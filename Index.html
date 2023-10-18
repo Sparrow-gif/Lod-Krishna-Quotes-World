@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<base href="#">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato&family=Roboto+Condensed:ital,wght@1,300&display=swap" rel="stylesheet"><title>   </title>
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+  <title> Quotes World  </title>
+
+<style>
+  * {
+  margin:0px;
+  padding:0px;  
+  Box-sizing:border-box;
+  font-family: 'Lato', sans-serif;
+  text-transform: ;
+      background-repeat:no-repeat;
+      background-position:inharit ;
+      margin: ;           
+      background-size:cover;
+   }
+.sidebar {  
+  display:none;
+}
+.navicons {
+         user-select:none;  
+         display:flex;
+     /*  justify-content:space-between;     */
+     /* justify-content:space-evenly;   */
+       justify-content:space-around;  
+     /* justify-content:center;   */
+       /*  background:#04AA6D;*/
+       background:#7242f5  ;
+         position:sticky;
+         top:0px;
+       }
+ .navicons > a {
+     cursor:pointer;  
+     display: block;
+     color: white;
+     padding:10px;
+     text-decoration: none;
+     font-size:18px;
+       }
+ .navicons > a:active {
+      color: ;
+      transform:scale(0.90) ;
+      }
+  .sidebar a {
+     display: block;
+     color: black;
+     padding: 16px;
+     text-decoration: none;
+       }
+ .sidebar a.active {
+     background-color:#7242f5;
+     color: white;
+     }
+
+.sidebar a:hover:not(.active) {
+  background-color: #7242f5;
+  color: white;
+   }
+
+div.content {    
+     height:auto;
+     width:100%;
+     
+      }
+   /* This is Slider Container   */
+.w3-content {
+        user-select:none;  
+        margin:10px auto;
+        width:95%;         
+        height:150px;
+        overflow:hidden;
+        border-radius:10px;
+        
+      }
+  /* This is Slider Image  */
+  img {  
+      height:100%;    
+         
+    }
+  aside {     
+      padding:10px 5px;
+      Box-sizing:border-box;
+      margin:0 auto;
+      text-align:center;
+      user-select:none;  
+      color:black;
+      background-image: url("___.jpeg");   
+      background-color: #f0edf7 ;    
+    }
+    /* Go To Top Button Css Close  */
+
+ footer {
+         margin:0 auto;
+         background:#122029;
+         color:white;    
+         user-select:none;  
+         padding:5px;
+         text-transform:capitalize;
+       }
+   footer > h2 > i{
+        font-size:3rem;
+        text-indent:20px;
+        padding:5px;
+     }
+  #foot {
+       display:flex;
+       flex-wrap:wrap;
+       border-top:1px solid white;
+       border-bottom:1px solid white;
+       }
+  #foot > div {
+       min-height:200px;
+       overflow:scroll;
+       width:50%;
+       padding:10px;    
+      }
+ #foot > div > a {
+        text-decoration:none;
+        padding:10px;
+        font-size:18px;
+        color:white;
+        text-indent:20px;
+        cursor:pointer;
+        display:inline-block;
+        text-align:center;
+     }
+ #foot > div a:hover {
+        color:#74eb34;
+        font-weight:blod;
+       }
+   .sneha {
+        padding:10px;
+        color:white;
+       }
+   .sneha > a{
+        text-decoration:none;
+        color:white;
+        display:block;      
+        margin:3px;  
+        }
+   select {
+        margin:10px;
+        float:right;
+        width:40%;
+        height:40px;
+        outline:none;
+        border:2px solid #253330; 
+        border-radius:30px;
+        text-align:center;
+        font-size:20px;
+        font-weight:600px;
+        transition:all 0.3s;
+        background:white;
+        outline:2px solid white; 
+        text-transform:capitalize;
+       }
+   /* This is quotes container Css  */
+  .quotesbody {
+          height:auto;
+          margin:0 auto;
+          background-image: url("Krish4.jpeg");
+          background-attachment:fixed;
+          padding:10px 5px;
+          display:flex;
+          flex-wrap:wrap;
+          justify-content:space-around;
+          align-items:center;
+          Overflow:hidden;
+       }
+ .quotesbody > div {
+          padding:10px;
+          border:2px solid #e84d66;
+          border-radius:10px;
+          text-align:center;
+          height:auto;
+          width:100%;
+          margin-top:10px;
+          overflow:scroll;          
+       }
+  .quotesbody > div > #text { 
+          color:white;
+          font-size:1.30rem;           
+       }
+  .quotesbody > div > #text::selection { 
+           background: silver ;
+           color:red ;   
+           }
+  .quotesbody > div > #author { 
+          color:aqua;
+          font-size:1.30rem;    
+          text-align:right;       
+       }
+
+  #follow {
+        border:1px solid purple;
+        width:100%;
+        background:white;
+        padding:5px;
+        margin:0px ;
+        display:flex;
+        justify-content:Space-around;
+        align-items:center;
+      }
+  #follow > a {
+        padding:10px 15px;
+        cursor:pointer;
+        background: ;
+        border: ;
+        border-radius:30px;
+        font-size:25px;
+     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+     }
+  #follow > a:hover {
+        background: #424ef5;
+        color: #5ad911;
+     }
+
+      #topic {
+        padding:10px 5px;
+        width:100%;
+        margin:0 auto;
+        background:purple;
+        
+         }
+   #heading {
+          text-align:center;
+          color:white;
+          
+        }
+  #search {
+           background:purple;
+           width:100%;
+           margin: 0px auto;
+           
+         }
+  #myInput {                 
+        width: 100%;
+        font-size: 16px;
+        padding: 12px 20px 12px 40px;
+        border: 3px solid coral;
+        border-radius:13px;
+        margin: 10px auto;
+        outline:none;
+        caret-color:coral;
+         }
+    #captions {
+             height:140px;
+             overflow:scroll;
+             user-select:none;
+           }
+   #captions > ul {
+         list-style-type: none;
+         padding:0px;
+         margin: 0 auto;
+         display:flex;
+         flex-wrap:wrap;    
+         justify-content:center ;
+         align-items:center; 
+         text-transform:Capitalize;   
+         
+      }
+    
+  #captions > ul > li a {
+        border: 1px solid #ddd;
+        margin:5px 5px auto; /* Prevent double borders */
+        background-color: #f6f6f6;
+        padding: 10px 15px;
+        text-decoration: none;
+        font-size: 18px;
+        color: black;
+        user-select:none;
+        display: block;
+        cursor:pointer;
+        border-radius:5px;
+        transition-duration:0.1s;
+        box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+    }
+   #captions > ul > li a:hover {
+           background-color:blue;
+           color:white;
+           box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+       }   
+
+
+  /* This is quotes container Css Close here */
+
+  @media screen and (min-width: 700px) {
+       * {
+         background-attachment:fixed;
+         }
+     .navicons {display:none;}
+
+   #bar {  
+       display:flex;
+       flex-direction:column;
+       }
+  .sidebar {
+    display:block;
+    margin: 0;
+    padding: 0;
+    width:25%;
+    border:0.1px solid black;
+    background-color: #f1f1f1;
+    position: fixed;
+    height: 100%;         
+    text-align:center;  
+    overflow:scroll;
+  }
+
+  div.content {
+       background: ;
+       margin-left:25%;
+       padding:10px;
+       width:75%;
+       }
+  .w3-content { height:220px; width:80%;}
+   footer { margin-left:25%; }
+
+   .quotesbody > div {
+          height:auto;
+          overflow:auto;
+          width:85%;
+          }
+     #follow { display:none;}
+    #app {
+         display:flex;
+         flex-wrap:wrap;
+         padding:10px;
+         justify-content:space-around;
+         align-items:center;
+       }
+     #app > a {
+          margin:10px;
+          padding:10px 15px;
+          cursor:pointer;
+          background: ;
+          border:0.5px solid black;;
+          border-radius:30px;
+          font-size:25px;
+         box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+     }
+  #app > a:hover {
+        background: #424ef5;
+        color:white;
+     }
+      #topic { margin-left:25%; width:75%;}
+     #myInput {
+             width:50%;
+            }
+        
+    }
+
+</style>
+</head>
+<body>
+ 
+ <div id ="bar">
+    
+    <div class="navicons">
+          <a href="#"target="_self"><i class="fa fa-fw fa-home"></i> </a> 
+          <a href="#"target="_self"><i class="fa-solid fa-video"></i> </a> 
+          <a href="#"target="_self"><i class="fa-solid fa-fire-flame-simple"></i> </a>
+         <!---<a href="#"target="_self"><i class="fa-solid fa-dots"></i> </a>---->
+          <a href="#"target="_self"><i class="fa-solid fa-shop"></i> </a>
+          <a class="active" href="#"target="_self"><i class="fa-solid fa-bars"></i> </a>
+   </div>
+<div class="sidebar">
+  <a class="active" href="#home"> <i class="fa fa-fw fa-home"></i> Home</a>
+  <a href="#news"> <i class="fa-brands fa-tiktok"></i> videos </a>
+  <a href="#contact"> <i class="fa-solid fa-fire-flame-simple"></i> Feeds </a>
+  <a href="#about"> <i class="fa-solid fa-shop"></i> Market </a>
+  <a href="#news"> <i class="fa-solid fa-phone fa-shake"></i> Contact Us</a>
+  <a href="#contact"> <i class="fa-solid fa-bars"></i> Menu-Bar</a>
+  <a href="#Paytm.html"> <i class="fa-solid fa-money-bill-1-wave fa-beat"></i> Paytm Cash</a>
+ <hr>
+  <p> follow us:-</p>
+     <div id="app">
+        <a href="#"target="_self" title="Facebook"> <i class="fa-brands fa-facebook-f"> </i> </a> 
+        <a href="#"target="_self" title="WhatsApp"> <i class="fa-brands fa-whatsapp">   </i> </a> 
+        <a href="#"target="_self" title="Twitter">  <i class="fa-brands fa-x-twitter">  </i> </a>
+        <a href="#"target="_self" title="Instagram"><i class="fa-brands fa-instagram">  </i> </a>
+        <a href="#"target="_self" title="Pinterest"><i class="fa-brands fa-pinterest-p"></i> </a>
+        <a href="#"target="_self" title="YouTube">  <i class="fa-brands fa-youtube">    </i> </a>                  
+        <a href="#"target="_self" title="Telegram"> <i class="fa-brands fa-telegram">   </i> </a>                        
+    </div>   
+</div>              
+
+<div class="content">
+    <div class="w3-content">
+        <img class="mySlides" src="krish2.jpeg" style="width:100%">
+        <img class="mySlides" src="krish1.jpeg" style="width:100%">
+        <img class="mySlides" src="krish3.jpeg" style="width:100%">
+   </div>
+
+<aside>
+  <h2>Responsive Sidebar Example</h2>
+  <p>This example use media queries to transform the sidebar to a top navigation bar when the screen size is 700px or less.</p>
+  <p>We have also added a media query for screens that are 400px or less, which will vertically stack and center the navigation links.</p>
+  <h3>Resize the browser window to see the effect.</h3>
+</aside>
+      <!---------This is qwotes--container---------------->
+             <div class="quotesbody">
+                             <!------Quotes 1---->
+                       <div id="box"data-aos="fade-up-left">
+                            <p id="text"> Hello World  </p>    
+                            <p id="author">Lord krishna</p>
+                      </div>
+                       
+                       <!------Quotes 2---->
+                       <div id="box"data-aos="fade-up-right">
+                            <p id="text"> Hello World  </p>    
+                            <p id="author">Lord krishna</p>
+                      </div>
+                   
+                       <!------Quotes 3---->
+                       <div id="box"data-aos="fade-up-left">  
+                            <p id="text"> Hello World  </p>    
+                            <p id="author">Lord krishna</p>
+                      </div>
+                        <!------Quotes 4---->
+                       <div id="box"data-aos="fade-up-right">  
+                            <p id="text"> Hello World  </p>    
+                            <p id="author">Lord krishna</p>
+                      </div>
+                        <!------Quotes 5---->
+                       <div id="box"data-aos="fade-up-left">  
+                            <p id="text"> Hello World  </p>    
+                            <p id="author">Lord krishna</p>
+                      </div>
+                       <!------Quotes 6---->
+                       <div id="box"data-aos="fade-up-right">
+                            <p id="text"> Hello World  </p>    
+                            <p id="author">Lord krishna</p>
+                      </div>
+                   
+                       <!------Quotes 7---->
+                       <div id="box"data-aos="fade-up-left">  
+                            <p id="text"> Hello World  </p>    
+                            <p id="author">Lord krishna</p>
+                      </div>
+                        <!------Quotes 8---->
+                       <div id="box"data-aos="fade-up-right">  
+                            <p id="text"> Hello World  </p>    
+                            <p id="author">Lord krishna</p>
+                      </div>
+                        <!------Quotes 9---->
+                       <div id="box"data-aos="fade-up-left">  
+                            <p id="text"> Hello World  </p>    
+                            <p id="author">Lord krishna</p>
+                      </div>
+                      <!------Quotes 10---->
+                       <div id="box"data-aos="fade-up-right">
+                            <p id="text"> Hello World  </p>    
+                            <p id="author">Lord krishna</p>
+                      </div>
+                   
+                       <!------Quotes 11---->
+                       <div id="box"data-aos="fade-up-left">  
+                            <p id="text"> Hello World  </p>    
+                            <p id="author">Lord krishna</p>
+                      </div>
+                        <!------Quotes 12---->
+                       <div id="box"data-aos="fade-up-right">  
+                            <p id="text"> Hello World  </p>    
+                            <p id="author">Lord krishna</p>
+                      </div>
+                        <!------Quotes 13---->
+                       <div id="box"data-aos="fade-up-left">  
+                            <p id="text"> Hello World  </p>    
+                            <p id="author">Lord krishna</p>
+                      </div>
+            </div>
+      <!---------This is qwotes--container---------------->
+</div>
+
+    <div id ="follow">
+          <a href="#"target="_self" title="Facebook"> <i class="fa-brands fa-facebook-f"> </i> </a> 
+          <a href="#"target="_self" title="WhatsApp"> <i class="fa-brands fa-whatsapp">   </i> </a> 
+          <a href="#"target="_self" title="Twitter">  <i class="fa-brands fa-x-twitter">  </i> </a>
+          <a href="#"target="_self" title="Instagram"><i class="fa-brands fa-instagram">  </i> </a>
+          <a href="#"target="_self" title="YouTube">  <i class="fa-brands fa-youtube">    </i> </a>     
+          <a href="#"target="_self" title="Pinterest"><i class="fa-brands fa-pinterest-p"></i> </a>          
+     </div>
+
+
+      <section id="topic">
+       <h2 id="heading"> Explore More Topics </h2>
+       <div id="search">
+            <input type="text" id="myInput" onkeyup="myFuncti()" placeholder="Search for Caption.." title="Type in a name">
+      </div>
+        
+         <!-----------Explore More Topic---------------->
+  <div id="captions">
+      <ul id="myUL"> 
+          <li><a href="#" target="_self">Calvin</a></li>
+          <li><a href="#" target="_self">Calvin</a></li>
+          <li><a href="#" target="_self">Calvin</a></li>
+          <li><a href="#" target="_self">Calvin</a></li>
+          <li><a href="#" target="_self">Calvin</a></li>
+          <li><a href="#" target="_self">Calvin</a></li>
+          <li><a href="#" target="_self">halvin</a></li>
+          <li><a href="#" target="_self">Calvin</a></li>
+          <li><a href="#" target="_self">Calvin</a></li>
+          <li><a href="#" target="_self">Calvin</a></li>                     
+          <li><a href="#" target="_self">Calvin</a></li>
+          <li><a href="#" target="_self">Calvin</a></li>
+          <li><a href="#" target="_self">Calvin</a></li>
+          <li><a href="#" target="_self">Calvin</a></li>
+          <li><a href="#" target="_self">Calvin</a></li>
+          <li><a href="#" target="_self">Calvin</a></li>
+          <li><a href="#" target="_self">Calvin</a></li>
+          <li><a href="#" target="_self">Calvin</a></li>
+          <li><a href="#" target="_self">Calvin</a></li>
+          <li><a href="#" target="_self">Calvin</a></li>
+          <li><a href="#" target="_self">Calvin</a></li>
+          <li><a href="#" target="_self">Calvin</a></li>
+          <li><a href="#" target="_self">Calvin</a></li>
+          <li><a href="#" target="_self">Calvin</a></li>
+          <li><a href="#" target="_self">Calvin</a></li>     
+          <li><a href="#" target="_self">Calvin</a></li>
+          <li><a href="#" target="_self">Calvin</a></li>
+          <li><a href="#" target="_self">Calvin</a></li>
+          <li><a href="#" target="_self">Calvin</a></li>
+          <li><a href="#" target="_self">Calvin</a></li>
+          <li><a href="#" target="_self">Calvin</a></li>
+          <li><a href="#" target="_self">Calvin</a></li>
+          <li><a href="#" target="_self">Calvin</a></li>
+          <li><a href="#" target="_self">salvin</a></li>
+          <li><a href="#" target="_self">Calvin</a></li>      
+          <li><a href="#" target="_self">Calvin</a></li>
+          <li><a href="#" target="_self">Calvin</a></li>
+          <li><a href="#" target="_self">Calevin</a></li>
+          <li><a href="#" target="_self">happy birthday</a></li>
+          <li><a href="#" target="_self">Calvin</a></li>
+          <li><a href="#" target="_self">Calvin</a></li>
+          <li><a href="#" target="_self">Calvin</a></li>
+          <li><a href="#" target="_self">Calvin</a></li>
+          <li><a href="#" target="_self">Calvin</a></li>
+          <li><a href="#" target="_self">Calvin</a></li>      
+      </ul>
+  </div>
+ </section> <!----------Explore-More Topic------------->
+
+
+
+    <!--------Footer Content--------->
+
+    <footer>
+       <h2><i class="fa-regular fa-comment-dots"></i> Quotes World </h2>
+   <div id="foot">
+        <div id="box1">    <!--------footer-Box-1-------->
+            <p> What We Do...</p>
+            <a href="#" target="_self"><p> Features  </p></a>
+            <a href="#" target="_self"><p> Blogs  </p></a>
+            <a href="#" target="_self"><p> Security  </p></a>
+            <a href="#" target="_self"><p> For Business  </p></a>
+       </div>
+        <div id="box2">    <!--------footer-Box-2-------->
+            <p> Who We Are...</p>
+            <a href="#" target="_self"><p> about us </p></a>
+            <a href="#" target="_self"><p> careers  </p></a>
+            <a href="#" target="_self"><p> brand center  </p></a>
+            <a href="#" target="_self"><p> privacy  </p></a>
+       </div>
+        
+<div id="box3">    <!--------footer-Box-3-------->
+            <p> Use whatsApp...</p>
+            <a href="#" target="_self"><p> Android  </p></a>
+            <a href="#" target="_self"><p> iPhone  </p></a>
+            <a href="#" target="_self"><p> Browsers </p></a>
+            <a href="#" target="_self"><p> websites </p></a>
+       </div>
+        <div id="box4">    <!--------footer-Box-4-------->
+            <p> Nead Help ?...</p>
+            <a href="#" target="_self"><p> contact Us </p></a>
+            <a href="#" target="_self"><p> help center </p></a>
+            <a href="#" target="_self"><p> corona virus </p></a>
+            <a href="#" target="_self"><p> security advice </p></a>
+       </div>  
+   </div>    
+        
+      <select>
+           <option> English </option>
+           <option> hindi   </option>
+           <option> Bengali </option>
+           <option> gujrati </option>
+           <option> tamil  </option>
+           <option> telugu  </option>
+           <option> odiya  </option>           
+     </select>
+       <div class="sneha">
+           <a href="#"><p> Terms & privacy </p></a>
+           <a href="#"><p> policy </p></a>
+           <a href="#"><p> 2023® </p></a>
+           <a href="#"><p> Quotes-World LLC</p></a>
+      </div>
+  </footer>
+</div>     <!--------Footer Content Close-------->       
+
+  <script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 1500); // Change image every 2 seconds
+};
+
+
+  function myFuncti() {
+    var input, filter, ul, li, a, i, txtValue;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("myUL");
+    li = ul.getElementsByTagName("li");
+    for (i = 0; i < li.length; i++) {
+        a = 
+   li[i].getElementsByTagName("a")[0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+        }
+    }
+}
+
+     
+</script>
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({
+           // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
+       offset: 120, // offset (in px) from the original trigger point
+       delay: 0, // values from 0 to 3000, with step 50ms
+       duration: 400, // values from 0 to 3000, with step 50ms
+       easing: 'ease', // default easing for AOS animations
+       once: false, // whether animation should happen only once - while scrolling down
+       mirror: false, // whether elements should animate out while scrolling past them
+       anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
+       });
+  </script>
+
+</body>
+</html>
