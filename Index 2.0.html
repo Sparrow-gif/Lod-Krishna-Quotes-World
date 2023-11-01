@@ -302,7 +302,24 @@ div.content {
            text-decoration:underline;
          /*  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
     */   }   
+    
+     #topButton {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
 
+#topButton:hover {
+  background-color: #0056b3;
+}
 
   /* This is quotes container Css Close here */
 
@@ -564,6 +581,10 @@ div.content {
  </section> <!----------Explore-More Topic------------->
 
 
+        <!-------Go To Top Button--------->
+     <button id="topButton">Top</button>
+
+
 
     <!--------Footer Content--------->
 
@@ -669,6 +690,22 @@ function carousel() {
        mirror: false, // whether elements should animate out while scrolling past them
        anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
        });
+
+             //Go To Top Button JS 
+
+     window.onscroll = function () {
+  if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+    document.getElementById("topButton").style.display = "block";
+  } else {
+    document.getElementById("topButton").style.display = "none";
+  }
+};
+
+// Scroll to the top when the button is clicked
+document.getElementById("topButton").addEventListener("click", function () {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+});
   </script>
 
 </body>
