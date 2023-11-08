@@ -292,6 +292,42 @@ header > h2{
        text-align:center;               
     }
 
+     #about {
+             height:auto ;
+             padding:20px ;
+             background: #ace8ba;
+             display:grid;
+             gap:10px;
+             display:grid;
+             grid-template-columns:repeat(auto-fit,minmax(min(20rem,100%),1fr)) ;
+             place-items:center;
+             overflow:hidden;
+             text-transform:capitalize ;
+          }
+      #about > .abbg {
+            margin:0 auto ;
+            width:100%;
+            height:200px;
+            border:0.5px solid black;
+            overflow:hidden;
+            border-radius:10px;
+            background-image:url('Img2.jpeg') ;
+            background-size:cover;
+            background-position:center;
+          }     
+       #about > .abhe > h2  {
+               padding:10px;
+               font-family: domine ;
+               font-size:30px;
+               color: ;
+          }
+       #about > .abhe > p  {
+               padding:10px;
+               font-family: Open Sans;
+               font-size:20px;
+               font-weight: ;               
+          }
+
         #gettouch {
           margin:0 auto ;
           padding:30px;    
@@ -447,25 +483,10 @@ footer {
            
         }
   @media only screen and (min-width:600px) {         
-         html {
-             background: -o-linear-gradient(195deg,#63ae7d,#7c52e3,#cf1480);
-             background: linear-gradient(255deg,#63ae7d,#7c52e3,#cf1480);
-             background-size: 180% 180%;
-             -webkit-animation: gradient-animation 5s ease infinite;
-             animation: gradient-animation 5s ease infinite;
-         }
-         body{       
-               margin:0 auto ;        
-               width:80%;
-            }
-       @keyframes gradient-animation {
-           
-           0% { background-position: 0% 50%; }
-          50% { background-position: 100% 50%; }
-         100% { background-position: 0% 50%; }
-                    }
-    }
-
+          body {
+                
+             }
+      }
 
    </style>
 </head>
@@ -561,10 +582,30 @@ footer {
             <div id="blur"> 
                <h1> Discover More Enlightening Wisdom </h1>
                <p>  </p>
-               <a href="#gettouch"> Explore  </a>
+               <a href="#gettouch"> Explore More </a>
         </div> 
      </section>
 
+                     <!-------About Page------->
+      <section id="about">
+                 <div class="abbg" data-aos=zoom-out">  </div>
+                 <div class="abhe">
+                      <h2> About us </h2>
+                      <p> Welcome to Quotes, your destination for Shri Krishna Quotes in Kolkata, WB. 
+                          We are passionate about spreading the wisdom and teachings of Shri Krishna
+                          through our carefully curated collection of quotes. 
+                      </p> 
+                      <p> At Quotes, we believe in the power of words to inspire and uplift.
+                          Our team of dedicated enthusiasts handpicks the most profound and 
+                          insightful quotes from the teachings of Shri Krishna, ensuring that 
+                          each quote resonates with our audience on a spiritual level. 
+                          Whether you are seeking guidance, motivation, or simply a moment 
+                          of reflection, our collection of Shri Krishna Quotes is here to 
+                          enlighten your mind and nourish your soul. 
+                      </p>
+                </div>
+         </section>
+      
          
                          <!-----Contact Us Section------->
              <div id="gettouch">
