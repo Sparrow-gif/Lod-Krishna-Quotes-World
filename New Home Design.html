@@ -1,1 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <meta charset="utf-8"/>
+  <base href="#">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato&family=Roboto+Condensed:ital,wght@1,300&display=swap" rel="stylesheet">
+  <title>   </title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+  <title> Food_Factory </title>
+    <style>
+        * {
+          margin:0px;
+          padding:0px;
+          -webkit-box-sizing:border-box;
+          box-sizing:border-box;
+          font-family: "Lato", sans-serif;
+          text-transform:capitalize;                     
+        }  
+ header {
+       display:-webkit-box;
+       display:-ms-flexbox;
+       display:flex;
+       -webkit-box-pack:justify;
+       -ms-flex-pack:justify;
+       justify-content:space-between;
+       -webkit-box-align:center;
+       -ms-flex-align:center;
+       align-items:center;
+       position:sticky;
+       z-index:99;
+       top:0px;
+       background:#13d48a ; /* #ebe6fa; */
+       padding:2px;      
+       -webkit-user-select:none;
+       -moz-user-select:none;
+       -ms-user-select:none;
+     }
+header > h2{
+          font-size:25px;
+          color:white;
+          text-indent:10px;
+          font-family: sans-serif;
+          -webkit-animation-duration: 6s;
+          animation-duration: 6s;
+        }
+         
+  header > span {
+      padding: 0px 10px;
+      font-size:30px;
+      cursor:pointer;           
+      background: ;
+      color:white;  
+      -webkit-transition-duration:0.3s;  
+      -o-transition-duration:0.3s;  
+       transition-duration:0.3s;
+      }
+.sidenav {
+        height:100vh;
+        width:0;
+        position: fixed;
+        z-index: ;
+        top: 0;
+        right: 0;
+        background-color: #ebe6fa;
+        overflow: scroll;
+       -webkit-transition: 0.5s;
+       -o-transition: 0.5s;
+       transition: 0.5s;
+       padding-top: 40px;
+       text-align:center;  
+        -webkit-user-select:none;
+        -moz-user-select:none;
+        -ms-user-select:none;        
+     }
+
+.sidenav a {
+       padding: 15px ;
+       text-decoration: none;
+       font-size: 16px;
+       color: #4b10eb;
+       display: block;
+       -webkit-transition: 0.3s;
+       -o-transition: 0.3s;
+       transition: 0.3s;
+       margin-bottom:6px;
+    }
+
+.sidenav a:hover{
+  color: #f1f1f1;
+  background:#2576e8;
+}
+ .sidenav > .active {
+          color: #f1f1f1;
+          background:#6e0cf7;
+        }
+.sidenav .closebtn {
+  position: absolute;
+  top:5px;
+  right: 10px;
+  font-size: 20px;
+  margin-left: 50px;
+  padding:-0px 12px;
+  background: #6e0cf7;
+  color:white;  
+  border-radius: ;
+}
+           /* blur background Section */
+      #bg {
+       position: ;       
+       margin:0 ;
+       padding:0 ;
+       z-index:-1;
+       user-select:none;
+      }
+   #bg >#blur >  h1{
+       font-size:30px;
+       text-transform:uppercase;
+       margin:0 auto ;
+       color:black;
+       z-index: ;
+    } 
+    #bg > #blur > p {
+       margin-top:20px ;
+       color:white; 
+      font-size:18px;
+     }
+    #bg > #background {
+         height:100vh;
+         width:100%;
+         background-image:url('images/raadha1.jpeg');    
+         background-size:cover;
+         background-position:center;
+         filter:blur(2px) ;
+         Position:relative;
+         z-index:;
+       }
+    #bg > #blur {
+       position:absolute;
+       top:50%;
+       left:50%;
+       transform:translate(-50%,-50%) ;
+       z-index:1;
+       width:90%;
+    /*   width:50%; */
+       padding:130px 10px ;  
+    /*  text-align:center;  */
+     /*  border:2px inset white; */
+     /*  border-radius:4px;       */
+     /* font-weight:bold;     */    
+     }
+   #bg >  #blur a {
+        position: ;
+       display:inline-block;
+       padding:10px ;
+       width:80%;
+       font-size:18px;
+       text-decoration:none;
+       color: White ;
+       background:coral;
+       margin-top:20px ;
+       text-align:center;    
+           
+    }
+
+        /*  Image Slider Css*/
+    #w3-content {
+        margin:10px auto;
+        width:95%;         
+        height:30vh;
+        overflow:hidden;     
+        -webkit-user-select:none;
+        -moz-user-select:none;
+        -ms-user-select:none;     
+        position:relative;    
+         z-index:-1 ;
+      }
+ #w3-content > img {
+      height:100%;     
+      width:100%;      
+    }
+     .wrapper {
+           position:relative;
+           z-index:-1 ;
+           background:coral;
+           text-align:center;
+           padding:10px;
+           -webkit-user-select:none;
+           -moz-user-select:none;
+           -ms-user-select:none;         
+         }
+    .wrapper > span {
+            font-size: 20px;
+            color:white;
+         }
+         /* Quotes body Css */
+    #quotes {
+           background:#fcfafa ;
+           display: ;
+           margin: 0 auto ;
+           overflow:hidden;
+           height:auto;
+           width:100%;
+           padding:10px;    
+           gap:10px;
+           display:grid;
+           grid-template-columns:repeat(auto-fit,minmax(min(21rem,100%),1fr)) ;      
+         }
+    #quotes > div {
+            border:4px solid;
+            border-image-source:url(images/ima4.jpeg) ;    
+            border-image-slice:30;
+            border-image-repeat: round ;
+            border-image-outset: ;
+            border-image-width:2 ;                        
+            height: auto;
+            width: 100% ;  
+            border-radius:5px;
+            box-sizing:border-box;
+         }
+    #quotes > div > h4 {
+            text-align:center;
+            padding:5px 0px;
+         }
+    #quotes > div > h3 {
+            text-align:right;
+            padding: 0px 5px ;
+         }
+            /* All Sections Css */
+  
+     #footbg {
+       position:relative ;       
+       margin:0 ;
+       padding:0 ;
+       z-index:1;
+       user-select:none;
+      }
+   #footbg >#blur >  h1{
+       font-size:30px;
+       text-transform:uppercase;
+       margin:0 auto ;
+       color:black;
+       z-index: ;
+    } 
+    #footbg > #blur > p {
+       margin-top:20px ;
+       color:white; 
+      font-size:18px;
+     }
+    #footbg > #background {
+         height:100vh;
+         width:100%;
+         background-image:url('images/raadha1.jpeg');    
+         background-size:cover;
+         background-position:center;
+         filter:blur(2px) ;
+         Position: ;
+         z-index:;
+       }
+    #footbg > #blur {
+       position:absolute;
+       top:50%;
+       left:50%;
+       transform:translate(-50%,-50%) ;
+       z-index:1;
+       width:90%;
+    /*   width:50%; */
+       padding:130px 10px ;  
+    /*  text-align:center;  */
+     /*  border:2px inset white; */
+     /*  border-radius:4px;       */
+     /* font-weight:bold;     */    
+     }
+   #footbg > #blur > a {
+        position: ;
+       display:inline-block;
+       padding:10px ;
+       width:80%;
+       font-size:18px;
+       text-decoration:none;
+       color: White ;
+       background:coral;
+       margin-top:20px ;
+       text-align:center;               
+    }
+
+        #gettouch {
+          margin:0 auto ;
+          padding:30px;    
+          background:#40ed91 ;    
+          -webkit-user-select:none;
+          -moz-user-select:none;
+          -ms-user-select:none;          
+       }
+  #gettouch > form {
+        margin:0 auto ;
+        width:100%;
+       }
+   #gettouch > form > label {
+        width:100%;
+        display:block;
+      }
+   #gettouch > form >  input {
+        width:100%;
+        padding:5px;
+        display:block;
+        margin:5px auto ;
+        border:none;
+        border-radius:4px;
+      }
+  #gettouch > form >  textarea {
+        width:100%;
+        border:none;
+        border-radius:4px;
+        padding:5px;
+      }
+  #gettouch > form >   .btn {
+        border:1px solid #092580;
+        background:#caa5f2;
+        color: #770ceb ;
+        width:50%;
+        border-radius:8px;
+        margin:10px auto ;
+        transition-duration:0.3s;
+       }
+  #gettouch > form >   .btn:active {
+          transform:scale(0.90) ;
+       }
+
+
+   .contact {
+        background:#c00fdb;
+        height:auto;
+        text-align:center;
+        padding:10px;
+        margin:0 auto ;
+        width:100%;
+        overflow:scroll;
+        -webkit-user-select:none;
+        -moz-user-select:none;
+        -ms-user-select:none;        
+     }
+  .contact > h1 {
+           -webkit-animation: heartBeat;
+              animation: heartBeat; /* referring directly to the animation's @keyframe declaration */
+           -webkit-animation-duration: 2s;
+              animation-duration: 2s;
+              color:aqua ;
+        }
+   .contact > #apps {
+            display:-webkit-box;
+            display:-ms-flexbox;
+            display:flex;
+            -webkit-box-pack:Space-around;
+            -ms-flex-pack:Space-around;
+            justify-content:Space-around;
+            -webkit-box-align:center;
+            -ms-flex-align:center;
+            align-items:center;
+         }
+   .contact > #apps > a {
+            border-radius:8px;
+            font-size:22px;
+            background:#3b62c4 ;
+            padding:8px 15px;
+            border:1px solid #3b3bc4;
+            color:white;
+            cursor:pointer;
+         -webkit-transition-duration:0.3s;
+         -o-transition-duration:0.3s;
+            transition-duration:0.3s;
+         -webkit-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+         }
+   .contact > #apps > a:hover {
+           background:white;
+           color:#6e9eeb ;
+           -webkit-transform:skewY(10deg);
+           -ms-transform:skewY(10deg);
+           transform:skewY(10deg);
+           z-index: ;
+       }
+          /*  Footer Css Section */
+footer {
+         margin:0 auto;
+         background:#122029;
+         color:white;    
+         -webkit-user-select:none;    
+         -moz-user-select:none;    
+         -ms-user-select:none;    
+         user-select:none;  
+         padding:5px;
+         text-transform:capitalize;
+         overflow:hidden;
+         -webkit-user-select:none;
+         -moz-user-select:none;
+         -ms-user-select:none;         
+       }
+   footer > h3 > i{
+        font-size:24px;
+        text-indent:20px;
+        padding:5px;
+     }  
+   .sneha {
+        padding:10px;
+        color:white;
+       }
+   .sneha > a{
+        text-decoration:none;
+        color:white;
+        display:block;      
+        margin:3px;  
+        font-size:14px
+        }
+   select {
+        margin:10px;
+        float:right;
+        width:40%;
+        height:40px;
+        outline:none;
+        border:2px solid #253330; 
+        border-radius:30px;
+        text-align:center;
+        font-size:16px;
+        font-weight:600px;
+        -webkit-transition:all 0.3s;
+        -o-transition:all 0.3s;
+        transition:all 0.3s;
+        background:white;
+        outline:2px solid white; 
+        text-transform:capitalize;
+       }
+  hr { 
+     width:100%;
+     z-index:-1;
+   }
+     
+   @Keyframes   {
+           
+        }
+  @media only screen and (min-width:600px) {         
+         html {
+             background: -o-linear-gradient(195deg,#63ae7d,#7c52e3,#cf1480);
+             background: linear-gradient(255deg,#63ae7d,#7c52e3,#cf1480);
+             background-size: 180% 180%;
+             -webkit-animation: gradient-animation 5s ease infinite;
+             animation: gradient-animation 5s ease infinite;
+         }
+         body{       
+               margin:0 auto ;        
+               width:80%;
+            }
+       @keyframes gradient-animation {
+           
+           0% { background-position: 0% 50%; }
+          50% { background-position: 100% 50%; }
+         100% { background-position: 0% 50%; }
+                    }
+    }
+
+
+   </style>
+</head>
+<body>
+    <header>              
+           <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <a href="#" class="active" target="_self" >Home</a>
+                <a href="#" target="_self" >About us </a>
+                <a href="#" target="_self" > Stories </a>
+                <a href="#" target="_self" > Videos </a>
+                <a href="#" target="_self" > more categorise </a>
+                <a href="#" target="_srlf" >Contact us</a>
+          </div>
+                <h2 class="animate__animated animate__jackInTheBox animate__infinite animate__slow"> Quotes World  </h2>
+                <span onclick="openNav()">&#9776;</span>
+     </header>
+
+                <!------Blur Background Section------>
+      <section id="bg">
+            <div id="background">  </div>
+            <div id="blur"> 
+               <h1> Discover The Wisdom Of Lord Krishna </h1>
+               <p> Discover The Whisdom Of Sri Krishna's Teaching
+                   Through Powerful Quotes. Expand Your Consciousness
+                   And Find Inner Peace. </p>
+               <a href="#w3-content"> Explore Now  </a>
+        </div> 
+     </section>
+
+
+                    <!----- Image Slider section----->
+      <div id="w3-content">
+            <img class="mySlides" src="images/raadha3.jpeg" style="width:100%">
+            <img class="mySlides" src="images/raadha2.jpg" style="width:100%">
+            <img class="mySlides" src="images/raadha1.jpeg" style="width:100%">
+     </div>
+
+                <!------Auto Type Text------->
+         <div class="wrapper">
+              <span> <span class="multiText"> </span></span>
+        </div>
+
+
+                <!--------Quotes Body Section------->
+        <section id="quotes">
+                <div class="box1" data-aos="fade-up"> 
+                    <h4> Hello World </h4>
+                    <h3> Lod krishna </h3>
+                 <hr/>
+                    <h4> Hello World </h4>
+                    <h3> Lod krishna </h3>
+              </div>
+
+                <div class="box2" data-aos="fade-up"> 
+                    <h4> Hello World </h4>
+                    <h3> Lod krishna </h3>
+                 <hr/>
+                    <h4> Hello World </h4>
+                    <h3> Lod krishna </h3>
+              </div>
+
+                <div class="box3" data-aos="fade-up"> 
+                    <h4> Hello World </h4>
+                    <h3> Lod krishna </h3>
+                 <hr/>
+                    <h4> Hello World </h4>
+                    <h3> Lod krishna </h3>
+              </div>
+
+               <div class="box4" data-aos="fade-up"> 
+                    <h4> Hello World </h4>
+                    <h3> Lod krishna </h3>
+                 <hr/>
+                    <h4> Hello World </h4>
+                    <h3> Lod krishna </h3>
+              </div>
+
+                <div class="box5" data-aos="fade-up"> 
+                    <h4> Hello World </h4>
+                    <h3> Lod krishna </h3>
+                 <hr/>
+                    <h4> Hello World </h4>
+                    <h3> Lod krishna </h3>
+              </div>
+
+        </section>
+
+
+          <!------Blur Background Section------>
+      <section id="footbg">
+            <div id="background">  </div>
+            <div id="blur"> 
+               <h1> inspire your soul with shri krishna Quotes </h1>
+               <p> Discover The Whisdom Of Sri Krishna's Teaching
+                   Through Powerful Quotes. Enlighten Your Mind
+                   And Find Inner Peace. </p>
+               <a href="#gettouch"> Explore Now  </a>
+        </div> 
+     </section>
+
+         
+                         <!-----Contact Us Section------->
+             <div id="gettouch">
+             <form>
+                 <h2> Contact Us Today </h2>
+                 <p> Complete the form below to get in
+                     touch with us. We are ready to assist
+                     you with help bring your vision to life. </p>
+                  
+                 <label for ="Name"> Name </label>
+                 <input type="Text" name="name" required>
+        
+                 <label for ="email"> Email </label>
+                 <input type="email" name="email" required>
+        
+                 <label for ="text"> Message </label>
+                 <textarea name="w3review" rows="7" cols="50" required>  </textarea>
+
+                 <input class="btn" type="submit" value="Submit">
+            </form>
+      </div>
+
+
+      <section class="contact"> <!-------contact Section--------->
+                <h1 class="animate__animated animate__infinite"> Follow Us </h1>
+             <div id="apps"> 
+                  <a href="#"> <i class="fa-brands fa-facebook-f"></i> </a>
+                  <a href="#"> <i class="fa-brands fa-instagram "></i> </a>
+                  <a href="#"> <i class="fa-brands fa-linkedin-in"></i> </a>
+                  <a href="#"> <i class="fa-brands fa-twitter"></i> </a>
+                  <a href="#"> <i class="fa-brands fa-whatsapp"></i> </a>
+                  <a href="#"> <i class="fa-brands fa-youtube"></i> </a>
+            </div>
+     </section>
+
+    <footer>   <!------footer Section------->
+       <h2 class="animate__animated animate__zoomInDown animate__infinite animate__slow"><i class="fa-solid fa-burger"></i>food-factory </h2>          
+      <select>
+           <option> English</option>
+           <option> hindi   </option>
+           <option> Bengali </option>
+           <option> gujrati </option>
+           <option> tamil  </option>
+           <option> telugu  </option>
+           <option> odiya  </option>           
+     </select>
+    <div class="sneha">
+        <a href="#" target="_self"><p> Terms & privacy </p></a>
+        <a href="#" target="_self"><p> policy </p></a>
+        <a href="#" target="_self"><p> 2023® </p></a>
+        <a href="#" target="_self"><p> Food-factory LLC</p></a>
+   </div>
+  </footer>
+    
+
+    <script> <!---javascript Section------>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "60%";
+}
+   function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+} ;
+        /* Image Slider JavaScript */
+      var myIndex = 0;
+      carousel();
+
+     function carousel() {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";  
+     }
+        myIndex++;
+        if (myIndex > x.length) {myIndex = 1}    
+        x[myIndex-1].style.display = "block";  
+        setTimeout(carousel, 1500); // Change image every 2 seconds
+     }
+           
+</script>
+                 
+       <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+         <script>
+             AOS.init({
+                      offset: 150, // offset (in px) from the original trigger point
+                      delay: 0, // values from 0 to 3000, with step 50ms
+                      duration: 400, // values from 0 to 3000, with step 50ms
+                      easing: 'ease', // default easing for AOS animations
+                      once: false, // whether animation should happen only once - while scrolling down
+                      mirror: false, // whether elements should animate out while scrolling past them
+                      anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
+                 });
+         </script>
+
+        <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+   <script>          
+      var typed = new Typed('.multiText', {
+      strings: ["Raadhe Raadhe.", "Jai Shri Krishna.", " राधे राधे.", "जय श्री कृष्णा", "রাধে রাধে.","জয় শ্রী কৃষ্ণ।",],
+      loop: true, 
+      typeSpeed: 150 , 
+      backSpead: 80 , 
+      startDelay: 500, 
+      backDelay: 1000, 
+     });
+   </script>
+</body>
+</html>
+
 
