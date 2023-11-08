@@ -241,7 +241,7 @@ header > h2{
        position:relative ;       
        margin:0 ;
        padding:0 ;
-       z-index:1;
+       z-index:99;
        user-select:none;
       }
    #footbg >#blur >  h1{
@@ -481,8 +481,24 @@ footer {
   hr { 
      width:100%;
      z-index:-1;
-   }
-     
+     }
+    #topButton {
+          display: none;
+          position: fixed;
+          bottom: 20px;
+          right: 20px;
+          background-color: #007BFF;
+          color: white;
+          border: none;
+          border-radius: 50%;
+          padding: 5px 10px;
+          font-size: 16px;
+          cursor: pointer;
+          z-index:99 ;
+          font-size:1.50rem;
+            }
+
+
    @Keyframes  heart {
              50% {transform:scale(0.80); }
         }
@@ -663,7 +679,10 @@ footer {
         <a href="#" target="_self"><p> Food-factory LLC</p></a>
    </div>
   </footer>
-    
+                 <!----Go To Top Button------>
+     <button id="topButton"> <i class="fa-solid fa-arrow-up"></i> </button>
+
+
 
     <script> <!---javascript Section------>
 function openNav() {
@@ -672,6 +691,8 @@ function openNav() {
    function closeNav() {
   document.getElementById("mySidenav").style.width = "0";
 } ;
+
+
         /* Image Slider JavaScript */
       var myIndex = 0;
       carousel();
@@ -686,7 +707,22 @@ function openNav() {
         if (myIndex > x.length) {myIndex = 1}    
         x[myIndex-1].style.display = "block";  
         setTimeout(carousel, 1500); // Change image every 2 seconds
-     }
+     };
+            
+            /* Go To Top Button */
+      window.onscroll = function () {
+  if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+    document.getElementById("topButton").style.display = "block";
+  } else {
+    document.getElementById("topButton").style.display = "none";
+  }
+};
+
+// Scroll to the top when the button is clicked
+document.getElementById("topButton").addEventListener("click", function () {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+});
            
 </script>
                  
