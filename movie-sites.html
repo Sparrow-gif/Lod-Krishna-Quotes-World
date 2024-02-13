@@ -563,7 +563,7 @@
             -ms-user-select:none;
                 user-select:none;
         margin:0 auto ;
-        width:100%;
+        max-width:620px;
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
@@ -676,7 +676,7 @@
             .contest > #banner { width:90%;}
 			 #contentable > table{ width:80%; margin:0 auto; }
 			 .article {  margin:0 auto;   width: 260px ; }
-		    #gettouch > form { width:70%; margin:0 auto;}
+		   
         }
 	
 	
@@ -688,7 +688,7 @@
 		    }     
 		 .contest > #banner { width:80%;}
 		   #contentable > table{ width:70%; margin:10px auto; }
-		 #gettouch > form { width:45%; margin:0 auto;}
+		
     }
    </style>
   </head>
@@ -1118,7 +1118,7 @@
 
      <!----Comment Section------->
           <div id="gettouch" class="comment-section">
-             <form action="#" method="post" id="comment-form">
+             <form action="#" method="post" id="myForm"> <!--id comment-form--->
                  <h1> leave a comment </h1>
                  
                  <label for ="Name"> Name </label>
@@ -1130,16 +1130,16 @@
 				 <label for ="text"> Message </label>
 				 <textarea id="msg" name="msg" rows="6" cols="40" placeholder="Your Comment*" spellcheck="true" required></textarea>
                  
-                <button class="btn" type="submit" title="button"> Submit </button>
-            </form>
+                <button class="btn" type="submit"> Submit </button>
+            </form>   
         
 
             <div class="didit">
-                 <h2> Recent Comments  </h2>
-                 <div id="comments"> </div> <!----messages-04----->
-                 <div id="community"> <b> sudip:- </b> Great </div> <!----messages-03----->
-                 <div id="community"> <b> sneha:- </b> wows  </div> <!----messages-02---->
-                 <div id="community"> <b> ajoy :- </b> best </div> <!----messages-01----->
+                  <h3 style="font-family:Roboto; color:202a57;"> Recent Comments  </h3>
+                  <div id="comments"> </div> <!----messages-04----->
+                  <div id="community"> Comments 0 </div> <!----messages-03----->
+            <!---<div id="community"> <b> sneha:- </b> wows  </div> ---messages-02---->
+            <!---<div id="community"> <b> ajoy :- </b> best </div>-----messages-01----->
            </div>
       </div>
 
@@ -1285,5 +1285,51 @@ function addComment(name, commentText) {
   commentsSection.appendChild(commentDiv);
 }
    </script>
+   
+       <script>
+      const form = document.getElementById('myForm');
+      form.addEventListener('submit', async function(e) {
+      e.preventDefault();
+      const formData = new FormData(this);
+      const responseData = await fetch('https://script.google.com/macros/s/AKfycbw-d3Eb2-hszre2uCKLnNxHX25lyGYDu32ghI6-15rRi7YGOzA8DA9cBOJNFsmWqSo/exec', {
+        method: 'POST',
+          body: formData
+        });
+    // Handle the response here (if needed)
+	  document.getElementById('myForm').addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevents the default form submission behavior
+
+            // Show alert
+            window.alert('Form submitted!');
+
+            // Refresh the form
+            document.getElementById('myForm').reset();			
+        });
+		
+		 //Contact us 
+      document.getElementById('myForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  const name = document.getElementById('name').value;
+  const commentText = document.getElementById('msg').value;
+  const email = document.getElementById('email').value;
+  if (name && commentText) {
+    addComment(name, commentText, email);
+    document.getElementById('myForm').reset();
+	 alert("submitted");
+  } else {
+    alert('Please fill in all fields.');
+  }
+});
+
+function addComment(name, commentText) {
+  const commentsSection = document.getElementById('comments');
+  const commentDiv = document.createElement('div');
+  commentDiv.classList.add('comment');
+  commentDiv.innerHTML = `<strong>${name}:</strong> ${commentText}`;
+  commentsSection.appendChild(commentDiv);
+} 
+  });
+</script>
+   
  </body>
 </html>
