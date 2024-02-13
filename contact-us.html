@@ -14,7 +14,7 @@
 	 }
 	  body {
     font-family: 'Arial', sans-serif;
-    background-color: #f4f4f4;
+    background-color:#774bde;
     margin: 0;
     padding: 0;
     display: -webkit-box;
@@ -27,7 +27,7 @@
         -ms-flex-pack: center;
             justify-content: center;
     height: 100vh;
-	 background-image:url('WEB/CONTACT.JPG'), url('WEB/CONTACT.JPG') ;
+	 background-image:url('') ;
 	 background-repeat:no-repeat;
 	   background-position:center;
 	   background-size:cover;
@@ -65,11 +65,15 @@ label {
 input,
 textarea {
     margin-bottom: 16px;
-    padding: 8px;
+    padding: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
+	outline:none;
 }
 
+     form >  input:user-invalid { border:1.50px solid red;}
+	 form >  textarea:user-invalid { border:1.50px solid red;}
+	 
 button {
     background-color: #007bff;
     color: #fff;
@@ -108,15 +112,19 @@ button:hover {
 <body>
     <div class="container">
         <h1 style="padding:25px 0px;">Contact Us</h1>
+		<p> Complete the form below to get in
+            touch with us. We are ready to assist
+            you with help bring your vision to life. </p>
+			<br/> <br/>
         <form class="contactForm" id="myForm">
            <label> Name </label>
-          <input type="text" id="name" name="name" placeholder="Name" required>
+          <input type="text" id="name" name="name" placeholder="Name" spellcheck="true" required>
 		  
 		  <label> email </label>
-          <input type="email" id="email" name="email" placeholder="Email" required>
+          <input type="email" id="email" name="email" placeholder="Email" spellcheck="true" required>
 		  
 		  <label> message </label>
-          <textarea id="msg" name="msg" placeholder="message" placeholder="message" rows="6"required></textarea>
+          <textarea id="msg" name="msg" placeholder="message" placeholder="message" rows="6" spellcheck="true" required></textarea>
 		  
           <button type="submit"> Submit </button>
       </form>
