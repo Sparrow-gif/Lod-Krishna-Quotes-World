@@ -73,14 +73,14 @@
         width:0;
         position: fixed;
         z-index:999;
-        top: 0;
+        top: 45PX;
         right: 0;
-        background: rgba( 235, 242, 250, 0.25 );
+      /*  background: rgba( 235, 242, 250, 0.25 );
         -webkit-box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
                 box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
         backdrop-filter: blur( 4px );
-       -webkit-backdrop-filter: blur( 4px );
-      /*  background-color:#FFEAEC; */
+       -webkit-backdrop-filter: blur( 4px ); */
+        background-color:#FFFFFF; 
         overflow: scroll;
        -webkit-transition: 0.5s;
        -o-transition: 0.5s;
@@ -103,32 +103,29 @@
        -webkit-transition: 0.3s;
        -o-transition: 0.3s;
        transition: 0.3s;
-       margin-bottom:6px;
+       margin:6px 10px;
+	   border-radius:50px;
     }
 
-.sidenav a:hover{
-  color: #f1f1f1;
-  background:#2576e8;
-  -webkit-box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
-          box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
-}
- .sidenav > .active {
+   .sidenav a:hover{
+            color: #f1f1f1;
+            background:#2576e8;
+    }
+   .sidenav > .active {
           color: #f1f1f1;
           background:#6e0cf7;
-          -webkit-box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
-                  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
-        }
-.sidenav .closebtn {
-  position: absolute;
-  top:5px;
-  right: 10px;
-  font-size: 20px;
-  margin-left: 50px;
-  padding:-0px 12px;
-  background: #6e0cf7;
-  color:white;  
-  border-radius: ;
-}
+          }
+    .sidenav .closebtn {
+         position: absolute;
+         top:5px;
+         right: 10px;
+         font-size: 1.10rem;
+         margin-left: 50px;
+         padding:-0px 12px;
+         background: #6e0cf7;
+         color:white;  
+         border-radius:0px;
+     }
   #cold {
         display:-webkit-box;
         display:-ms-flexbox;
@@ -225,9 +222,10 @@
             border-top-right-radius:15px;
             min-height:650px;
             max-height:auto;
-            background: rgba( 255, 255, 255, 0.25 );
+			background:#FFFFFF;
+         /*   background: rgba( 255, 255, 255, 0.25 );
 		    backdrop-filter: blur( 4px );
-           -webkit-backdrop-filter: blur( 4px );
+           -webkit-backdrop-filter: blur( 4px );  */
             border-radius: 10px;
 			padding:20px 7px;
        }
