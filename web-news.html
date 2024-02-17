@@ -516,7 +516,8 @@
    <script>
           //navigation javascript
          function openNav() {
-         document.getElementById("mySidenav").style.width = "340px";
+         document.getElementById("mySidenav").style.minWidth = "320px";
+	 document.getElementById("mySidenav").style.maxWidth = "500px";
            }
          function closeNav() {
          document.getElementById("mySidenav").style.width = "0";
