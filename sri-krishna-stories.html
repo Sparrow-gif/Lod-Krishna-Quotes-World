@@ -68,14 +68,14 @@
         width:0;
         position: fixed;
         z-index:999;
-        top: 0;
+        top: 45px;
         right: 0;
-        background: rgba( 235, 242, 250, 0.25 );
+      /*  background: rgba( 235, 242, 250, 0.25 );
         -webkit-box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
                 box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
         backdrop-filter: blur( 4px );
-       -webkit-backdrop-filter: blur( 4px );
-      /*  background-color:#FFEAEC; */
+       -webkit-backdrop-filter: blur( 4px ); */
+        background-color:#FFFFFF; 
         overflow: scroll;
        -webkit-transition: 0.5s;
        -o-transition: 0.5s;
@@ -98,26 +98,24 @@
        -webkit-transition: 0.3s;
        -o-transition: 0.3s;
        transition: 0.3s;
-       margin-bottom:6px;
+       margin:4px 10PX;
+	   border-radius:50px;
     }
 
      .sidenav a:hover{
              color: #f1f1f1;
              background:#2576e8;
-            -webkit-box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
-             box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
-        }
- 
+         }
       .sidenav .closebtn {
              position: absolute;
              top:5px;
              right: 10px;
-             font-size: 20px;
+             font-size: 1.20rem;
              margin-left: 50px;
              padding:-0px 12px;
              background: #6e0cf7;
              color:white;  
-             border-radius: ;
+             border-radius:0px;
         }
   #cold {
         display:-webkit-box;
@@ -182,96 +180,7 @@
            }
       
 
-   #askqtn {
-       /*   background-image:url('') ;
-          background-size:cover;
-          background-position:center;
-          background-attachment:fixed;*/
-          margin:0 auto ;
-          padding:10px;
-          -webkit-user-select:none;
-             -moz-user-select:none;
-              -ms-user-select:none;
-                  user-select:none;
-          width:100% ;
-          height:auto;
-          background: ;/*#ede7d8*/
-       }
-   #askqtn > .accordion {
-         text-transform:capitalize;
-         background-color:#eee;
-         margin:10px auto;
-         color:#5E2BFF;
-         cursor: pointer;
-         padding: 18px;
-         width: 100%;
-         border:none;
-         border-radius:8px;
-         text-align: left;
-         outline: none;
-         -webkit-backdrop-filter:blur(20px) ;
-                 backdrop-filter:blur(20px) ;
-         font-size:16px;
-         -webkit-transition: 0.4s;
-         -o-transition: 0.4s;
-         transition: 0.4s;
-         -webkit-box-shadow: box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-                 box-shadow: box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-		 font-family: ;
-     }
- #askqtn > .accordion:hover {
-             background-color: #FFFCF2;
-             color: #FF5A5F;
-           }
-
-     .accordion:after {
-            content: '\002B';
-            color: #777;
-            font-weight: bold;
-            float: right;
-            margin-left: 5px;
-         }
-    .active:after {
-           content: "\2212";
-         }
-
-      .panel {
-           margin:0 auto;
-           width:100%;
-           padding: 0 10px;
-           background-color: #FAFFFD;
-           max-height: 0;
-           overflow: hidden;
-           -webkit-transition: max-height 0.2s ease-out;
-           -o-transition: max-height 0.2s ease-out;
-           transition: max-height 0.2s ease-out;
-           -webkit-box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
-                   box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
-           gap:20px;
-           display:-ms-grid;
-           display:grid;
-           grid-template-columns:repeat(auto-fit,minmax(min(26rem,100%),1fr)) ;
-           place-items: ;
-       }
-    .panel > iframe {
-            -webkit-box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
-                    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
-            aspect-ratio:1/0.55;
-            margin:8px 0px 6px 0px;
-            width:100%;
-            border-radius:8px;
-           }
-     .panel > p {
-            padding: 8px 10px;
-            color: ;
-            font-family:PT Sans ;
-            font-size: 14px;
-            min-height: ;
-            max-height: ;
-            overflow:auto ;
-               }
-     .panel > p::-webkit-scrollbar{ display:none; }
-
+  
 
 
     footer {
@@ -320,28 +229,9 @@
         outline:2px solid white; 
         text-transform:capitalize;
        }
-    #topButton {
-          display: none;
-          position: fixed;
-          bottom: 20px;
-          right: 20px;
-          background-color: #ff5400;
-          color: white;
-          border: none;
-          border-radius: 50%;
-          padding: 5px 10px;
-          font-size: 16px;
-          cursor: pointer;
-          z-index:1 ;
-          font-size:1.30rem;
-            }
-
-
+  
       @media only screen and (min-width: 480px) {
-        body {
-          background: ;
-          }
-        #askqtn { padding: 5% 5%; }
+       
      }
 	 
 	  @media only screen and (max-width:767px) { 
@@ -385,7 +275,7 @@
                 <div id="cold">
                     <a href="https://www.facebook.com/profile.php?id=100028875690917&mibextid=2JQ9oc" title="facebook" rel="noopener noreferrer"> <i class="fa-brands fa-facebook-f"></i> </a>
                     <a href="https://www.instagram.com/shri.krishna04?igsh=MXY5aWxnbGM0N293bw==" title="instagram" rel="noopener noreferrer"> <i class="fa-brands fa-instagram "></i> </a>
-                    <a href="https://t.me/paytm_cash_hub" rel="noopener noreferrer" title="twitter"> <i class="fa-brands fa-telegram" rel="noopener noreferrer"></i> </a>
+                    <a href="https://t.me/paytm_cash_hub" rel="noopener noreferrer" title="telegram"> <i class="fa-brands fa-telegram" rel="noopener noreferrer"></i> </a>
                     <a href="https://whatsapp.com/channel/0029VaNPC4QEVccDcycBlh0r" title="whatsapp" rel="noopener noreferrer"> <i class="fa-brands fa-whatsapp"></i> </a>
                     <a href="https://youtube.com/@Wings_dna?si=q_lyk1Tif5t1D-iJ" title="youtube" rel="noopener noreferrer"> <i class="fa-brands fa-youtube"></i> </a>                             
                </div>
@@ -414,181 +304,7 @@
           
       
        <!-----Main / Body--section------>
-       <main id="askqtn">
-                          <!-------accordion 01-------->
-             <button class="accordion"> the batting ceremony of Lord krishna </button>
-             <div class="panel">
-                 <iframe width="560" height="315" src="https://www.youtube.com/embed/1CcjCPzTr5Q?si=NtY2UDozEPPgIrTx&amp;start=60" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                 <p> In the enchanting town of Vrindavan, a divine betting ceremony unfolded as Lord Krishna engaged in playful activities with the cowherd boys. Amidst the lush meadows,
-     				 Krishna and his friends gathered to participate in a joyous betting game.
-                                <br/> <br/>
-                     Using flower petals as tokens, they wagered on various playful competitions—races, mock battles, and feats of strength. The air was filled with laughter and
-					 the melodious sounds of their merriment. Krishna, with his captivating charm, led the festivities, making every moment a celebration of camaraderie.
-                                  <br/> <br/>
-                     The cowherd boys, dressed in vibrant attire, joyfully placed their bets and cheered as the divine games unfolded. Each playful contest became an opportunity for 
-					 the supreme Lord to exhibit his extraordinary prowess and endearing playfulness.
-                                  <br/> <br/>
-                     As the sun dipped below the horizon, marking the end of the celestial ceremony, Lord Krishna, the ultimate victor, bestowed his divine grace upon the participants,
-					 leaving behind a trail of memories etched in the hearts of those fortunate enough to witness the enchanting spectacle.
-				</p>
-            </div>
-                       
-					   
-					   <!-------accordion 02-------->
-            <button class="accordion"> trnavarta defeated by shri krishna</button>
-            <div class="panel">
-                 <iframe width="560" height="315" src="https://www.youtube.com/embed/X9WbC8_Txhw?si=i-JhMeIfHspZKAhV&amp;start=60" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                 <p> Trinavarta was a powerful demon in the form of a whirlwind who was sent by the evil king Kansa to kill the infant Krishna. According to the Bhagavata Purana, a sacred Hindu text, 
-				     Trinavarta approached the baby Krishna, who was playing in the courtyard of his foster parents, Nanda and Yashoda.
-                             <br/> <br/>     
-                     Trinavarta picked up Krishna and flew high into the sky, intending to kill him by throwing him back to the ground. However, the divine infant Krishna grew heavy, and his 
-					 divine power overcame the demon. As a result, Trinavarta couldn't carry Krishna any longer and fell to the ground. In the process, the demon was killed, and Krishna emerged unharmed.
-				</p>
-           </div>
-                    
-					
-					<!-------accordion 03-------->
-            <button class="accordion"> krishna show wholl universe on his mouth </button>
-            <div class="panel">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/xGnOdLCP3Ec?si=aAkEWy9rMblJbQwW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                 <p> young Krishna was mischievous and would often engage in playful activities in the village of Vrindavan. In one incident, Yashoda, Krishna's mother, found him with a mouthful of mud. 
-				     Concerned for his well-being, she scolded him and asked him to open his mouth. When Krishna complied, Yashoda was astonished to see the entire universe, including mountains,  
-					 rivers, planets, and celestial beings, within his mouth.
-			    </p>
-           </div>
-
-                        <!-------accordion 04--------
-             <button class="accordion"> Bakasura killed </button>
-             <div class="panel">
-                 <video src="video.mp4" controls> Sorry your browser does not support embedding videos. </video>
-                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing eoris nisi ut aliquip ex ea commodo consequat.</p>
-            </div> --------------->
-			
-			
-                         <!-------accordion 05-------->
-            <button class="accordion"> killing of agasura </button>
-            <div class="panel">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/q-2Fl9eM5LU?si=wPN2dby2onTMYMcN&amp;start=60" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                 <p> Krishna, along with his friends, the cowherd boys, used to tend to the cows in the forests of Vrindavan. One day, they decided to take their lunch and rest near
-				     a beautiful riverbank. Unbeknownst to them, Aghasura had taken the form of a gigantic serpent and lay on the riverbank, with his mouth wide open like a cave.
-                                     <br/> <br/>
-                     The cowherd boys, unaware of the danger, entered Aghasura's mouth to explore what seemed like an interesting cave. Krishna, who knew the true identity of Aghasura,
-					 followed them inside. Once all the boys and Krishna were inside Aghasura's mouth, the demon closed his mouth, intending to devour them.
-                                    <br/> <br/>
-                     However, Krishna, being the Supreme Lord, expanded his divine form within the serpent's body, causing Aghasura's mouth to burst open. The force of the expansion 
-					 destroyed the demon from within, and Krishna emerged victorious. The cowherd boys and the animals trapped inside were unharmed.
-				</p>
-           </div>
-		   
-		   
-                           <!-------accordion 06-------
-            <button class="accordion"> bramha steals boys and calves </button>
-            <div class="panel">
-                 <video src="video.mp4" controls> Sorry your browser does not support embedding videos. </video>
-                 <p>t  ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-           </div>---------------------->
-
-
-
-                       <!-------accordion 07-------->
-             <button class="accordion"> krishna's dhenuka demon killing </button>
-             <div class="panel">
-               <iframe width="560" height="315" src="https://www.youtube.com/embed/hKSl-q-5hpY?si=7118qknf8iOPNTmg&amp;start=60" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                 <p> In the village of Vrindavan, where Lord Krishna spent his early years, there was a demon named Dhenuka. Dhenuka had the form of a powerful donkey and was in the service of Kansa, 
-				     a tyrannical king who sought to harm Krishna. Dhenuka, along with other demons, was sent to Vrindavan to disrupt the peaceful life of the villagers and harm Lord Krishna.
-                                     <br/> <br/>
-                     One day, as Krishna and his friends were playing in the forest, they decided to explore the beautiful gardens of the nearby forest named Talavana. The forest was known for its 
-					 delicious fruits, especially ripe and juicy berries. The trees in Talavana were occupied by the demon Dhenuka and his demon friends.
-                                     <br/> <br/>
-                     Undeterred by the danger, Krishna climbed one of the trees and began shaking it to release the ripe fruits. The commotion disturbed Dhenuka, who came charging towards Krishna with great rage. 
-					 However, Lord Krishna, with his divine strength and agility, easily dodged the demon's attacks and eventually caught him by the hind legs.
-                                     <br/> <br/>
-                     Krishna then whirled the donkey demon around and threw him onto a nearby tree. The impact of the throw was so powerful that it killed Dhenuka instantly. The other demons in the vicinity,
-					 witnessing the fate of their comrade, also attacked Krishna, but they too were defeated with ease. </p>
-            </div>
-                        
-
-						<!-------accordion 08-------->
-            <button class="accordion"> krishna lifts Govardhan hills  </button>
-            <div class="panel">
-                 <iframe src="https://www.youtube-nocookie.com/embed/PC4bpckXmgY?si=d6d6IGAE238oY1_3&amp;controls=0&amp;start=61" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                 <p> Once, the residents of Vrindavan, including Lord Krishna, were preparing for a grand worship ceremony dedicated to Lord Indra, the god of rain. They believed that
-				     offering prayers and sacrifices to Indra would ensure good rains and a prosperous harvest. However, Krishna, being the wise and compassionate avatar of Lord Vishnu,
-					 suggested that they should instead worship Govardhan Hill, which provided them with abundant resources and sustenance.
-                                    <br/> <br/>
-                     This suggestion angered Lord Indra, who felt ignored and disrespected. In his fury, he sent a torrential downpour to punish the people of Vrindavan. The rain became so 
-					 intense that it posed a threat to the lives and homes of the residents.
-                                  <br/> <br/>
-                     In response to this crisis, Lord Krishna, displaying his divine powers, lifted the entire Govardhan Hill with his little finger and held it like an umbrella to
-					 shield the people and the livestock from the rain. For seven days and seven nights, Krishna held the hill aloft, providing a shelter for the entire community.
-                                    <br/> <br/>
-                     Witnessing Krishna's extraordinary feat, the people of Vrindavan realized his divine nature and the futility of their previous worship of Indra. Eventually,
-					 Lord Indra acknowledged his mistake and the supremacy of Lord Krishna. He stopped the rain, and the people of Vrindavan returned to their homes. 
-				</p>
-           </div>
-                       
-
-					   <!-------accordion 09-------->
-            <button class="accordion"> krishna saves nanda </button>
-            <div class="panel">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/q6P6_g-GIaM?si=p69HmiYcZuqTix4p&amp;start=60" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                 <p> According to the Bhagavata Purana, a sacred Hindu scripture, the serpent Kaliya had polluted the Yamuna River, making it poisonous. Krishna, who was just a young boy at the time,
-				     danced on the serpent's many hoods and eventually subdued Kaliya. The serpent's wives prayed to Krishna to spare Kaliya's life, and Krishna, in his mercy, 
-				     released the serpent with a promise that Kaliya would leave the Yamuna and go to the ocean.
-			   </p>
-           </div>
-                         
-
-						 <!-------accordion 10-------->
-             <button class="accordion"> krishna slays shankachuda </button>
-             <div class="panel">
-               <iframe width="560" height="315" src="https://www.youtube.com/embed/mAlobL3E8UE?si=a2Fv6AQuriCBUdrY&amp;start=60" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                 <p> Shankachuda was a powerful demon who had gained a boon of invincibility from Lord Shiva. According to the legends, Shankachuda was originally a celestial being named
-      				 Sudarshana who, due to a curse, was born as a demon.
-                                 <br/> <br/>
-                    Shankachuda performed severe penance and pleased Lord Shiva, who granted him a boon of invincibility, stating that only a person wearing the flower born from the body
-					of Lord Shiva himself could defeat him. This made Shankachuda almost indestructible, as he believed that no one possessed such a flower.
-                                  <br/> <br/>
-                    Meanwhile, on earth, there was a devotee of Lord Shiva named Tulsi (or sometimes referred to as Brinda). She was married to Shankachuda, unaware of his demonic nature.
-					She was a devoted wife and worshiped Lord Vishnu with utmost sincerity.
-                                 <br/> <br/>
-                    Lord Vishnu, knowing the plight of Tulsi and the danger Shankachuda posed, decided to intervene. He took the form of Mohini, an enchanting and beautiful woman,
-					to distract Shankachuda. In the process, Mohini plucked a flower from her own hair and threw it into the air. This flower transformed into the Sudarshana Chakra 
-					(the divine discus of Lord Vishnu), which severed Shankachuda's head, ultimately defeating him.
-                                  <br/> <br/>
-                   After the battle, Shankachuda's true celestial form was restored, and he was liberated from the curse.
-		    	</p>
-            </div>
-                     
-
-					 <!-------accordion 11-------->
-            <button class="accordion"> the killing of keshi </button>
-            <div class="panel">
-                 <iframe src="https://www.youtube-nocookie.com/embed/SNX_-17qcCU?si=8pM-rG-o6F91WrMR&amp;controls=0&amp;start=64" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> 
-                 <p> Keshi was a powerful demon in the form of a horse, sent by the wicked king Kamsa to kill Krishna. Kansa was aware of the prophecy that predicted his
-       				 demise at the hands of Krishna, so he continuously attempted to eliminate Krishna.
-                                <br/> <br/>
-                     When Keshi arrived in Vrindavan in the form of a fierce horse, he created terror among the residents. Lord Krishna, however, fearlessly confronted Keshi. In the epic 
-					 confrontation, Krishna skillfully approached Keshi and eventually thrust his arm into the demon's mouth. Instead of being harmed, Krishna expanded his size, causing 
-					 the demon's body to explode from the inside.
-				</p>
-           </div>
-                     
-
-					 <!-------accordion 12-------->
-            <button class="accordion"> krishna defeats vyomasura </button>
-            <div class="panel">
-               <iframe width="560" height="315" src="https://www.youtube.com/embed/Lq-_HJCrRvs?si=ch79WWR9SAn0bz1b" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                 <p> According to the mythology, Vyomasura had the ability to fly and would create chaos by abducting children. In one instance, 
-				     Vyomasura kidnapped Krishna's friends and took them to the sky. Lord Krishna, being the divine avatar of Lord Vishnu, 
-					 confronted Vyomasura to rescue his friends and defeat the demon.
-                                  <br/> <br/>
-                     In the battle that ensued, Krishna eventually killed Vyomasura by striking him with his divine weapon. The exact details of the story may 
-					 vary in different retellings, but the common theme is the triumph of good (Krishna) over evil (Vyomasura) and the rescue of the abducted children.
-				</p>
-           </div>
-
-     </main>
+      
        
 
        
@@ -606,15 +322,12 @@
     <div class="sneha">
         <a href="about-us.html" target="_self"><p> Terms & privacy </p></a>
         <a href="about-us.html" target="_self"><p> policy </p></a>
-        <a href="about-us.html" target="_self"><p> 2023® </p></a>
-        <a href="about-us.html" target="_self"><p> Food-factory LLC</p></a>
+		<a href="about-us.html" target="_self"><p> sitemap </p></a>
+        <a href="about-us.html" target="_self"><p> 2024® </p></a>
+       
    </div>
   </footer>
      
-        <!----Go To Top Button------>
-     <button id="topButton"> <i class="fa-solid fa-arrow-up"></i> </button>
-
-
    <script>
           //navigation javascript
          function openNav() {
@@ -624,22 +337,7 @@
          document.getElementById("mySidenav").style.width = "0";
            } ;
 
-          /* Go To Top Button */
-
-      window.onscroll = function () {
-  if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
-    document.getElementById("topButton").style.display = "block";
-  } else {
-    document.getElementById("topButton").style.display = "none";
-  }
-};
-
-    // Scroll to the top when the button is clicked
-
-document.getElementById("topButton").addEventListener("click", function () {
-  document.body.scrollTop = 0;
-  document.documentElement.scrollTop = 0;
-});
+         
       //change Navigation background
    window.addEventListener('scroll', function() {
        const navbar = document.getElementById('navbar');
@@ -652,20 +350,6 @@ document.getElementById("topButton").addEventListener("click", function () {
      }
   });
 
-         var acc = document.getElementsByClassName("accordion");
-         var i;
-
-for (i = 0; i < acc.length; i++) {
-  acc[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var panel = this.nextElementSibling;
-    if (panel.style.maxHeight) {
-        panel.style.maxHeight = null;
-    } else {
-      panel.style.maxHeight = panel.scrollHeight + "px";
-    } 
-  });
-};
    </script>
    </body>
 </html>
