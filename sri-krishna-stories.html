@@ -179,7 +179,46 @@
           border:1px none #FFFFFF; */
            }
       
-
+    .container {
+         display: flex;
+         flex-wrap: wrap;
+         justify-content: center;
+     }
+  
+  .image-card {
+    margin: 10px;
+    min-width: 340px;
+	max-width:450px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .image-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .image-card .buttons {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f0f0f0;
+  }
+  
+  .image-card .buttons button {
+    border: none;
+    cursor: pointer;
+    background: none;
+  }
+  
+  .like-counter {
+    display: inline-block;
+    margin-left: 5px;
+  }
   
 
 
@@ -302,9 +341,77 @@
           <!-- Add more items as needed -->
        </nav>
           
+		  
       
        <!-----Main / Body--section------>
-      
+         <div class="container">
+  <figure class="image-card">   <!----IMAGE-CARD 01--->
+    <img src="https://via.placeholder.com/300" alt="Placeholder Image"> 
+    <figcaption class="buttons">
+      <button class="like-btn">Like</button>
+      <span class="like-counter">0</span>
+      <a href="https://via.placeholder.com/300" download>
+        <button class="download-btn">Download</button>
+      </a>
+    </figcaption>
+  </figure>
+  
+  <figure class="image-card">   <!----IMAGE-CARD 02--->
+    <img src="https://via.placeholder.com/300" alt="Placeholder Image"> 
+    <figcaption class="buttons">
+      <button class="like-btn">Like</button>
+      <span class="like-counter">0</span>
+      <a href="https://via.placeholder.com/300" download>
+        <button class="download-btn">Download</button>
+      </a>
+    </figcaption>
+  </figure>
+  
+  <figure class="image-card">   <!----IMAGE-CARD 03--->
+    <img src="https://via.placeholder.com/300" alt="Placeholder Image"> 
+    <figcaption class="buttons">
+      <button class="like-btn">Like</button>
+      <span class="like-counter">0</span>
+      <a href="https://via.placeholder.com/300" download>
+        <button class="download-btn">Download</button>
+      </a>
+    </figcaption>
+  </figure>
+  
+  <figure class="image-card">   <!----IMAGE-CARD 04--->
+    <img src="https://via.placeholder.com/300" alt="Placeholder Image"> 
+    <figcaption class="buttons">
+      <button class="like-btn">Like</button>
+      <span class="like-counter">0</span>
+      <a href="https://via.placeholder.com/300" download>
+        <button class="download-btn">Download</button>
+      </a>
+    </figcaption>
+  </figure>
+  
+  <figure class="image-card">   <!----IMAGE-CARD 05--->
+    <img src="https://via.placeholder.com/300" alt="Placeholder Image"> 
+    <figcaption class="buttons">
+      <button class="like-btn">Like</button>
+      <span class="like-counter">0</span>
+      <a href="https://via.placeholder.com/300" download>
+        <button class="download-btn">Download</button>
+      </a>
+    </figcaption>
+  </figure>
+  
+  <figure class="image-card">   <!----IMAGE-CARD 06--->
+    <img src="https://via.placeholder.com/300" alt="Placeholder Image"> 
+    <figcaption class="buttons">
+      <button class="like-btn">Like</button>
+      <span class="like-counter">0</span>
+      <a href="https://via.placeholder.com/300" download>
+        <button class="download-btn">Download</button>
+      </a>
+    </figcaption>
+  </figure>
+  <!-- Add more figures as needed -->
+</div>
        
 
        
@@ -331,7 +438,7 @@
    <script>
           //navigation javascript
          function openNav() {
-         document.getElementById("mySidenav").style.width = "340px";
+         document.getElementById("mySidenav").style.width = "360px";
            }
          function closeNav() {
          document.getElementById("mySidenav").style.width = "0";
@@ -350,6 +457,14 @@
      }
   });
 
+           // JavaScript for like functionality
+  document.querySelectorAll('.like-btn').forEach(button => {
+    let counter = button.parentElement.querySelector('.like-counter');
+    button.addEventListener('click', () => {
+      let count = parseInt(counter.textContent);
+      counter.textContent = count + 1;
+    });
+  });
    </script>
    </body>
 </html>
