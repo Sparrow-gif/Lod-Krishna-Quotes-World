@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en"> <!--Roboto--Cabin--Open Sans--Lato---Montserrat--Quicksand---PT Sans--Playfair--Display--Domine---->
+<html> <!--Roboto--Cabin--Open Sans--Lato---Montserrat--Quicksand---PT Sans--Playfair--Display--Domine---->
 <head>
   <meta charset="utf-8"/>
   <base href="#">
@@ -7,22 +7,25 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cabin&family=Domine:wght@400;500;600&family=Lato:wght@300;400&family=Montserrat:wght@200;300;400&family=Open+Sans:wght@300;400;600&family=PT+Sans:ital@0;1&family=Playfair+Display:wght@400;500&family=Quicksand:wght@300;400;500&family=Roboto:wght@300;400&display=swap" rel="stylesheet">     
   <link rel="icon" type="image/x-icon" href="favicon.jpeg">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="robots" content="nofollow, noarchive">	
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+  <meta name="robots" content="noindex, nofollow, noarchive">
   <meta name="keywords" content="Discount store, Bargain deals, Budget-friendly shopping, Markdowns, Savings shop, Sale items">
   <meta name="description" content="Discover unbeatable savings at our discount shop! Explore a wide range of products and learn how to get exclusive discounts on your favorite items. Dive into a world of budget-friendly shopping and uncover incredible deals. Start saving today – explore, discover, and get more for less at our discount shop!">
   <title> Low Price Wonderland: Explore Affordable Finds for Everything You Need! </title>
-<style>
+  <link rel="canonical" href="https://www.yourwebsite.com/discount-Offers"/>
+    <style>
      * {
           margin:0px;
           padding:0px;
           -webkit-box-sizing:border-box;
           box-sizing:border-box;
           font-family: Roboto;
-          text-transform:capitalize;     
-	  user-select:none;
+          text-transform:capitalize;                     
         }  
  header {
        display:-webkit-box;
@@ -63,20 +66,20 @@
       transition-duration:0.3s;
      text-shadow: 1px 1px 3px #666666;
       }
-   .sidenav {
+  .sidenav {
         height:100vh;
         width:0;
         width:0;
         position: fixed;
         z-index:999;
-        top: 0;
+        top: 45PX;
         right: 0;
-        background: rgba( 235, 242, 250, 0.25 );
+      /*  background: rgba( 235, 242, 250, 0.25 );
         -webkit-box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
                 box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
         backdrop-filter: blur( 4px );
-       -webkit-backdrop-filter: blur( 4px );
-      /*  background-color:#FFEAEC; */
+       -webkit-backdrop-filter: blur( 4px ); */
+        background-color:#FFFFFF; 
         overflow: scroll;
        -webkit-transition: 0.5s;
        -o-transition: 0.5s;
@@ -89,7 +92,7 @@
        -webkit-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;    
                box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
      }
-
+	.sidenav::-webkit-scrollbar { display:none;}
 .sidenav a {
        padding: 15px ;
        text-decoration: none;
@@ -99,32 +102,29 @@
        -webkit-transition: 0.3s;
        -o-transition: 0.3s;
        transition: 0.3s;
-       margin-bottom:6px;
+       margin:6px 10px;
+	   border-radius:50px;
     }
 
-.sidenav a:hover{
-  color: #f1f1f1;
-  background:#2576e8;
-  -webkit-box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
-          box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
-}
- .sidenav > .active {
+   .sidenav a:hover{
+            color: #f1f1f1;
+            background:#2576e8;
+    }
+   .sidenav > .active {
           color: #f1f1f1;
           background:#6e0cf7;
-          -webkit-box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
-                  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
-        }
-.sidenav .closebtn {
-  position: absolute;
-  top:5px;
-  right: 10px;
-  font-size: 20px;
-  margin-left: 50px;
-  padding:-0px 12px;
-  background: #6e0cf7;
-  color:white;  
-  border-radius: ;
-}
+          }
+    .sidenav .closebtn {
+         position: absolute;
+         top:5px;
+         right: 10px;
+         font-size: 1.10rem;
+         margin-left: 50px;
+         padding:-0px 12px;
+         background: #6e0cf7;
+         color:white;  
+         border-radius:0px;
+     }
   #cold {
         display:-webkit-box;
         display:-ms-flexbox;
@@ -141,6 +141,8 @@
         padding:10px 15px;
         border-radius:50%;
      }
+	 
+	 
    .scroll-container {
         width: 100%;
         overflow-x: auto;
@@ -206,140 +208,65 @@
        font-family: ;
 	  }
 
-#searchBtn {
-  position: absolute;
-  top: 50%;
-  right:5%;
-  -webkit-transform:translate(-50%,-50%) ;
-      -ms-transform:translate(-50%,-50%) ;
+    #searchBtn {
+          position: absolute;
+          top: 50%;
+          right:5%;
+         -webkit-transform:translate(-50%,-50%) ;
+         -ms-transform:translate(-50%,-50%) ;
           transform:translate(-50%,-50%) ;
-  padding: 7px 5px;
-  border: none;
-  background: none;
-  cursor: pointer;
-  width:0%;
-  color:white;
-}
+          padding: 7px 5px;
+          border: none;
+          background: none;
+          cursor: pointer;
+          width:0%;
+          color:white;
+    }
 
  
-     #section {
-       position:relative;       
-       margin:0 ;
-       padding:10px;
-       background: ;
-       gap:10px;
-       display:-ms-grid;
-       display:grid;
-       grid-template-columns:repeat(auto-fit,minmax(min(20rem,100%),1fr)) ;
-       text-transform:capitalize;
-      }
-    .product-card {
-          -webkit-box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-                  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-          border: ;
-          font-family: ;
-          background:#FFFFFA ;
-          border-radius: 8px;
-          padding: 20px;
-          margin:10px auto;
-          width:90%;
-		/*  max-height:480px;  */
-		  overflow:hidden;
-          text-align: center;
-          -webkit-transition: -webkit-transform 0.3s ease, -webkit-box-shadow 0.3s ease;
-          transition: -webkit-transform 0.3s ease, -webkit-box-shadow 0.3s ease;
-          -o-transition: transform 0.3s ease, box-shadow 0.3s ease;
-          transition: transform 0.3s ease, box-shadow 0.3s ease;
-          transition: transform 0.3s ease, box-shadow 0.3s ease, -webkit-transform 0.3s ease, -webkit-box-shadow 0.3s ease;
-          text-transform:capitalize;
-          }
-	 .product-card::-webkit-scrollbar{ display:none;}
-     .product-card > h2 { 
-	            text-transform:capitalize; 
-		        color:#eb3461;
-		        font-size:16px ;
-                font-family: ;
-	                  }
-					  
-	     .product-card > #Des {
-	             height: ;
- 		         -o-text-overflow: ellipsis;
- 		            text-overflow: ellipsis;  
-                 overflow:hidden;
-                 width:auto;
-                 white-space:wrap;
-	             color: ;
-                 font-family: ;
-				 font-size:12px ;
-	          }
-       .product-card > #Des:hover { overflow:visible; }
-	  
-	  #Des::-webkit-scrollbar{ display: noe;}
-	  
-    .product-card img {
-         width: 80%;
-         aspect-ratio:1/1.10;
-         border-radius: 8px;
-         margin: 10px auto;
-         background-position:center;
-         -webkit-transition: -webkit-transform 0.3s ease;
-         transition: -webkit-transform 0.3s ease;
-         -o-transition: transform 0.3s ease;
-         transition: transform 0.3s ease;
-         transition: transform 0.3s ease, -webkit-transform 0.3s ease;
-       }
-
-     .product-card .price {
-           font-weight: ;
-           color: #2ecc71;
-           font-family: ;
-       }
-
-  .product-card > button {
-           -webkit-box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
-                   box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
-           background-color: #2ecc71;
-           color: white;
-           border: none;
-           border-radius: 4px;
-           padding: 8px 16px;
-           font-size: ;
-           font-family: ;
-           cursor: pointer;
-           -webkit-transition-duration: 0.3s;
-                -o-transition-duration: 0.3s;
-                   transition-duration: 0.3s;
-           text-shadow: 1px 1px 3px #666666; 
-           text-transform:capitalize;
-      }
-  .product-card > button > a {
-        text-decoration:none;
-        color:white;
-        font-family: ;
-        font-weight: ;
-      } 
-  .product-card  button:active {
-              background-color: #27ae60;
-              -webkit-transform: scale(0.90);
-                  -ms-transform: scale(0.90);
-                      transform: scale(0.90);
+        .gallery {
+             display: flex;
+             flex-wrap: wrap;
+             justify-content: center;
+             gap: 20px;
+             padding: 0;
          }
-
-      /* Animation and Glow Effect */
-        .product-card:hover {
-              -webkit-transform: scale(1.05);
-                  -ms-transform: scale(1.05);
-                      transform: scale(1.05);
-              -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-                      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-        }
-
-      .product-card img:hover {
-             -webkit-transform: scale(1.1);
-                 -ms-transform: scale(1.1);
-                     transform: scale(1.1);
+  
+    .gallery-item {
+            position: relative;
+            width: 160px; /* Fixed width for each item */
+            height: 180px; /* Fixed height for each item */
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+       }
+  
+   .gallery-item img {
+           width: 100%;
+           height: 100%;
+           display: block;
+           transition: transform 0.3s ease-in-out;
+           object-fit: cover;
          }
-
+  
+  .gallery-item:hover img {
+    transform: scale(1.05);
+  }
+  
+  .price-button {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: #ff5a5f;
+    color: white;
+    padding: 5px 10px;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    font-size: 12px;
+  }
+ 
+   
     footer {
          margin:0 auto;
          background:#122029;
@@ -419,6 +346,14 @@
 		   
 		     @media only screen and (max-width:690px) { 
 	              .search-container { width: 310px ; }
+				   .gallery-item {
+                          position: relative;
+                          width: 160px; /* Fixed width for each item */
+                          height: 160px; /* Fixed height for each item */
+                          overflow: hidden;
+                          border-radius: 8px;
+                          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                    }
 	  }
 	  
 	  
@@ -427,14 +362,12 @@
 				   margin:0 auto;
 				   width:90%;
 				 }
-               #section  {
-			       gap:10px;
-                  display:-ms-grid;
-                  display:grid;
-                  grid-template-columns:repeat(auto-fit,minmax(min(16rem,100%),1fr)) ;
-	          }
+              .gallery-item {
+                          position: relative;
+                          width: 220px; /* Fixed width for each item */
+                          height: 220px; 
+						  }
 	   }
-	   
 	   @media only screen and (min-width:992px) { 
 		       html {
 	                 margin:0 auto;
@@ -453,16 +386,16 @@
                 <a href="blog-videos.html" target="_self" > Blogs </a>
                 <a href="poem-sonnet-poetry.html" target="_self" > Poetry </a>			                                
                 <a href="web-news.html" target="_self"> web news </a>
-                <a href="https://www.amazon.in" rel="noopener noreferrer" target="_blank"> e-commerce </a>
-                <a href="https://www.sportskeeda.com" rel="noopener noreferrer" target="_blank"> cricket </a>
-		<a href="health-advice.html" target="_self" > health </a> 
+                <a href="https://www.amazon.in" target="_blank"> Life-Style </a>
+                <a href="https://www.sportskeeda.com" target="_blank"> cricket </a>
+				<a href="health-advice.html" target="_seif" > health </a> 
                 <a href="contact-us.html" target="_self" >Contact us</a>
                 <div id="cold">
-                    <a href="https://www.facebook.com/profile.php?id=100028875690917&mibextid=2JQ9oc" title="facebook" rel="noopener noreferrer"> <i class="fa-brands fa-facebook-f"></i> </a>
-                    <a href="https://www.instagram.com/shri.krishna04?igsh=MXY5aWxnbGM0N293bw==" title="instagram" rel="noopener noreferrer"> <i class="fa-brands fa-instagram "></i> </a>
-                    <a href="https://t.me/paytm_cash_hub" rel="noopener noreferrer" title="twitter"> <i class="fa-brands fa-telegram" rel="noopener noreferrer"></i> </a>
-                    <a href="https://whatsapp.com/channel/0029VaNPC4QEVccDcycBlh0r" title="whatsapp" rel="noopener noreferrer"> <i class="fa-brands fa-whatsapp"></i> </a>
-                    <a href="https://youtube.com/@Wings_dna?si=q_lyk1Tif5t1D-iJ" title="youtube" rel="noopener noreferrer"> <i class="fa-brands fa-youtube"></i> </a>                                 
+                      <a href="https://www.facebook.com/profile.php?id=100028875690917&mibextid=2JQ9oc" title="facebook" rel="noopener noreferrer"> <i class="fa-brands fa-facebook-f"></i> </a>
+                      <a href="https://www.instagram.com/shri.krishna04?igsh=MXY5aWxnbGM0N293bw==" title="instagram" rel="noopener noreferrer"> <i class="fa-brands fa-instagram "></i> </a>
+                      <a href="https://t.me/paytm_cash_hub" rel="noopener noreferrer" title="twitter"> <i class="fa-brands fa-telegram" rel="noopener noreferrer"></i> </a>
+                      <a href="https://whatsapp.com/channel/0029VaNPC4QEVccDcycBlh0r" title="whatsapp" rel="noopener noreferrer"> <i class="fa-brands fa-whatsapp"></i> </a>
+                      <a href="https://youtube.com/@Wings_dna?si=q_lyk1Tif5t1D-iJ" title="youtube" rel="noopener noreferrer"> <i class="fa-brands fa-youtube"></i> </a>                                
                </div>
           </div>
                 <h2 title="logo"> Quotes World  </h2>
@@ -471,16 +404,14 @@
 
          <nav class="scroll-container" title="scroll bar">
                <a class="scroll-item" href="motivational-quotes.html" target="_self"> Daily Quotes </a>     
-               <a class="scroll-item" href="index.html" target="_self"> wishdom </a>
-               <a class="scroll-item" href="sri-krishna-stories.html" target="_self"> Karma </a>
+               <a class="scroll-item" href="index.html" target="_self"> K.Quotes </a>
+               <a class="scroll-item" href="sri-krishna-stories.html" target="_self"> K.Stories </a>
                <a class="scroll-item" href="blog-videos.html" target="_self"> blogs </a>
                <a class="scroll-item" href="poem-sonnet-poetry.html" target="_self"> poetry </a>               
                <a class="scroll-item" href="best-educational-websites.html" target="_self"> education </a>
                <a class="scroll-item" href="best-mobile-games.html" target="_self"> games </a>
                <a class="scroll-item" id="active" href="discount-deals.html" target="_self"> loot Offers </a>    
                <a class="scroll-item" href="movie-sites.html" target="_self"> Movies </a>                                        
-               <a class="scroll-item" href="https://www.amazon.in" target="_blank"> Life-Style </a>
-               <a class="scroll-item" href="https://www.sportskeeda.com" target="_blank"> cricket </a>
                <a class="scroll-item" href="health-advice.html" target="_self"> health </a>
                <a class="scroll-item" href="web-news.html" target="_self"> web news </a>                
                <a class="scroll-item" href="#" target="_self" onclick="notevel()"> More...</a>
@@ -493,125 +424,96 @@
 
      <div class="search-container" title="search">
          <input type="search" id="searchInput" placeholder="Search products">
-         <button for="search" id="searchBtn" class="fa fa-search" title="searchBtn" name="searchBtn"></button>
+         <button for="search" id="searchBtn" class="fa fa-search"></button>
     </div>
 
-
-           <!-----Main Body------>
-        <section id="section">
-                        
-    <!----productp01-------->
-               <div data-name="shoes" class="product-card" id="pcard">
-                   <img src="LOOT/LOOT1.jpg" alt="Product Image" loading="lazy">
-                   <h2> Oneshine Chunky sole pink sneakers </h2>
-                   <p class="price"> price- ₹400 </p>
-                   <p id="Des"> 
-                        a pair of casual sneaker made with high quality synthetic leather thar ensure 
-		        comfort throughout the day and avoid any breakage.these are your everyday pair 
-                        of sneakers with added comfort.								
-                  </p>
-                   <button><a href="#" rel="noopener noreferrer"> Add to Cart </a></button>
-              </div>
-     <!----productp02-------->
-               <div data-name="shoes" class="product-card" id="pcard">
-                   <img src="LOOT/LOOT2.jfif" alt="Product Image" loading="lazy">
-                   <h2> Oneshine Chunky sole pink sneakers </h2>
-                   <p class="price"> price- ₹495 </p>
-                   <p id="Des"> 
-                        a pair of round toe sneakers having regular styling lace-up details.								
-                  </p>
-                   <button><a href="https://rapidbox.in/s/R13814669P40283" rel="noopener noreferrer"> Add to Cart </a></button>
-              </div>
-     <!----productp03-------->
-                <div data-name="shoes" class="product-card" id="pcard">
-                   <img src="LOOT/LOOT3.jfif" alt="Product Image" loading="lazy">
-                   <h2> Oneshine Chunky sole pink sneakers </h2>
-                   <p class="price"> price- ₹390 </p>
-                   <p id="Des"> 
-                        a pair of casual sneaker made with high quality synthetic leather thar ensure 
-		                a very long life and avoids any breakage or issues like pasting separation .this is your everyday pair 
-                        of sneakers with added comfort.								
-                  </p>
-                   <button><a href="https://rapidbox.in/s/R13814669P39494" rel="noopener noreferrer"> Add to Cart </a></button>
-              </div>
-     <!----productp04------->
-               <div data-name="shoes" class="product-card" id="pcard">
-                   <img src="LOOT/LOOT4.jfif" alt="Product Image" loading="lazy">
-                   <h2> Oneshine Chunky sole pink sneakers </h2>
-                   <p class="price"> price- ₹595 </p>
-                   <p id="Des"> 
-                        a pair of round toe sneakers having regular styling lace-up details.							
-                  </p>
-                   <button><a href="https://rapidbox.in/s/R13814669P39071" rel="noopener noreferrer"> Add to Cart </a></button>
-              </div>
-			  
-   <!----productp05------->
-               <div data-name="ladies-tshirt" class="product-card" id="pcard">
-                   <img src="LOOT/LOOT5.jfif" alt="Product Image" loading="lazy">
-                   <h2> Oneshine Chunky sole pink sneakers </h2>
-                   <p class="price"> price- ₹330 </p>
-                   <p id="Des"> 
-                       printed t-shirt, has a round neck, haif sleeve.							
-                  </p>
-                   <button><a href="https://rapidbox.in/s/R13814669P40533" rel="noopener noreferrer"> Add to Cart </a></button>
-              </div>
-			  
-   <!----productp06------->
-               <div data-name="man-tshirt" class="product-card" id="pcard">
-                   <img src="LOOT/LOOT6.jfif" alt="Product Image" loading="lazy">
-                   <h2> Oneshine Chunky sole pink sneakers </h2>
-                   <p class="price"> price- ₹385 </p>
-                   <p id="Des"> 
-                         this over size t-shirt is sure to make you not just feel good but look good as well. it ensures a long lasting comfort.							
-                  </p>
-                   <button><a href="https://rapidbox.in/s/R13814669P41305" rel="noopener noreferrer"> Add to Cart </a></button>
-              </div>
-			  
-	<!----productp7------->
-               <div data-name="ladies-tshirt" class="product-card" id="pcard">
-                   <img src="LOOT/LOOT7.jfif" alt="Product Image" loading="lazy">
-                   <h2> Oneshine Chunky sole pink sneakers </h2>
-                   <p class="price"> price- ₹350 </p>
-                   <p id="Des"> 
-                        printed t-shirt, has a round neck, haif sleeve.								
-                  </p>
-                   <button><a href="https://rapidbox.in/s/R13814669P40550" rel="noopener noreferrer"> Add to Cart </a></button>
-              </div>
-			  
-	<!----productp8------->
-               <div data-name="man-tshirt" class="product-card" id="pcard">
-                   <img src="LOOT/LOOT8.jfif" alt="Product Image" loading="lazy">
-                   <h2> Oneshine Chunky sole pink sneakers </h2>
-                   <p class="price"> price- ₹405 </p>
-                   <p id="Des"> 
-                      this over size t-shirt is sure to make you not just feel good but look good as well. it ensures a long lasting comfort. 							
-                  </p>
-                   <button><a href="https://rapidbox.in/s/R13814669P41299" rel="noopener noreferrer"> Add to Cart </a></button>
-              </div>
-			  
-	<!----productp9------->
-               <div data-name="ladies-tshirt" class="product-card" id="pcard">
-                   <img src="LOOT/LOOT9.jfif" alt="Product Image" loading="lazy">
-                   <h2> Oneshine Chunky sole pink sneakers </h2>
-                   <p class="price"> price- ₹340 </p>
-                   <p id="Des"> 
-                       printed t-shirt, has a round neck, haif sleeve.							
-                  </p>
-                   <button><a href="https://rapidbox.in/s/R13814669P40548" rel="noopener noreferrer"> Add to Cart </a></button>
-              </div>
-			  
-	<!----productp10------->
-               <div data-name="man-tshirt" class="product-card" id="pcard">
-                   <img src="LOOT/LOOT10.jfif" alt="Product Image" loading="lazy">
-                   <h2> Oneshine Chunky sole pink sneakers </h2>
-                   <p class="price"> price- ₹490 </p>
-                   <p id="Des"> 
-                       the integration of trend-setting designs,styles,attractive & eye-catching colors, together make this sweatshirt look apart 
-                       from the other brand.					   
-                  </p>
-                   <button><a href="https://rapidbox.in/s/R13814669P40853" rel="noopener noreferrer"> Add to Cart </a></button>
-              </div>
-       </section>
+      <!-----Main Body------>              
+        <section class="gallery" id="gallery">
+                  <article class="gallery-item" data-name="shoes" id="pcard">   <!------PRODUCT 01--------->
+                      <a href="image1.jpg" target="_blank">
+                          <img src="image1-thumbnail.jpg" alt="Image 1">
+                     </a>
+                      <a href="#" class="price-button">$19.99</a>
+                </article>
+				
+                 <article class="gallery-item" data-name="shoes" id="pcard">    <!------PRODUCT 01--------->
+                     <a href="image2.jpg" target="_blank">
+                        <img src="image2-thumbnail.jpg" alt="Image 2">
+                    </a>
+                     <a href="#" class="price-button">$24.99</a>
+               </article>
+			   
+			    <article class="gallery-item" data-name="shoes" id="pcard">   <!------PRODUCT 02--------->
+                      <a href="image1.jpg" target="_blank">
+                          <img src="image1-thumbnail.jpg" alt="Image 1">
+                     </a>
+                      <a href="#" class="price-button">$19.99</a>
+                </article>
+				
+                 <article class="gallery-item" data-name="shoes" id="pcard">    <!------PRODUCT 03--------->
+                     <a href="image2.jpg" target="_blank">
+                        <img src="image2-thumbnail.jpg" alt="Image 2">
+                    </a>
+                     <a href="#" class="price-button">$24.99</a>
+               </article>
+			   
+			    <article class="gallery-item" data-name="shoes" id="pcard">   <!------PRODUCT 04--------->
+                      <a href="image1.jpg" target="_blank">
+                          <img src="image1-thumbnail.jpg" alt="Image 1">
+                     </a>
+                      <a href="#" class="price-button">$19.99</a>
+                </article>
+				
+                 <article class="gallery-item" data-name="shoes" id="pcard">    <!------PRODUCT 05--------->
+                     <a href="image2.jpg" target="_blank">
+                        <img src="image2-thumbnail.jpg" alt="Image 2">
+                    </a>
+                     <a href="#" class="price-button">$24.99</a>
+               </article>
+			   
+			    <article class="gallery-item" data-name="shoes" id="pcard">   <!------PRODUCT 06--------->
+                      <a href="image1.jpg" target="_blank">
+                          <img src="image1-thumbnail.jpg" alt="Image 1">
+                     </a>
+                      <a href="#" class="price-button">$19.99</a>
+                </article>
+				
+                 <article class="gallery-item" data-name="shoes" id="pcard">    <!------PRODUCT 07--------->
+                     <a href="image2.jpg" target="_blank">
+                        <img src="image2-thumbnail.jpg" alt="Image 2">
+                    </a>
+                     <a href="#" class="price-button">$24.99</a>
+               </article>
+			   
+			    <article class="gallery-item" data-name="shoes" id="pcard">   <!------PRODUCT 08--------->
+                      <a href="image1.jpg" target="_blank">
+                          <img src="image1-thumbnail.jpg" alt="Image 1">
+                     </a>
+                      <a href="#" class="price-button">$19.99</a>
+                </article>
+				
+                 <article class="gallery-item" data-name="shoes" id="pcard">    <!------PRODUCT 09--------->
+                     <a href="image2.jpg" target="_blank">
+                        <img src="image2-thumbnail.jpg" alt="Image 2">
+                    </a>
+                     <a href="#" class="price-button">$24.99</a>
+               </article>
+			   
+			    <article class="gallery-item" data-name="shoes" id="pcard">   <!------PRODUCT 10--------->
+                      <a href="image1.jpg" target="_blank">
+                          <img src="image1-thumbnail.jpg" alt="Image 1">
+                     </a>
+                      <a href="#" class="price-button">$19.99</a>
+                </article>
+				
+                 <article class="gallery-item" data-name="shoes" id="pcard">    <!------PRODUCT 11--------->
+                     <a href="image2.jpg" target="_blank">
+                        <img src="image2-thumbnail.jpg" alt="Image 2">
+                    </a>
+                     <a href="#" class="price-button">$24.99</a>
+               </article>
+  <!-- Add more images here -->
+     </section>
 
                    
        
@@ -629,8 +531,8 @@
     <div class="sneha">
         <a href="about-us.html" target="_self"><p> Terms & privacy </p></a>
         <a href="about-us.html" target="_self"><p> policy </p></a>
-        <a href="about-us.html" target="_self"><p> 2024® </p></a>
-       <!-----<a href="about-us.html" target="_self"><p> Food-factory LLC</p></a>------>
+        <a href="about-us.html" target="_self"><p> 2023® </p></a>
+        <a href="about-us.html" target="_self"><p> Food-factory LLC</p></a>
    </div>
   </footer>
      
@@ -680,7 +582,7 @@
          // search filter
           document.getElementById('searchInput').addEventListener('input', function () {
            const filter = this.value.toLowerCase();
-           const items = document.querySelectorAll('#section #pcard');
+           const items = document.querySelectorAll('#gallery #pcard');
 
            items.forEach(function (item) {
            const name = item.dataset.name.toLowerCase();
