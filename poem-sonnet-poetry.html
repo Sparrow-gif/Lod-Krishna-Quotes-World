@@ -256,6 +256,7 @@
          background: ;
          padding:0px 0px;
          white-space:nowrap;
+	 scroll-snap-type: x mandatory;    
       }
 
      .lightbox {
@@ -272,19 +273,20 @@
        }
    .gallery > img {
              width:140px;
-	         aspect-ratio:1/1.40;
-	         display:inline-block;
-	         margin:4px 8px;
+	     aspect-ratio:1/1.40;
+	     display:inline-block;
+	     margin:4px 8px;
              border:0px solid black;
              border-radius:3px;
              box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
              cursor:pointer;
-    }
+	     scroll-snap-align:center;
+        }
      .lightbox-content {
             max-width: 90%;
             max-height: 90%;
             animation: fadeIn 0.5s;
-}
+    }
 
     .close-btn {
          position: absolute;
