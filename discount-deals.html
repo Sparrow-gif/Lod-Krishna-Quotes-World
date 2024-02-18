@@ -131,21 +131,23 @@
 		
 		
     .scroll-container {
-        width: 100%;
-        overflow-x: auto;
-        display:-webkit-box;
-        display:-ms-flexbox;
-        display:flex;        
-        background:white;
-        padding:5px;
-        position:relative ;
-        white-space: nowrap;
+         width: 100%;
+         overflow-x: auto;
+         display:-webkit-box;
+         display:-ms-flexbox;
+         display:flex;        
+         background:white;
+         padding:5px;
+         position:relative ;
+         white-space: nowrap;
+	 scroll-snap-type: x mandatory;
 	 }
  .scroll-container::-webkit-scrollber {
          display:none;
       }
  .scroll-container > .scroll-item {
          font-family: Slabo;
+	 scroll-snap-align:center;
 	 color:#6604de;
          background:#ebe6fa ;
          text-align:center;
