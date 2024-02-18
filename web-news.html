@@ -540,6 +540,22 @@
 
 
 
+       // Find the active scroll item
+              const activeItem = document.getElementById("active");
+              const scrollContainer = document.querySelector(".scroll-container");
+
+      // Calculate scroll position to center the active item
+              const containerWidth = scrollContainer.offsetWidth;
+              const scrollItemWidth = activeItem.offsetWidth;
+              const scrollItemLeft = activeItem.offsetLeft;
+              const scrollItemCenter = scrollItemLeft - (containerWidth - scrollItemWidth) / 2;
+
+     // Scroll the container to center the active item
+             scrollContainer.scrollLeft = scrollItemCenter;
+
+
+
+
          function changeLanguage(language) {
   document.getElementById('heading-english').style.display = language === 'en' ? 'block' : 'none';
   document.getElementById('heading-bengali').style.display = language === 'bn' ? 'block' : 'none';
