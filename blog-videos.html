@@ -27,141 +27,130 @@
        scroll-behavior:smooth;
        scroll-padding:3em;
       }
- header {
-       display:-webkit-box;
-       display:-ms-flexbox;
-       display:flex;
-       -webkit-box-pack:justify;
-       -ms-flex-pack:justify;
-       justify-content:space-between;
-       -webkit-box-align:center;
-       -ms-flex-align:center;
-       align-items:center;
-       position:sticky;
-       z-index:99;
-       top:0px;
-       background:#181f1a;
-       padding:2px;      
-       -webkit-user-select:none;
-       -moz-user-select:none;
-       -ms-user-select:none;
-     }
-      header > h2{
-          font-size:25px;
-          color:white;
-          text-indent:10px;
-          font-family: sans-serif;
-          -webkit-animation-duration: 6s;
-          animation-duration: 6s;
+  body.sidebar-open {  overflow: hidden; }
+   header {
+            background-color: #181f1a;
+            color: white;
+            padding: 0px 10px;
+            position:sticky;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 999;
         }
-         
-  header > span {
-      padding: 0px 10px;
-      font-size:1.80rem;
-      cursor:pointer;           
-      background: ;
-      color:white;  
-      -webkit-transition-duration:0.3s;  
-      -o-transition-duration:0.3s;  
-      transition-duration:0.3s;
-     text-shadow: 1px 1px 3px #666666;
-      }
-   .sidenav {
-        height:100vh;
-        width:0;
-        width:0;
-        position: fixed;
-        z-index:999;
-        top: 0;
-        right: 0;
-        background: rgba( 235, 242, 250, 0.25 );
-        -webkit-box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-                box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-        backdrop-filter: blur( 4px );
-       -webkit-backdrop-filter: blur( 4px );
-      /*  background-color:#FFEAEC; */
-        overflow: scroll;
-       -webkit-transition: 0.5s;
-       -o-transition: 0.5s;
-       transition: 0.5s;
-       padding-top: 40px;
-       text-align:center;  
-        -webkit-user-select:none;
-        -moz-user-select:none;
-        -ms-user-select:none;    
-       -webkit-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;    
-               box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-     }
-
-.sidenav a {
-       padding: 15px ;
-       text-decoration: none;
-       font-size: 16px;
-       color: black;
-       display: block;
-       -webkit-transition: 0.3s;
-       -o-transition: 0.3s;
-       transition: 0.3s;
-       margin-bottom:6px;
-    }
-
-.sidenav a:hover{
-  color: #f1f1f1;
-  background:#2576e8;
-  -webkit-box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
-          box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
-}
- .sidenav > .active {
-          color: #f1f1f1;
-          background:#6e0cf7;
-          -webkit-box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
-                  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+        #navbar {
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
         }
-  #cold {
+        .navbar-brand h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+        
+        .navbar-toggler {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 24px;
+            color: white;
+            padding: 10px;
+        }
+        
+        .sidebar {
+            height: calc(100vh - 40px);
+            width: 360px;
+            position: fixed;
+            top: 43px;
+            right: -100%;
+            background-color: #fff;
+            overflow-y: auto;
+            padding-top: 20px; /* Adjusted padding top */
+            transition: 0.5s;
+            z-index: 998;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .sidebar.active {
+            right: 0;
+        }
+        
+        .menu {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .menu li {
+            margin-bottom: 10px;
+        }
+        
+        .menu li a {
+            display: block;
+            padding: 10px 20px;
+            margin:10px 10px;
+            text-decoration: none;
+            color: black;
+            transition: background-color 0.3s;
+            border-radius: 30px;
+            text-align: center; /* Center align the text */
+        }
+        
+        .menu li a:hover {
+            background-color: #2576e8;
+            color: white;
+        }
+        
+        .social-links {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            padding: 0;
+        }
+        
+        .social-links a {
+            margin: 0 10px;
+            font-size: 20px;
+            text-decoration: none;
+            transition: transform 0.3s, color 0.3s;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .social-links a:hover {
+            color: #fff;
+            background-color: #1e62d0;
+            transform: translateY(-5px);
+        }
+        
+        @media (max-width:550px) {
+            .sidebar {
+                width: 100%;
+            }
+        }
+		
+		
+    .scroll-container {
+        width: 100%;
+        overflow-x: auto;
         display:-webkit-box;
         display:-ms-flexbox;
-        display:flex;
-        -webkit-box-pack:center;
-            -ms-flex-pack:center;
-                justify-content:space-between;
-        -webkit-box-align:center;
-            -ms-flex-align:center;
-                align-items:center;
-     }
-  #cold > a {
-        font-size:20px;
-        padding:10px 15px;
-        border-radius:50%;
-     }
-      
-.sidenav .closebtn {
-  position: absolute;
-  top:5px;
-  right: 10px;
-  font-size: 20px;
-  margin-left: 50px;
-  padding:-0px 12px;
-  background: #6e0cf7;
-  color:white;  
-  border-radius: ;
-}
-
-    .scroll-container {
-          width: 100%;
-          overflow-x: auto;
-          display:-webkit-box;
-          display:-ms-flexbox;
-          display:flex;        
-          background:white;
-          padding:5px;
-          position:relative ;
-          white-space: nowrap;
-        }
+        display:flex;        
+        background:white;
+        padding:5px;
+        position:relative ;
+        white-space: nowrap;
+	 }
  .scroll-container::-webkit-scrollber {
          display:none;
       }
  .scroll-container > .scroll-item {
          font-family: Slabo;
+		 color:dodgerblue;
          background:#ebe6fa ;
          text-align:center;
          min-width: 100px;
@@ -730,31 +719,36 @@
    </style>
   </head>
   <body oncontextmenu="return false">
-        <header id="navbar" title="Header">              
-           <div id="mySidenav" class="sidenav" title="SideNav">
-                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()" title="closebtn">&times;</a>
-                <a href="index.html" target="_self" >Home</a>
-                <a href="about-us.html" target="_self" > About us </a>
-                <a href="blog-videos.html" class="active" target="_self" > Blogs </a>
-                <a href="poem-sonnet-poetry.html" target="_self" > Poetry </a>
-		<a href="web-news.html" target="_self" > web news </a>
-                <a href="https://www.amazon.in" target="_blank" rel="noopener noreferrer"> e-commerce </a>
-                <a href="https://www.sportskeeda.com" target="_blank" rel="noopener noreferrer"> cricket </a>
-		<a href="health-advice.html" target="_self" > health </a>                                             
-                <a href="contact-us.html" target="_self" >Contact us</a>
-                <div id="cold">
-                    <a href="https://www.facebook.com/profile.php?id=100028875690917&mibextid=2JQ9oc" title="facebook" rel="noopener noreferrer"> <i class="fa-brands fa-facebook-f"></i> </a>
-                    <a href="https://www.instagram.com/shri.krishna04?igsh=MXY5aWxnbGM0N293bw==" title="instagram" rel="noopener noreferrer"> <i class="fa-brands fa-instagram "></i> </a>
-                    <a href="https://t.me/paytm_cash_hub" rel="noopener noreferrer" title="twitter"> <i class="fa-brands fa-telegram" rel="noopener noreferrer"></i> </a>
-                    <a href="https://whatsapp.com/channel/0029VaNPC4QEVccDcycBlh0r" title="whatsapp" rel="noopener noreferrer"> <i class="fa-brands fa-whatsapp"></i> </a>
-                    <a href="https://youtube.com/@Wings_dna?si=q_lyk1Tif5t1D-iJ" title="youtube" rel="noopener noreferrer"> <i class="fa-brands fa-youtube"></i> </a>                              
-               </div>
-          </div>
-                <h2 title="logo"> Quotes World  </h2>
-                <span onclick="openNav()" title="Menubar">&#9776;</span>
-     </header>
+         <header id="header">
+    <nav id="navbar">
+        <div class="navbar-brand">
+            <h1>Quotes World</h1>
+        </div>
+        <button class="navbar-toggler" id="toggleButton" onclick="toggleNav()" aria-label="Toggle navigation">&#9776;</button>
+    </nav>
+    <aside id="sidebar" class="sidebar">
+        <ul class="menu">
+            <li><a href="index.html" title="Go to Home">Home</a></li>
+            <li><a href="about-us.html" title="Learn about us">About us</a></li>
+            <li><a href="blog-videos.html" title="Explore Blogs">Blogs</a></li>
+            <li><a href="poem-sonnet-poetry.html" title="Read Poetry">Poetry</a></li>
+            <li><a href="web-news.html" title="Discover Web News">Web News</a></li>
+            <li><a href="https://www.amazon.in" target="_blank" rel="noopener noreferrer">Life-Style</a></li>
+            <li><a href="https://www.sportskeeda.com" target="_blank" rel="noopener noreferrer">Cricket</a></li>
+            <li><a href="health-advice.html" title="Get Health Advice">Health</a></li>
+            <li><a href="contact-us.html" title="Contact us">Contact us</a></li>
+        </ul>
+        <div class="social-links">
+            <a href="https://www.facebook.com/profile.php?id=100028875690917&mibextid=2JQ9oc" target="_blank" rel="noopener noreferrer" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/shri.krishna04?igsh=MXY5aWxnbGM0N293bw==" target="_blank" rel="noopener noreferrer" title="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://t.me/paytm_cash_hub" target="_blank" rel="noopener noreferrer" title="Telegram"><i class="fab fa-telegram"></i></a>
+            <a href="https://whatsapp.com/channel/0029VaNPC4QEVccDcycBlh0r" target="_blank" rel="noopener noreferrer" title="Whatsapp"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://youtube.com/@Wings_dna?si=q_lyk1Tif5t1D-iJ" target="_blank" rel="noopener noreferrer" title="Youtube"><i class="fab fa-youtube"></i></a>
+        </div>
+    </aside>
+</header>
 
-         <nav class="scroll-container" title="ScrollBar">
+         <nav class="scroll-container" title="scroll-ber">
                <a class="scroll-item" href="motivational-quotes.html" target="_self"> Daily Quotes </a>     
                <a class="scroll-item" href="index.html" target="_self"> wishdom </a>
                <a class="scroll-item" href="sri-krishna-stories.html" target="_self"> Karma </a>
@@ -764,13 +758,11 @@
                <a class="scroll-item" href="best-mobile-games.html" target="_self"> games </a>
                <a class="scroll-item" href="discount-deals.html" target="_self"> loot Offers </a>    
                <a class="scroll-item" href="movie-sites.html" target="_self"> Movies </a>                                        
-               <a class="scroll-item" href="https://www.amazon.in" target="_blank"> Life-Style </a>
-               <a class="scroll-item" href="https://www.sportskeeda.com" target="_blank"> cricket </a>
                <a class="scroll-item" href="health-advice.html" target="_self"> health </a>
                <a class="scroll-item" href="web-news.html" target="_self"> web news </a>                
                <a class="scroll-item" href="#" target="_self" onclick="notevel()"> More...</a>
           <!-- Add more items as needed -->
-         </nav>
+       </nav>
           
 
            <!-------100vh background ------>
@@ -1059,24 +1051,46 @@
 
 
    <script>
-          function notevel() {
-                 window.alert("Sorry..Content Not Evelable Right Now") ;
-             };
+          const sidebar = document.getElementById("sidebar");
+       const toggleButton = document.getElementById("toggleButton");
 
-         const soundButton = document.getElementById('soundButton');
-         const audio = document.getElementById('myAudio');
+      function toggleNav() {
+          sidebar.classList.toggle("active");
+          toggleButton.innerHTML = sidebar.classList.contains("active") ? "&times;" : "&#9776;";
 
-         soundButton.addEventListener('click', () => {
-         audio.play();
-         });
+    // Add/remove class to body to prevent scrolling
+        document.body.classList.toggle("sidebar-open");
+  };
 
-          //navigation javascript
-         function openNav() {
-         document.getElementById("mySidenav").style.width = "340px";
-           }
-         function closeNav() {
-         document.getElementById("mySidenav").style.width = "0";
-           } ;
+
+
+
+         //change Navigation background
+   window.addEventListener('scroll', function() {
+       const navbar = document.getElementById('header');
+       const scrolled = window.scrollY;
+
+       if (scrolled > 30) {
+       navbar.style.backgroundColor = '#01BAEF'; // Change this to the desired color
+     } else {
+       navbar.style.backgroundColor = '#181f1a'; // Change this to the default color
+     }
+  });
+
+
+
+       // Find the active scroll item
+              const activeItem = document.getElementById("active");
+              const scrollContainer = document.querySelector(".scroll-container");
+
+      // Calculate scroll position to center the active item
+              const containerWidth = scrollContainer.offsetWidth;
+              const scrollItemWidth = activeItem.offsetWidth;
+              const scrollItemLeft = activeItem.offsetLeft;
+              const scrollItemCenter = scrollItemLeft - (containerWidth - scrollItemWidth) / 2;
+
+     // Scroll the container to center the active item
+             scrollContainer.scrollLeft = scrollItemCenter;
    
 
           /* Go To Top Button */
@@ -1095,17 +1109,6 @@ document.getElementById("topButton").addEventListener("click", function () {
   document.documentElement.scrollTop = 0;
 });
 
-         //change Navigation background
-   window.addEventListener('scroll', function() {
-       const navbar = document.getElementById('navbar');
-       const scrolled = window.scrollY;
-
-       if (scrolled > 30) {
-       navbar.style.backgroundColor = '#01BAEF'; // Change this to the desired color
-     } else {
-       navbar.style.backgroundColor = '#181f1a'; // Change this to the default color
-     }
-  });
  
  
             //Contact us 
