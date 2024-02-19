@@ -150,15 +150,16 @@
      }
 		
     .scroll-container {
-        width: 100%;
-        overflow-x: auto;
-        display:-webkit-box;
-        display:-ms-flexbox;
-        display:flex;        
-        background:white;
-        padding:5px;
-        position:relative ;
-        white-space: nowrap;
+          width: 100%;
+          overflow-x: auto;
+          display:-webkit-box;
+          display:-ms-flexbox;
+          display:flex;        
+          background:white;
+          padding:5px;
+          position:relative ;
+          white-space: nowrap;
+	  scroll-snap-type: x mandatory;   
 	 }
  .scroll-container::-webkit-scrollber {
          display:none;
@@ -173,6 +174,7 @@
              margin-right: 10px;
              border-radius:14px;
              overflow:scroll;
+	     scroll-snap-align:center;
 		 }
 	  .scroll-container > .scroll-item::-webkit-scrollbar{ display: none;}
     .scroll-container > #active {
@@ -251,7 +253,7 @@
  #section >  #blur a {
        display:inline-block;
        padding:10px ;
-	   max-width:80%;
+       max-width:60%;
        min-width:320px;
        font-size:18px;
        text-decoration:none;
