@@ -26,7 +26,7 @@
         }  
    html {
        scroll-behavior:smooth;
-       scroll-padding:3em;
+       scroll-padding:2.80em;
       }
   body.sidebar-open {  overflow: hidden; }
    header {
@@ -128,12 +128,26 @@
             transform: translateY(-5px);
         }
         
-        @media (max-width:550px) {
+        @media (max-width:520px) {
             .sidebar {
                 width: 100%;
             }
         }
 		
+	#overlay {
+         position: fixed;
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 100%;
+         background-color: rgba(0, 0, 0, 0.6); /* Adjust the transparency here */
+         z-index: 997; /* Ensure the overlay is below the sidebar */
+         display: none; /* Initially hidden */
+     }
+
+   #overlay.active {
+          display: block; /* Display when sidebar is active */
+     }
 		
     .scroll-container {
         width: 100%;
@@ -145,34 +159,31 @@
         padding:5px;
         position:relative ;
         white-space: nowrap;
-	 scroll-snap-type: x mandatory;
 	 }
  .scroll-container::-webkit-scrollber {
          display:none;
       }
  .scroll-container > .scroll-item {
-         font-family: Slabo;
-		 color:#6604de;
-         background:#ebe6fa ;
-         text-align:center;
-         min-width: 100px;
-         text-decoration:none;
-         padding:5px;
-         border: none;
-         margin-right: 10px;
-         border-radius:10px;
-         overflow:scroll;
-         scroll-snap-align:center;
-        box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;     
-       }
+             color:dodgerblue;
+		     border:2px solid #ebe6fa;
+             text-align:center;
+             min-width: 100px;
+             text-decoration:none;
+             padding:5px;
+             margin-right: 10px;
+             border-radius:14px;
+             overflow:scroll;
+		 }
 	  .scroll-container > .scroll-item::-webkit-scrollbar{ display: none;}
     .scroll-container > #active {
         color: white;
         background:#6e0cf7;
+		border:none;
         }
    .scroll-container > .scroll-item:hover {
           color: white;
           background:#6e0cf7;
+		  border:none;
        }
    .scroll-container::-webkit-scrollbar{  width:2px; }
 
@@ -240,8 +251,8 @@
  #section >  #blur a {
        display:inline-block;
        padding:10px ;
-	   min-width:80%;
-       max-width:240px;
+	   max-width:80%;
+       min-width:320px;
        font-size:18px;
        text-decoration:none;
        color: White ;
@@ -664,6 +675,9 @@
     </aside>
 </header>
 
+      <!-- Overlay to cover content behind sidebar -->
+      <div id="overlay"></div>
+
          <nav class="scroll-container" title="scroll-ber">
                <a class="scroll-item" href="motivational-quotes.html" target="_self"> Daily Quotes </a>     
                <a class="scroll-item" href="index.html" target="_self"> wishdom </a>
@@ -674,8 +688,6 @@
                <a class="scroll-item" href="best-mobile-games.html" target="_self"> games </a>
                <a class="scroll-item" href="discount-deals.html" target="_self"> loot Offers </a>    
                <a class="scroll-item" href="movie-sites.html" target="_self"> Movies </a>                                        
-               <a class="scroll-item" href="https://www.amazon.in" target="_blank" rel="noopener noreferrer"> Life-Style </a>
-               <a class="scroll-item" href="https://www.sportskeeda.com" target="_blank" rel="noopener noreferrer"> cricket </a>
                <a class="scroll-item" href="health-advice.html" target="_self"> health </a>
                <a class="scroll-item" href="web-news.html" target="_self"> web news </a>                
                <a class="scroll-item" href="#" target="_self" onclick="notevel()"> More...</a>
@@ -1115,12 +1127,16 @@
              
    <script>
           
+		  const overlay = document.getElementById("overlay");
           const sidebar = document.getElementById("sidebar");
-       const toggleButton = document.getElementById("toggleButton");
+          const toggleButton = document.getElementById("toggleButton");
 
       function toggleNav() {
           sidebar.classList.toggle("active");
           toggleButton.innerHTML = sidebar.classList.contains("active") ? "&times;" : "&#9776;";
+
+     // Toggle visibility of overlay
+      overlay.classList.toggle("active");
 
     // Add/remove class to body to prevent scrolling
         document.body.classList.toggle("sidebar-open");
