@@ -135,44 +135,58 @@
         }
 		
 		
-    .scroll-container {
+   #overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /* Adjust the transparency here */
+  z-index: 997; /* Ensure the overlay is below the sidebar */
+  display: none; /* Initially hidden */
+}
+
+#overlay.active {
+  display: block; /* Display when sidebar is active */
+}
+		
+  .scroll-container {
         width: 100%;
         overflow-x: auto;
         display:-webkit-box;
         display:-ms-flexbox;
         display:flex;        
         background:white;
-        padding:5px;
+        padding:6px 0px;
         position:relative ;
         white-space: nowrap;
-	scroll-snap-type: x mandatory;
+		scroll-snap-type: x mandatory;
 	 }
  .scroll-container::-webkit-scrollber {
          display:none;
       }
  .scroll-container > .scroll-item {
-         font-family: Slabo;
-		 color:#6604de;
-         background:#ebe6fa ;
+         color:dodgerblue;
+		 border:2px solid #ebe6fa;
          text-align:center;
          min-width: 100px;
          text-decoration:none;
          padding:5px;
-         border: none;
          margin-right: 10px;
-         border-radius:10px;
+         border-radius:14px;
          overflow:scroll;
-         scroll-snap-align:center;
-         box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;       
-       }
+		 scroll-snap-align:center;
+        }
 	  .scroll-container > .scroll-item::-webkit-scrollbar{ display: none;}
     .scroll-container > #active {
         color: white;
         background:#6e0cf7;
+		 border:none;
         }
    .scroll-container > .scroll-item:hover {
           color: white;
           background:#6e0cf7;
+		  border:none;
        }
    .scroll-container::-webkit-scrollbar{  width:2px; }
 
@@ -381,6 +395,9 @@
     </aside>
 </header>
 
+	  <!-- Overlay to cover content behind sidebar -->
+          <div id="overlay"></div>
+	  
          <nav class="scroll-container" title="scroll-ber">
                <a class="scroll-item" href="motivational-quotes.html" target="_self"> Daily Quotes </a>     
                <a class="scroll-item" href="index.html" target="_self"> wishdom </a>
@@ -514,12 +531,16 @@
  
  
    <script>
-          const sidebar = document.getElementById("sidebar");
-       const toggleButton = document.getElementById("toggleButton");
+           const sidebar = document.getElementById("sidebar");
+           const overlay = document.getElementById("overlay");
+           const toggleButton = document.getElementById("toggleButton");
 
       function toggleNav() {
           sidebar.classList.toggle("active");
           toggleButton.innerHTML = sidebar.classList.contains("active") ? "&times;" : "&#9776;";
+
+    // Toggle visibility of overlay
+      overlay.classList.toggle("active");
 
     // Add/remove class to body to prevent scrolling
         document.body.classList.toggle("sidebar-open");
