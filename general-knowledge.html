@@ -28,9 +28,14 @@
                   user-select:none;		  
         }  
    body.sidebar-open {  overflow: hidden; }
-	html {    background-color:#f0f0f0; 
-		 box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-	     }
+   
+	 html {
+         scroll-behavior:smooth;
+         scroll-padding:3em;
+         background-color:#f0f0f0; 
+	     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+	  
    header {
             background-color: #181f1a;
             color: white;
@@ -240,6 +245,71 @@
 			  margin:10px auto;
 		}
 		
+		
+		
+		
+	 .Answer {
+             Display:flex;
+			 flex-wrap:wrap;
+			 justify-content:space-around;
+			 flex-direction: ;
+			 gap:20px;
+          }
+
+    .Answer > .article {
+                  margin:0 auto;
+                  width: 165px;
+                  border: 0px solid #ccc;
+                padding:2px ;
+         margin-bottom: 10px;
+         display: -webkit-box;
+         display: -ms-flexbox;
+         display: flex;
+         -webkit-box-orient: vertical;
+         -webkit-box-direction: normal;
+             -ms-flex-direction: column;
+                 flex-direction: column;
+         -webkit-box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+                 box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+		 -webkit-transition-duration:0.3s;
+		      -o-transition-duration:0.3s;
+		         transition-duration:0.3s;
+			 }
+     .Answer > .article:hover{
+	     -webkit-transform:scale(1.04);
+	         -ms-transform:scale(1.04);
+	             transform:scale(1.04);
+	 }
+   .Answer > .article img {
+        max-width: 100%;
+        aspect-ratio:1/1;  
+        -o-object-fit: cover;  
+        object-fit: cover;
+	background-position:center;
+     }
+
+    .Answer > .article h3 {
+           margin-top:10px;
+           -webkit-transition-duration:0.3s;
+                -o-transition-duration:0.3s;
+                   transition-duration:0.3s;
+	    font-family: ;
+	    text-align:center;
+	     font-size:15px;
+           }
+
+      .Answer > .article h3 a {
+            text-decoration: none;
+            color:#6e14b3;
+            text-align:center;
+         }
+
+     .Answer > .article h3 a:hover {
+          text-decoration: underline;
+      }
+	  
+	  
+	  
 	 footer {
             background: #020122;
             text-align: center;
@@ -287,8 +357,12 @@
 			   justify-content:space-around;
 			  }
 			.Question {   width:63%;  }
-			.Answer {   width:35%;  }
+			.Answer {  
+       			 width:35%; 
+                
+			}
 			.ramayana { Display:none; }
+			
 	   }
 	   
    @media only screen and (min-width:992px) { 
@@ -355,6 +429,123 @@
 	    <section class="Question">
 		       
 			   <h2 Style="margin:0px 3px 30px 0px;"> Explore the Epic: Ramayana Trivia - Your Source for General Knowledge Questions and Insights </h2>
+			   
+			   <p> Explore the Epic >> <a href="#ram"> ramayana </a>  >>  <a href="#krishna"> mahabharat </a> </p>
+			   
+			   <p>  The Ramayana is an ancient Indian epic depicting the journey of Prince 
+			         Rama to rescue his wife Sita from the demon king Ravana. 
+			        It illustrates themes of righteousness, duty, and the triumph of good
+					over evil. Knowing it fosters cultural understanding and moral teachings.
+			  </p>
+			   
+              <article id="ram">
+                  <h2>Question 1 </h2>
+                  <p>  Who is the author of the Ramayana?  </p>
+                  <p><strong>Answer:</strong>  The Ramayana is traditionally attributed to the sage Valmiki.  </p>
+             </article>
+              <article>
+                 <h2>Question 2 </h2>
+                 <p>Who wrote "To Kill a Mockingbird"?</p>
+                 <p><strong>Answer:</strong> Harper Lee</p>
+            </article>
+			 <article>
+                  <h2>Question 3 </h2>
+                  <p>What is the capital of France?</p>
+                  <p><strong>Answer:</strong> Paris</p>
+             </article>
+              <article>
+                 <h2>Question 4 </h2>
+                 <p>Who wrote "To Kill a Mockingbird"?</p>
+                 <p><strong>Answer:</strong> Harper Lee</p>
+            </article>
+			<article>
+                  <h2>Question 5 </h2>
+                  <p>What is the capital of France?</p>
+                  <p><strong>Answer:</strong> Paris</p>
+             </article>
+              <article>
+                 <h2>Question 6</h2>
+                 <p>Who wrote "To Kill a Mockingbird"?</p>
+                 <p><strong>Answer:</strong> Harper Lee</p>
+            </article>
+			<article>
+                  <h2>Question 7 </h2>
+                  <p>What is the capital of France?</p>
+                  <p><strong>Answer:</strong> Paris</p>
+             </article>
+              <article>
+                 <h2>Question 8 </h2>
+                 <p>Who wrote "To Kill a Mockingbird"?</p>
+                 <p><strong>Answer:</strong> Harper Lee</p>
+            </article>
+			<article>
+                  <h2>Question 9 </h2>
+                  <p>What is the capital of France?</p>
+                  <p><strong>Answer:</strong> Paris</p>
+             </article>
+              <article>
+                 <h2>Question 10 </h2>
+                 <p>Who wrote "To Kill a Mockingbird"?</p>
+                 <p><strong>Answer:</strong> Harper Lee</p>
+            </article>
+			
+			<div class="ramayana">    <!-------ramayan background image-------->		</div>	
+			
+			 <article>
+                  <h2>Question 11 </h2>
+                  <p>What is the capital of France?</p>
+                  <p><strong>Answer:</strong> Paris</p>
+             </article>
+              <article>
+                 <h2>Question 12 </h2>
+                 <p>Who wrote "To Kill a Mockingbird"?</p>
+                 <p><strong>Answer:</strong> Harper Lee</p>
+            </article>
+			 <article>
+                  <h2>Question 13 </h2>
+                  <p>What is the capital of France?</p>
+                  <p><strong>Answer:</strong> Paris</p>
+             </article>
+              <article>
+                 <h2>Question 14 </h2>
+                 <p>Who wrote "To Kill a Mockingbird"?</p>
+                 <p><strong>Answer:</strong> Harper Lee</p>
+            </article>
+			<article>
+                  <h2>Question 15 </h2>
+                  <p>What is the capital of France?</p>
+                  <p><strong>Answer:</strong> Paris</p>
+             </article>
+              <article>
+                 <h2>Question 16</h2>
+                 <p>Who wrote "To Kill a Mockingbird"?</p>
+                 <p><strong>Answer:</strong> Harper Lee</p>
+            </article>
+			<article>
+                  <h2>Question 17 </h2>
+                  <p>What is the capital of France?</p>
+                  <p><strong>Answer:</strong> Paris</p>
+             </article>
+              <article>
+                 <h2>Question 18 </h2>
+                 <p>Who wrote "To Kill a Mockingbird"?</p>
+                 <p><strong>Answer:</strong> Harper Lee</p>
+            </article>
+			<article>
+                  <h2>Question 19 </h2>
+                  <p>What is the capital of France?</p>
+                  <p><strong>Answer:</strong> Paris</p>
+             </article>
+              <article>
+                 <h2>Question 20 </h2>
+                 <p>Who wrote "To Kill a Mockingbird"?</p>
+                 <p><strong>Answer:</strong> Harper Lee</p>
+            </article>
+			
+			
+			
+			
+			<h2 Style="margin:60px 3px 30px 0px;" id="krishna"> Explore the Epic: Ramayana Trivia - Your Source for General Knowledge Questions and Insights </h2>
 			   
 			   <p>  The Ramayana is an ancient Indian epic depicting the journey of Prince 
 			         Rama to rescue his wife Sita from the demon king Ravana. 
@@ -465,14 +656,39 @@
                  <p>Who wrote "To Kill a Mockingbird"?</p>
                  <p><strong>Answer:</strong> Harper Lee</p>
             </article>
-			
         <!-- Add more articles with questions and answers -->
 		</section>
 		
 		
 		
-		<section class="Answer">
-		       
+		  <!-----Recomended Article Section-------->
+		
+		<section class="Answer">	
+              <h1 Style="padding:10px 0px; color:#211b63; width:100%;"> our Recommended top Articles </h1>		
+            <!---Artical1----->
+              <div class="article">
+                  <img src="INDEX/movie.webp" alt="Article 1 Image" loading="lazy">
+                  <h3><a href="movie-sites.html"> Top Movie Download Websites for Quality Entertainment on Demand </a></h3>
+             </div>
+
+            <!---Artical2----->
+              <div class="article">
+                  <img src="INDEX/webnews.webp" alt="Article 3 Image" loading="lazy">
+                  <h3><a href="web-news.html"> Stay Updated with the Latest Headlines on- web news </a></h3>
+             </div>
+
+            <!---Artical3----->
+              <div class="article">
+                  <img src="INDEX/Lod7.webp" alt="Article 2 Image" loading="lazy">
+                  <h3><a href="index.html" id="dnl"> Explore enlightening quotes from the Bhagavad Gita by Sri Krishna </a></h3>
+             </div>
+
+            <!---Artical4----->
+              <div class="article">
+                  <img src="INDEX/CYBER1.webp" alt="Article 3 Image" loading="lazy">
+                  <h3><a href="cyber-security.html"> SecureCyber: Your Trusted Resource for Cyber Security Insights and Solutions </a></h3>
+             </div>
+			
 		</section>
     </main>
 	
