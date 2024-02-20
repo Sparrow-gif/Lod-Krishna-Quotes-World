@@ -249,11 +249,7 @@
 		
 		
 	 .Answer {
-             Display:flex;
-			 flex-wrap:wrap;
-			 justify-content:space-around;
-			 flex-direction: ;
-			 gap:15px;
+           
           }
 
     .Answer > .article {
@@ -342,7 +338,12 @@
 		
 		
     @media only screen and (max-width:767px) { 
-	      
+	        .Answer {
+                  gap:10px;
+                  display:flex;
+				  flex-wrap:wrap;
+                  flex-direction:;
+          }
 	  }
 	  
 	  
@@ -354,13 +355,16 @@
 			main {
 			   display:flex;
 			   gap:10px;
-			   justify-content:space-around;
+			   justify-content:space-around;			   
 			  }
 			.Question {   width:63%;  }
 			.Answer {  
        			 width:35%; 
-                
-			}
+				 text-align:center;
+                /* gap:10px;
+                 display:grid;
+                 grid-template-columns:repeat(auto-fit,minmax(min(10rem,100%),1fr)) ; */
+			  }
 			.ramayana { Display:none; }
 			
 	   }
@@ -664,7 +668,7 @@
 		  <!-----Recomended Article Section-------->
 		
 		<section class="Answer">	
-              <h1 Style="padding:10px 0px; color:#211b63; width:100%;"> our Recommended top Articles </h1>		
+              <h2 Style="padding:10px 0px; color:#211b63; width:100%; Display:block;"> our Recommended top Articles </h2>		
             <!---Artical1----->
               <div class="article">
                   <img src="INDEX/movie.webp" alt="Article 1 Image" loading="lazy">
