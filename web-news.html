@@ -3,7 +3,10 @@
 <head>
   <meta charset="utf-8"/>
   <base href="#">
- <link rel="icon" type="image/x-icon" href="favicon.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cabin&family=Domine:wght@400;500;600&family=Lato:wght@300;400&family=Montserrat:wght@200;300;400&family=Open+Sans:wght@300;400;600&family=PT+Sans:ital@0;1&family=Playfair+Display:wght@400;500&family=Quicksand:wght@300;400;500&family=Roboto:wght@300;400&display=swap" rel="stylesheet">    
+  <link rel="icon" type="image/x-icon" href="favicon.jpg">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -18,7 +21,7 @@
           padding:0px;
           -webkit-box-sizing:border-box;
           box-sizing:border-box;
-          font-family: ;
+          font-family: roboto;
           text-transform:capitalize;  
           -webkit-user-select:none;  
              -moz-user-select:none;  
@@ -26,11 +29,12 @@
                   user-select:none;		  
         }  
    body.sidebar-open {  overflow: hidden; }
-	html {    background-color:#f0f0f0; 
+	 html {   
+   	     background-color: ; 
 		 box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 	     }
    header {
-            position:sticky;
+            position:fixed;
             top: 0;
             left: 0;
             width: 100%;
@@ -44,19 +48,17 @@
             color: black;
             width:100%;
 			padding:0px 10px;
-			font-weight:700;
         }
         .navbar-brand h1 {
             margin: 0;
-            font-size: 24px;
-			font-weight:700;
-        }
+            font-size: 32px;
+		 }
         
         .navbar-toggler {
             background: none;
             border: none;
             cursor: pointer;
-            font-size: 24px;
+            font-size:28px;
             color: ;
             padding: 10px;
         }
@@ -65,7 +67,7 @@
             height: calc(100vh - 40px);
             width: 360px;
             position: fixed;
-            top: 43px;
+            top: 48px;
             right: -100%;
             background-color: #fff;
             overflow-y: auto;
@@ -73,6 +75,7 @@
             transition: 0.5s;
             z-index: 998;
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+			padding:10px 0px 20px 0px;
         }
         
         .sidebar.active {
@@ -154,6 +157,7 @@
 }
 		
   .scroll-container {
+  margin-top:46px;
         width: 100%;
         overflow-x: auto;
         display:-webkit-box;
@@ -172,24 +176,24 @@
          color:#181f1a;
 		 border:2px solid #ebe6fa;
          text-align:center;
-         min-width: 110px;
+         min-width: 100px;
          text-decoration:none;
-		 transition-duration:0.2s;
          padding:5px 5px;
          margin:0px 6px;
          border-radius:14px;
          overflow:scroll;
 		 scroll-snap-align:center;
+		 transition-duration:0.3s;
         }
 	  .scroll-container > .scroll-item::-webkit-scrollbar{ display: none;}
     .scroll-container > #active {
            color: black;
-           background: #ccc8c2 ;
+           background:#e3e3e8;
 		   border:none;
         }
    .scroll-container > .scroll-item:hover {
            color: black;
-           background:#ccc8c2;
+           background: #e3e3e8 ;
 		   border:none;
 		   transform:scale(1.03);
        }
@@ -215,7 +219,7 @@
          position:sticky;
          aspect-ratio:1/0.71;		
 	     max-width:760px;
-         top:3.20em;
+         top:46px;
          z-index:0;
 		 margin:0 auto;
         }
@@ -250,7 +254,8 @@
 
    #language-switcher > button {
              cursor: pointer;
-             padding: 7px 20px;
+			 font-size:15px;
+             padding: 7px 15px;
              margin-right: 10px;
              background-color: #3498db;
              color: #fff;
@@ -328,18 +333,17 @@
    
     #whatsapp-share-btn {
 	      position: fixed;
-          bottom: 10%;
-          right: 20px;
-          background-color: ;
-          color: ;
+          bottom: 2%;
+          right: 10px;
+          background-color: #76e87c;
+          color: #fff;
           border: none;
           border-radius: 50%;
-          padding: 15px 15px;
-          font-size: 16px;
+          padding: 10px 10px;
+          font-size:30px;
           cursor: pointer;
           z-index:1 ;
-          font-size: 1.10rem ;
-	}
+        }
 	
 	
 	
@@ -370,7 +374,7 @@
       }
    </style>
   </head>
-  <body oncontextmenu="return false">
+  <body ncontextmenu="return false">
         <header id="header">
     <nav id="navbar">
         <div class="navbar-brand">
@@ -529,7 +533,7 @@
   </footer>
      
         <!----Go To Top Button------>
-        <button id="whatsapp-share-btn" class="fa-solid fa-share-nodes" title="share button" rel="noopener noreferrer"> </button>
+        <button id="whatsapp-share-btn" class="fab fa-whatsapp" title="share button" rel="noopener noreferrer"> </button>
  
  
  
