@@ -157,7 +157,7 @@
 }
 		
   .scroll-container {
-  margin-top:46px;
+        margin-top:46px;
         width: 100%;
         overflow-x: auto;
         display:-webkit-box;
@@ -183,8 +183,7 @@
          border-radius:14px;
          overflow:scroll;
 		 scroll-snap-align:center;
-		 transition-duration:0.3s;
-        }
+		}
 	  .scroll-container > .scroll-item::-webkit-scrollbar{ display: none;}
     .scroll-container > #active {
            color: black;
@@ -195,8 +194,7 @@
            color: black;
            background: #e3e3e8 ;
 		   border:none;
-		   transform:scale(1.03);
-       }
+		 }
    .scroll-container::-webkit-scrollbar{  width:2px; }
 
    .scroll-container::-webkit-scrollbar-track{  background: ;}
@@ -217,7 +215,7 @@
 
    .container > .image-div {
          position:sticky;
-         aspect-ratio:1/0.71;		
+         aspect-ratio:1/0.61;		
 	     max-width:760px;
          top:46px;
          z-index:0;
@@ -284,52 +282,35 @@
 	   
 	   
     footer {
-        position:relative;
-         width:100%;         
-         margin:0 auto;
-         background:#122029;
-         color:white;    
-         -webkit-user-select:none;    
-         -moz-user-select:none;    
-         -ms-user-select:none;    
-         user-select:none;  
-         padding:5px;
-         text-transform:capitalize;
-         overflow:hidden;
-         -webkit-user-select:none;
-         -moz-user-select:none;
-         -ms-user-select:none;              
-       }
-  .sneha {
-        padding:10px;
-        color:white;
-       }
-   .sneha > a{
-        text-decoration:none;
-        color:white;
-        display:block;      
-        margin:3px;  
-        font-size:14px
+            background: #020122;
+            text-align: center;
+            color: #FFFFFF;
+            padding: 20px;
         }
-   select {
-        margin:10px;
-        float:right;
-        width:40%;
-		max-width:210px;
-        height:40px;
-        outline:none;
-        border:2px solid #253330; 
-        border-radius:30px;
-        text-align:center;
-        font-size:16px;
-        font-weight:600px;
-        -webkit-transition:all 0.3s;
-        -o-transition:all 0.3s;
-        transition:all 0.3s;
-        background:white;
-        outline:2px solid white; 
-        text-transform:capitalize;
-       }
+       footer > nav > a {
+	         text-decoration:none;
+		     color:white;
+		      border-left:2px solid coral;
+		     padding:6px 8px;
+			 margin:20px 20px;
+			 transition-duration:0.3s;
+         }
+		 
+		 footer > .social-media > a {
+		      		 text-decoration:none;
+		             color:white;
+			         margin: 10px;
+                     Font-size:1.50rem;  
+		 }
+        footer nav a:hover {
+             border-left:none;
+			 border-bottom:2px solid coral;
+			 color: #76e87c ;
+        }
+        footer h3 {
+            margin-bottom: 10px;
+            font-size: 1.5rem;
+        }
    
     #whatsapp-share-btn {
 	      position: fixed;
@@ -512,25 +493,28 @@
 
                    
        
-       <footer title="footer">   <!------footer Section------->
-       <h2> Quotes World </h2>          
-      <select title="language -switcher">
-           <option> English</option>
-           <option> hindi   </option>
-           <option> Bengali </option>
-           <option> gujrati </option>
-           <option> tamil  </option>
-           <option> telugu  </option>
-           <option> odiya  </option>           
-     </select>
-    <div class="sneha">
-        <a href="about-us.html" target="_self"><p> Terms & privacy </p></a>
-        <a href="about-us.html" target="_self"><p> policy </p></a>
-		<a href="my-sitemap.html" target="_self"><p> sitemap </p></a>
-        <a href="about-us.html" target="_self"><p> 2024® </p></a>
-        <!-----<a href="about-us.html" target="_self"><p> Food-factory LLC</p></a>------->
-   </div>
-  </footer>
+      <!-- FOOTER SECTION -->
+    <footer>
+        <p>  &copy copyright-2024  quotes planet. all rights reserved </p>
+        <div class="social-media">
+            <h3>Follow Us</h3>
+            <a href="#" class="fa-brands fa-telegram" title="Telegram"></a>
+            <a href="#" class="fa-brands fa-instagram" title="Instagram"></a>
+            <a href="#" class="fa-brands fa-twitter" title="Twitter"></a>
+            <a href="#" class="fa-brands fa-whatsapp" title="WhatsApp"></a>
+            <a href="#" class="fa-brands fa-youtube" title="YouTube"></a>
+        </div>
+        <nav>
+            <a href="contact-us.html">Contact Us</a>
+            <a href="about-us.html">About Us</a>
+            <a href="privacy-policy.html">Privacy Policy</a>
+            <a href="terms-and-conditions.html">Terms & Conditions</a>
+            <a href="disclaimer.html">Disclaimer</a>
+            <a href="sitemap.html">Sitemap</a>
+        </nav>
+    </footer>
+	
+	
      
         <!----Go To Top Button------>
         <button id="whatsapp-share-btn" class="fab fa-whatsapp" title="share button" rel="noopener noreferrer"> </button>
