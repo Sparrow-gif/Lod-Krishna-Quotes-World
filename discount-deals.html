@@ -31,6 +31,8 @@
         }  
    body.sidebar-open {  overflow: hidden; }
 	 html {   
+	     scroll-behavior:smooth;
+         scroll-padding:3em;
    	     background-color: ; 
 		 box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 	     }
@@ -217,6 +219,46 @@
 	       font-size:24px;
 	  }
 	  
+	 
+   main > figure {
+           	 display:flex;
+		     flex-wrap:wrap;
+		     justify-content:space-evenly;
+		     align-items:center;
+			 gap:20px;
+         }	 
+	main > figure > div {
+           border:2px solid #f0f0f0;
+		   width:310px;
+		   height:320px;
+		   border-radius:10px;
+		   padding:10px 10px;
+		   overflow:hidden;
+		   transition-duration:0.3s;
+       }	  
+      main > figure > div > a > img {
+	       width:300px;
+		   height:310px;	  
+	 }
+	  
+	   #seen {
+	       overflow-x:auto;
+		   overflow-y:hidden;
+		   background:;
+		   padding:10px;
+		   white-space:nowrap;
+		   scroll-snap-type: x mandatory;
+	      }
+	  #seen > a > img {
+	          width:190px;
+		      border-radius:6px;
+		      aspect-ratio:1/1.20;
+		      display:inline-block;
+		      margin:10px;
+              scroll-snap-align:center;
+		      box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+	       }
+	  
 	  
 	   footer {
            background: #f0f0f0;
@@ -248,6 +290,14 @@
               display:grid;
               grid-template-columns:repeat(auto-fit,minmax(min(5rem,100%),1fr)) ;
           }
+	main > figure > div {
+           width:280px;
+		   height:290px;
+		 }
+	 main > figure > div > a > img {
+	       width:270px;
+		   height:280px;	  
+	 }
   }			
 			
 			
@@ -279,6 +329,11 @@
 		#category > a > div:hover  {
 			      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 			}
+		main > figure > div:hover {
+		         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+				 transform:scale(1.02);
+	    	}
+	  
 			
 	}
 		 </style>
@@ -321,16 +376,16 @@
             <div style="height:220px;">
                 <h1> 50% discount online shop </h1>
                 <p> hello World </p>
-                <a href="#"> shop now <i class="fa-solid fa-cart-shopping"></i> </a>
+                <a href="#clothing"> shop now <i class="fa-solid fa-cart-shopping"></i> </a>
            </div>
             <div style="height:auto;">
-               <img src="AMAZON/Shop.webp" alt="shopping">
+               <img src="AMAZON/Shop.webp">
            </div>
       </section>
     
-	       <h2 style="text-align:Center;color:#5e2bff; font-weight:bold; padding:20px;">  CATEGORY  </h2>
-	 <div id="category">
-	       <a href="#">
+	       <h1 style="text-align:Center;color:#5e2bff; font-weight:bold; padding:20px;">  CATEGORY  </h1>
+	 <article id="category">
+	       <a href="#clothing">
 		        <div> 
 		            <i class="fa-solid fa-shirt" style="color: #5e2bff;"></i> 
 					<p>  clothing  </p>
@@ -354,8 +409,39 @@
 					<p>  Accessories  </p>
 			   </div> 
 		  </a>
-	 </div>
+	 </article>
 	 
+	 
+	    <!-----------------------------------
+	    ----------MAIN SECTION----------
+	    -------------------------------------->  
+	  <main>
+	       <h1 id="clothing" style="padding:10px 10px;">  clothing  </h1>
+		   <figure>
+                 <div> <!----------PRODUCTS 1-------------------->
+                     <a href="#"> <img src="AMAZON/Shop.webp"> </a>
+				 </div>
+				 <div> <!----------PRODUCTS 2-------------------->
+                     <a href="#"> <img src="AMAZON/Shop.webp"> </a>
+				 </div>
+				 <div> <!----------PRODUCTS 3-------------------->
+                     <a href="#"> <img src="AMAZON/Shop.webp"> </a>
+				 </div>
+				 <div> <!----------PRODUCTS 4-------------------->
+                     <a href="#"> <img src="AMAZON/Shop.webp"> </a>
+				 </div>
+		  </figure>
+	 </main>
+	  
+	 <!-------------NEW RELESES MOVIES----------------------------->
+      <article id="seen">
+           <a href="#"> <img src="#" alt="movies" loading="lazy"></a> <!-----MOVIE BANNER 1-------->
+		   <a href="#"> <img src="#" alt="movies" loading="lazy"></a> <!-----MOVIE BANNER 2-------->
+		   <a href="#"> <img src="#" alt="movies" loading="lazy"></a> <!-----MOVIE BANNER 3-------->
+		   <a href="#"> <img src="#" alt="movies" loading="lazy"></a> <!-----MOVIE BANNER 4-------->
+		   <a href="#"> <img src="#" alt="movies" loading="lazy"></a> <!-----MOVIE BANNER 5-------->
+		   <a href="#"> <img src="#" alt="movies" loading="lazy"></a> <!-----MOVIE BANNER 6-------->
+      </article>
 	 
 	  <!-----------------------------------
 	    ----------FOOTER SECTION----------
