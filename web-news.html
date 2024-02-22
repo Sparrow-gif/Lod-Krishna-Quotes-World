@@ -47,13 +47,13 @@
 		    background-color: #FFFFFF;
             color: black;
             width:100%;
-			padding:0px 10px;
+			padding:5px 10px;
         }
         .navbar-brand h1 {
                  margin: 0;
                  font-size: 28px;
-	         color:#5E2BFF;
-		 font-weight:600;
+	             color:#5E2BFF;
+		        font-weight:bold;
 		 }
         
         .navbar-toggler {
@@ -61,10 +61,9 @@
             border: none;
             cursor: pointer;
             font-size:28px;
-            color: ;
-            padding: 10px;
-        }
-        
+            padding:6px;
+            }
+       
         .sidebar {
             height: calc(100vh - 40px);
             width: 360px;
@@ -97,7 +96,7 @@
         .menu li a {
             display: block;
             padding: 10px 20px;
-            margin:20px 10px;
+            margin:10px 10px;
             text-decoration: none;
             color: black;
             transition: background-color 0.3s;
@@ -114,7 +113,7 @@
         }
         
         .social-links a {
-            margin: 0 10px;
+            margin: 0px 10px;
             font-size: 20px;
             text-decoration: none;
             transition: transform 0.3s, color 0.3s;
@@ -156,7 +155,7 @@
         display:-webkit-box;
         display:-ms-flexbox;
         display:flex;        
-		justify-content:Center;
+		justify-content: ;
         background:white;
         padding:6px 0px;
         position:relative ;
@@ -204,8 +203,8 @@
 		  }
 
    .container > .image-div {
-         position:sticky;
-         aspect-ratio:1/0.71;		
+         position: ;
+         aspect-ratio:1/0.60;		
 	     max-width:760px;
          top:46px;
          z-index:0;
@@ -269,6 +268,74 @@
 			font-family: ;
 			padding:0px 5px;
 	   }
+	   
+	                       /* Read MORE NEWS SECTION */
+	   
+	.news {
+	     gap:10px;
+         display:grid;
+         grid-template-columns:repeat(auto-fit,minmax(min(23rem,100%),1fr)) ;      
+         margin: 10px auto;
+         padding:10px 10px;
+         background-color: #f9f9f9;
+         border-radius: 8px;
+         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+	   
+	 .news > figure > img {
+	      width:100%;
+          aspect-ratio:1/0.60;
+          border-radius: 0px;
+          margin:0 auto;
+          object-fit:fill;
+	   }
+	 /* Style for the heading */
+  .news h2 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  /* Style for the button */
+  .news button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .news button:hover {
+    background-color: #0056b3;
+  }
+
+  /* Style for the collapsible content */
+  .collapsible-content {
+    display: none;
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid #ccc;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  /* Style for the additional content */
+  .collapsible-content {
+    color: #181f1a;
+    font-size: 18px;    
+    padding:8px;
+  }
+
+  /* Fade-in animation */
+  .collapsible-content.show {
+    display: block;
+    opacity: 1;
+  }   
+	   
+	   
 	   
 	   
     footer {
@@ -347,7 +414,11 @@
                  color: black;
                  background: #f0f0f0 ;
 		         border:none;
-		     }		   
+		     }		
+           .navbar-toggler:hover {
+		     background: #c7c5c5 ;
+			 border-radius:50%;
+		}			 
       }
    </style>
   </head>
@@ -487,9 +558,49 @@
             </div>
       </main>
 
-                   
-       
-      <!-- FOOTER SECTION -->
+               <!------------------------------------
+			     -------read more news---------------
+			     ------------------------------------>
+     <article class="news">
+         <figure>
+              <img src="INDEX/banner.webp" alt="Image">
+        </figure>
+         <figure>
+             <h2>Heading Text 1</h2>
+                                    <!-- Additional content here -->
+             <p id="content1" class="collapsible-content">This is the additional content that will be revealed when the button is clicked.</p>
+             <button onclick="toggleContent('content1')">  Read Now  </button>
+        </figure>
+     </article>
+
+      <article class="news">
+         <figure>
+             <img src="INDEX/banner.webp" alt="Image">
+        </figure>
+         <figure>
+              <h2>Heading Text 2</h2>
+                         <!-- Additional content here -->
+              <p id="content2" class="collapsible-content">This is the additional content that will be revealed when the button is clicked.</p>
+             <button onclick="toggleContent('content2')">  Read Now  </button>
+        </figure>
+     </article>
+
+      <article class="news">
+         <figure>
+             <img src="INDEX/banner.webp" alt="Image">
+        </figure>
+         <figure>
+              <h2>Heading Text 3</h2>
+                         <!-- Additional content here -->
+              <p id="content3" class="collapsible-content">This is the additional content that will be revealed when the button is clicked.</p>
+              <button onclick="toggleContent('content3')">  Read Now  </button>
+        </figure>
+     </article>
+	   
+	   
+      <!-----------------------------------
+	    ----------FOOTER SECTION----------
+	  -------------------------------------->
     <footer>
         <p>  &copy copyright-2024  quotes planet. all rights reserved </p>
         <div class="social-media">
@@ -588,6 +699,12 @@
         window.open(whatsappLink, '_blank');
 });
 
+
+       function toggleContent(contentId) {
+       var content = document.getElementById(contentId);
+     content.classList.toggle('show');  
+   }
+   
    </script>
    </body>
 </html>
