@@ -241,24 +241,49 @@
 		   height:310px;	  
 	 }
 	  
-	   #seen {
-	       overflow-x:auto;
-		   overflow-y:hidden;
-		   background:;
-		   padding:10px;
-		   white-space:nowrap;
-		   scroll-snap-type: x mandatory;
-	      }
-	  #seen > a > img {
-	          width:190px;
-		      border-radius:6px;
-		      aspect-ratio:1/1.20;
-		      display:inline-block;
-		      margin:10px;
-              scroll-snap-align:center;
-		      box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
-	       }
 	  
+	  
+	    .gallery {
+		     overflow-x:auto;
+		     overflow-y:hidden;
+		     background:;
+		     padding:10px;
+		     white-space:nowrap;
+		     scroll-snap-type: x mandatory;
+         }
+  
+    .gallery-item {
+	        display:inline-block;
+            position: relative;
+            width: 165px; /* Fixed width for each item */
+            height: 200px; /* Fixed height for each item */
+            overflow: hidden;
+            box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+	        padding:6px;
+			margin:10px;
+			scroll-snap-align:center;
+         }
+  
+   .gallery-item img {
+           width: 100%;
+           height: 100%;
+           display: block;
+           transition: transform 0.3s ease-in-out;
+           object-fit: cover;
+         }
+  
+  .price-button {
+         position: absolute;
+         bottom: 5px;
+         right: 10px;
+         background-color: #ff5a5f;
+         color: white;
+         padding: 5px 10px;
+         text-decoration: none;
+         border: none;
+		 border-radius: 5px;
+        font-size: 12px;
+	  }
 	  
 	   footer {
            background: #f0f0f0;
@@ -434,15 +459,81 @@
 	 </main>
 	  
 	 <!-------------NEW RELESES MOVIES----------------------------->
-      <article id="seen">
-           <a href="#"> <img src="#" alt="movies" loading="lazy"></a> <!-----MOVIE BANNER 1-------->
-		   <a href="#"> <img src="#" alt="movies" loading="lazy"></a> <!-----MOVIE BANNER 2-------->
-		   <a href="#"> <img src="#" alt="movies" loading="lazy"></a> <!-----MOVIE BANNER 3-------->
-		   <a href="#"> <img src="#" alt="movies" loading="lazy"></a> <!-----MOVIE BANNER 4-------->
-		   <a href="#"> <img src="#" alt="movies" loading="lazy"></a> <!-----MOVIE BANNER 5-------->
-		   <a href="#"> <img src="#" alt="movies" loading="lazy"></a> <!-----MOVIE BANNER 6-------->
-      </article>
-	 
+      <section class="gallery" id="gallery">
+                <article class="gallery-item" data-name="Man Wrist Watches" id="pcard">   <!------PRODUCT 01--------->
+                      <a href="https://amzn.to/3UHCcUv" target="_blank">
+                          <img src="AMAZON/Man Wrist Watches.webp" alt="product" loading="auto">
+                     </a>
+                      <a href="https://amzn.to/3UHCcUv" class="price-button"> $ 399 </a>
+                </article>
+				
+                 <article class="gallery-item" data-name="shoes" id="pcard">    <!------PRODUCT 02--------->
+                     <a href="image2.jpg" target="_blank">
+                        <img src="image2-thumbnail.jpg" alt="product" loading="auto">
+                    </a>
+                     <a href="#" class="price-button">$24.99</a>
+               </article>
+			   
+			    <article class="gallery-item" data-name="Man Wrist Watches" id="pcard">   <!------PRODUCT 03--------->
+                      <a href="https://amzn.to/3UHCcUv" target="_blank">
+                          <img src="AMAZON/Man Wrist Watches.webp" alt="product" loading="auto">
+                     </a>
+                      <a href="https://amzn.to/3UHCcUv" class="price-button"> $ 399 </a>
+                </article>
+				
+                 <article class="gallery-item" data-name="shoes" id="pcard">    <!------PRODUCT 04--------->
+                     <a href="image2.jpg" target="_blank">
+                        <img src="image2-thumbnail.jpg" alt="product" loading="auto">
+                    </a>
+                     <a href="#" class="price-button">$24.99</a>
+               </article>
+			   
+			    <article class="gallery-item" data-name="Man Wrist Watches" id="pcard">   <!------PRODUCT 05--------->
+                      <a href="https://amzn.to/3UHCcUv" target="_blank">
+                          <img src="AMAZON/Man Wrist Watches.webp" alt="product" loading="auto">
+                     </a>
+                      <a href="https://amzn.to/3UHCcUv" class="price-button"> $ 399 </a>
+                </article>
+				
+                 <article class="gallery-item" data-name="shoes" id="pcard">    <!------PRODUCT 06--------->
+                     <a href="image2.jpg" target="_blank">
+                        <img src="image2-thumbnail.jpg" alt="product" loading="auto">
+                    </a>
+                     <a href="#" class="price-button">$24.99</a>
+               </article>
+			   
+			    <article class="gallery-item" data-name="Man Wrist Watches" id="pcard">   <!------PRODUCT 07--------->
+                      <a href="https://amzn.to/3UHCcUv" target="_blank">
+                          <img src="AMAZON/Man Wrist Watches.webp" alt="product" loading="auto">
+                     </a>
+                      <a href="https://amzn.to/3UHCcUv" class="price-button"> $ 399 </a>
+                </article>
+				
+                 <article class="gallery-item" data-name="shoes" id="pcard">    <!------PRODUCT 08--------->
+                     <a href="image2.jpg" target="_blank">
+                        <img src="image2-thumbnail.jpg" alt="product" loading="auto">
+                    </a>
+                     <a href="#" class="price-button">$24.99</a>
+               </article>
+			   
+			    <article class="gallery-item" data-name="Man Wrist Watches" id="pcard">   <!------PRODUCT 09--------->
+                      <a href="https://amzn.to/3UHCcUv" target="_blank">
+                          <img src="AMAZON/Man Wrist Watches.webp" alt="product" loading="auto">
+                     </a>
+                      <a href="https://amzn.to/3UHCcUv" class="price-button"> $ 399 </a>
+                </article>
+				
+                 <article class="gallery-item" data-name="shoes" id="pcard">    <!------PRODUCT 010--------->
+                     <a href="image2.jpg" target="_blank">
+                        <img src="image2-thumbnail.jpg" alt="product" loading="auto">
+                    </a>
+                     <a href="#" class="price-button">$24.99</a>
+               </article>
+	   </section>
+	   
+	   
+	   
+	   
 	  <!-----------------------------------
 	    ----------FOOTER SECTION----------
 	  -------------------------------------->
