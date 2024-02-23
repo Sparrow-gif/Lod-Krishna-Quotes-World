@@ -218,7 +218,7 @@
                  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;  
          	text-transform:capitalize;			 
        }
-  .head-logo > a:hover{ -webkit-transform:scale(1.20); -ms-transform:scale(1.20); transform:scale(1.20)}
+  
    .head-logo > a:nth-child(1) {
          color:white;
          background: #266DD3;
@@ -309,9 +309,12 @@
 		 }
 	   
 	   
-      @media only screen and (max-width: 767px) {
+      @media only screen and (min-width: 500px) {
                                                         /* Styles for small screens here */
-       
+               main > img { 
+			         width:500px;
+					 aspect-ratio:1/1;
+			   }
       }
      @media only screen and (min-width: 768px) {
                                                         /* Styles for medium screens here */
@@ -346,7 +349,7 @@
 		       background: #ccc ;
 			   border-radius:50%;
 		    }		                                    
-       
+         .head-logo > a:hover{ -webkit-transform:scale(1.20); -ms-transform:scale(1.20); transform:scale(1.20)}
       }
 
 
@@ -606,7 +609,8 @@
         // Open the WhatsApp share window
         window.open(whatsappUrl, "_blank");
     });
-	      		    //INSTAGRAM share button
+	      
+		    //INSTAGRAM share button
 		  
 		   document.getElementById('instagramShareBtn').addEventListener('click', function() {
              // Replace 'your_caption' and 'your_url' with your own caption and URL
