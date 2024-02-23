@@ -389,13 +389,18 @@
 	}
 	
     #gettouch > figure > .tact {
-	          width:46%;
+	          width:180px;
 		      border:2px solid #f0f0f0;
 		      aspect-ratio:1/1;
 	          padding:20px 10px;
-			  overflow: ;
+			  overflow:hidden;
 	   }
-	
+	 @media only screen and (min-width:500px) {
+	        #gettouch > figure > .tact { 
+			      width:250px;
+		          aspect-ratio:1/1;
+			}
+	 }
 	
   #gettouch > form {
         -webkit-user-select:none;
