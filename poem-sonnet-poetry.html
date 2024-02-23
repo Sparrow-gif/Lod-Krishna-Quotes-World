@@ -341,11 +341,7 @@
 		      -o-transition-duration:0.3s;
 		         transition-duration:0.3s;
 			 }
-     .article:hover{
-	     -webkit-transform:scale(1.04);
-	         -ms-transform:scale(1.04);
-	             transform:scale(1.04);
-	 }
+    
    .article img {
         max-width: 100%;
         aspect-ratio:1/1;  
@@ -384,13 +380,28 @@
             -ms-user-select:none;      
              text-transform: capitalize ;    
           }
+		  
+    #gettouch > figure {
+	     display:flex;
+		 flex-wrap:wrap;
+		 justify-content:Center;
+		 gap:20px 20px;
+	}
+	
+    #gettouch > figure > .tact {
+	      width:160px;
+		  border:2px solid #f0f0f0;
+		  aspect-ratio:1/1;
+	}
+	
+	
   #gettouch > form {
         -webkit-user-select:none;
            -moz-user-select:none;
             -ms-user-select:none;
                 user-select:none;
         margin:0 auto ;
-        max-width:640px;
+        max-width:440px;
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
@@ -401,12 +412,7 @@
         gap:6px;
 		padding:15px;
        }
-   #gettouch > form > h1 {
-         color:#5E239D;
-         font-size: ;
-         font-family:;
-         font-weight: ;
-       }
+  
    #gettouch > form > label {
         width:100%;
         display:block;
@@ -460,36 +466,6 @@
               -ms-transform:scale(0.90) ;
                   transform:scale(0.90) ;
        }
-  #comments {
-         margin-top: 20px;
-         Font-family: ;
-		 color: ;
-       }
-   
-  .comment {
-        background-color: #e6f7ff;
-        padding: 10px;
-        margin-bottom: 10px;
-        border-radius: 4px;
-        Font-family: ;
-		 color: dodgerblue;
-     }
-   .didit > #community {
-        background-color: ;
-        padding: 7px;
-        margin:10px auto;
-        Font-family: ;
-        overflow:hidden;
-	    color: ;
-     }
-      .didit {
-          min-height: auto ;
-          max-height: auto ;
-          overflow:auto;
-		  padding:10px;
-		   color: ;
-       }
-
 
    footer {
            background: #f0f0f0;
@@ -539,6 +515,7 @@
 	   
 	   @media only screen and (min-width:600px) { 
 	          .article {  margin:0 auto;   width: 220px ; }
+			
 	  }
 	  
 	  
@@ -563,7 +540,12 @@
                    color: black;
                    cursor: pointer;
               }			
+			  #gettouch > figure > .tact {
+			       width:240px;
+				   aspect-ratio:1/1;
+			  }
 			 
+			  
 	   }
 	   
 	   
@@ -602,6 +584,17 @@
 		       background: #ccc ;
 			   border-radius:50%;
 		    }		
+		 .article:hover{
+	         -webkit-transform:scale(1.04);
+	         -ms-transform:scale(1.04);
+	             transform:scale(1.04);
+	 }
+	    #gettouch {
+			      gap:0px;
+                  display:grid;
+                 grid-template-columns:repeat(auto-fit,minmax(min(30rem,100%),1fr)) ;
+			  }
+	 
 			    
 		}
    </style>
@@ -810,27 +803,28 @@
     <!-- You can add more articles using the same structure -->
   </section>
         
-
-
-           <!----COMMENT Section------>
-				  <div class="didit">
-                       <h1 style="font-family:Roboto; color:#291769;"> Recent Comments  </h1>
-                       <div id="comments"> </div> <!----messages-04----->
-                       <div id="community"> Comments 0 </div> <!----messages-03----->
-                     <!---<div id="community"> <b> sneha:- </b> wows  </div> ---messages-02---->
-                     <!---<div id="community"> <b> ajoy :- </b> best </div>-----messages-01----->
-                 </div>
-				 
-		   </aside>
+    </aside>
 		        
-		</section>	
+ </section>	
 			
 		
-				   <!----Comment Section------->
+				   <!---------------------------------------
+                      ------------CONTACT Section-----------
+					 ---------------------------------------->
+					 
+				<h1 style="color:#5E2BFF;Font-size:16px; text-align:center; margin-top:50px;"> Contact us </h1>
+				<h1 style="color:#181f1a;Font-size:30px; text-align:center;"> Contact to purchase poem </h1>
         <div id="gettouch" class="comment-section">
+		     
+			 <figure>
+			       <div class="tact">   </div>
+				   <div class="tact">   </div>
+				   <div class="tact">   </div>
+				   <div class="tact">   </div>
+			 </figure>
+			 
              <form action="#" method="post" id="myForm"> <!--id comment-form--->
-                 <h1> leave a comment </h1>
-                 
+                                 
                  <label for ="Name"> Name </label>
                  <input type="text" id="name" name="name" spellcheck="true" required>
                 
@@ -840,7 +834,7 @@
 		 <label for ="text"> Message </label>
 		 <textarea id="msg" name="msg" rows="6" cols="40" spellcheck="true" required></textarea>
                  
-                <button class="btn" type="submit"> Submit </button>
+                <button class="btn" type="submit"> buy now </button>
             </form>        
         </div>
        
@@ -1008,29 +1002,7 @@ function addComment(name, commentText) {
             document.getElementById('myForm').reset();			
         });
 		
-		 //Contact us 
-      document.getElementById('myForm').addEventListener('submit', function(e) {
-  e.preventDefault();
-  const name = document.getElementById('name').value;
-  const commentText = document.getElementById('msg').value;
-  const email = document.getElementById('email').value;
-  if (name && commentText) {
-    addComment(name, commentText, email);
-    document.getElementById('myForm').reset();
-	 alert("submitted");
-  } else {
-    alert('Please fill in all fields.');
-  }
-});
-
-function addComment(name, commentText) {
-  const commentsSection = document.getElementById('comments');
-  const commentDiv = document.createElement('div');
-  commentDiv.classList.add('comment');
-  commentDiv.innerHTML = `<strong>${name}:</strong> ${commentText}`;
-  commentsSection.appendChild(commentDiv);
-} 
-  });
+	
 </script>
    
  </body>
