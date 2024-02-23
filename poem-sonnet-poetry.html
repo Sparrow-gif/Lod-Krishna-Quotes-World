@@ -982,32 +982,7 @@ triggers.forEach((trigger) => {
   });
 });
 		
-            //Contact us 
-      document.getElementById('comment-form').addEventListener('submit', function(e) {
-  e.preventDefault();
-  const name = document.getElementById('name').value;
-  const commentText = document.getElementById('comment').value;
-  const email = document.getElementById('email').value;
-  if (name && commentText) {
-    addComment(name, commentText, email);
-    document.getElementById('comment-form').reset();
-	 alert("submitted");
-  } else {
-    alert('Please fill in all fields.');
-  }
-});
-
-function addComment(name, commentText) {
-  const commentsSection = document.getElementById('comments');
-  const commentDiv = document.createElement('div');
-  commentDiv.classList.add('comment');
-  commentDiv.innerHTML = `<strong>${name}:</strong> ${commentText}`;
-  commentsSection.appendChild(commentDiv);
-}
-   </script>
-   
-      <script>
-      const form = document.getElementById('myForm');
+            const form = document.getElementById('myForm');
       form.addEventListener('submit', async function(e) {
       e.preventDefault();
       const formData = new FormData(this);
@@ -1025,6 +1000,30 @@ function addComment(name, commentText) {
             // Refresh the form
             document.getElementById('myForm').reset();			
         });
+		
+		 //Contact us 
+      document.getElementById('myForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  const name = document.getElementById('name').value;
+  const commentText = document.getElementById('msg').value;
+  const email = document.getElementById('email').value;
+  if (name && commentText) {
+    addComment(name, commentText, email);
+    document.getElementById('myForm').reset();
+	 alert("submitted");
+  } else {
+    alert('Please fill in all fields.');
+  }
+});
+
+function addComment(name, commentText) {
+  const commentsSection = document.getElementById('comments');
+  const commentDiv = document.createElement('div');
+  commentDiv.classList.add('comment');
+  commentDiv.innerHTML = `<strong>${name}:</strong> ${commentText}`;
+  commentsSection.appendChild(commentDiv);
+} 
+  });
 		
 	
 </script>
