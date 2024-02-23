@@ -555,15 +555,13 @@
 
 
          //change Navigation background
-   window.addEventListener('scroll', function() {
-       const navbar = document.getElementById('header');
-       const scrolled = window.scrollY;
-
-       if (scrolled > 30) {
-       navbar.style.backgroundColor = '#01BAEF'; // Change this to the desired color
-     } else {
-       navbar.style.backgroundColor = '#181f1a'; // Change this to the default color
-     }
+     window.addEventListener('scroll', function() {
+       var scrollBox = document.getElementById('header');
+       if (window.scrollY > 0) {
+            scrollBox.style.boxShadow = '0px 0px 30px rgba(127, 137, 161, 0.25)';
+    } else {                             
+      scrollBox.style.boxShadow = 'none';
+    }
   });
 
 
