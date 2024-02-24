@@ -15,7 +15,7 @@
   <meta name="description" content="">
   <title>General Knowledge Website</title>
     <style>
-        * {
+       * {
           margin:0px;
           padding:0px;
           -webkit-box-sizing:border-box;
@@ -28,19 +28,12 @@
                   user-select:none;		  
         }  
    body.sidebar-open {  overflow: hidden; }
-   
-	 html {
-         scroll-behavior:smooth;
-         scroll-padding:3em;
-         background-color:#f0f0f0; 
-	     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      }
-	  
+	 html {   
+   	     background-color: ; 
+		 box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	     }
    header {
-            background-color: #181f1a;
-            color: white;
-            padding: 0px 10px;
-            position:sticky;
+            position:fixed;
             top: 0;
             left: 0;
             width: 100%;
@@ -50,26 +43,32 @@
             display: flex; 
             justify-content: space-between; 
             align-items: center; 
+		    background-color: #FFFFFF;
+            color: black;
+            width:100%;
+			padding:5px 10px;
         }
         .navbar-brand h1 {
-            margin: 0;
-            font-size: 24px;
-        }
+                 margin: 0;
+                 font-size: 28px;
+	             color:#5E2BFF;
+		        font-weight:bold;
+		 }
         
         .navbar-toggler {
             background: none;
             border: none;
             cursor: pointer;
-            font-size: 24px;
-            color: white;
-            padding: 10px;
-        }
-        
+            font-size:28px;
+            padding:6px;
+			font-weight:bold;
+            }
+       
         .sidebar {
             height: calc(100vh - 40px);
             width: 360px;
             position: fixed;
-            top: 43px;
+            top: 48px;
             right: -100%;
             background-color: #fff;
             overflow-y: auto;
@@ -77,6 +76,7 @@
             transition: 0.5s;
             z-index: 998;
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+			padding:10px 0px 20px 0px;
         }
         
         .sidebar.active {
@@ -103,11 +103,10 @@
             border-radius: 30px;
             text-align: center; /* Center align the text */
         }
-        
-        .menu li a:hover {
-            background-color: #2576e8;
-            color: white;
-        }
+        .menu li #active {
+              background-color: #6b40f7;
+              color: white;
+		}
         
         .social-links {
             margin-top: 20px;
@@ -117,7 +116,7 @@
         }
         
         .social-links a {
-            margin: 0 10px;
+            margin: 0px 10px;
             font-size: 20px;
             text-decoration: none;
             transition: transform 0.3s, color 0.3s;
@@ -129,11 +128,6 @@
             height: 40px;
         }
         
-        .social-links a:hover {
-            color: #fff;
-            background-color: #1e62d0;
-            transform: translateY(-5px);
-        }
         
         @media (max-width:550px) {
             .sidebar {
@@ -158,11 +152,13 @@
 }
 		
   .scroll-container {
+        margin-top:46px;
         width: 100%;
         overflow-x: auto;
         display:-webkit-box;
         display:-ms-flexbox;
         display:flex;        
+		justify-content: ;
         background:white;
         padding:6px 0px;
         position:relative ;
@@ -173,28 +169,24 @@
          display:none;
       }
  .scroll-container > .scroll-item {
-         color:dodgerblue;
+         color:#181f1a;
 		 border:2px solid #ebe6fa;
          text-align:center;
          min-width: 100px;
          text-decoration:none;
-         padding:5px;
+         padding:5px 5px;
          margin:0px 6px;
          border-radius:14px;
          overflow:scroll;
 		 scroll-snap-align:center;
-        }
+		}
 	  .scroll-container > .scroll-item::-webkit-scrollbar{ display: none;}
     .scroll-container > #active {
-        color: white;
-        background:#6e0cf7;
-		 border:none;
+           color: black;
+           background:#f0f0f0;
+		   border:none;
         }
-   .scroll-container > .scroll-item:hover {
-          color: white;
-          background:#6e0cf7;
-		  border:none;
-       }
+  
    .scroll-container::-webkit-scrollbar{  width:2px; }
 
    .scroll-container::-webkit-scrollbar-track{  background: ;}
@@ -271,11 +263,7 @@
 		      -o-transition-duration:0.3s;
 		         transition-duration:0.3s;
 			 }
-     .Answer > .article:hover{
-	     -webkit-transform:scale(1.04);
-	         -ms-transform:scale(1.04);
-	             transform:scale(1.04);
-	 }
+     
    .Answer > .article img {
         max-width: 100%;
         aspect-ratio:1/1;  
@@ -300,41 +288,31 @@
             text-align:center;
          }
 
-     .Answer > .article h3 a:hover {
-          text-decoration: underline;
-      }
 	  
 	  
 	  
-	 footer {
-            background: #020122;
+	  footer {
+           background: #f0f0f0;
             text-align: center;
-            color: #FFFFFF;
+            color: #181f1a;
             padding: 20px;
         }
        footer > nav > a {
 	         text-decoration:none;
-		     color:white;
-		      border-left:2px solid coral;
-		     padding:6px 8px;
-			 margin:10px;
-			 transition-duration:0.3s;
-         }
-		 
+			 border-left:2px solid coral;
+			 margin:20px 10px;
+			 padding:6px 10px;
+			 column-count:auto;
+			 color: #181f1a;
+			 font-size:14px;
+			}		
+		
 		 footer > .social-media > a {
 		      		 text-decoration:none;
-		             color:white;
+		             color: #181f1a;
 			         margin: 10px;
                      Font-size:1.50rem;  
 		 }
-        footer nav a:hover {
-             border-left:0px solid coral;
-			 border-bottom:2px solid coral;
-        }
-        footer h3 {
-            margin-bottom: 10px;
-            font-size: 1.5rem;
-        }
 		
 		
     @media only screen and (max-width:767px) { 
@@ -354,7 +332,7 @@
 			   }
 			main {
 			   display:flex;
-			   gap:10px;
+			   gap:20px 20px;
 			   justify-content:space-around;			   
 			  }
 			.Question {   width:63%;  }
@@ -374,7 +352,33 @@
 	          margin:0 auto;
 			  max-width:65%;
 			  min-width:990px;
-		    }    		 
+		    }   
+         .menu li a:hover {
+              background-color: #6b40f7;
+              color: white;
+            }	
+          .social-links a:hover {
+                 color: #fff;
+                 background-color: #5E2BFF;
+                 transform: translateY(-5px);
+           }	
+         .scroll-container > .scroll-item:hover {
+                 color: black;
+                 background: #f0f0f0 ;
+		         border:none;
+		     }		
+        .navbar-toggler:hover {
+		       background: #ccc ;
+			   border-radius:50%;
+		    }	
+	.Answer > .article:hover{
+	     -webkit-transform:scale(1.04);
+	         -ms-transform:scale(1.04);
+	             transform:scale(1.04);
+	 }
+   .Answer > .article h3 a:hover {
+          text-decoration: underline;
+         }			
       }
 	  
 
@@ -417,9 +421,9 @@
                <a class="scroll-item" href="motivational-quotes.html" target="_self"> Daily Quotes </a>     
                <a class="scroll-item" href="index.html" target="_self"> wishdom </a>
                <a class="scroll-item" href="sri-krishna-stories.html" target="_self"> Karma </a>
+			   <a class="scroll-item" id="active" href="general-knowledge.html" target="_self"> gk quiz </a>              
                <a class="scroll-item" href="blog-videos.html" target="_self"> videos </a>
-			   <a class="scroll-item" id="active" href="general-knowledge.html" target="_self"> gk quiz </a>
-               <a class="scroll-item" href="poem-sonnet-poetry.html" target="_self"> books </a>               
+			   <a class="scroll-item" href="poem-sonnet-poetry.html" target="_self"> books </a>               
                <a class="scroll-item" href="best-educational-websites.html" target="_self"> study </a>
                <a class="scroll-item" href="best-mobile-games.html" target="_self"> gaming </a>
                <a class="scroll-item" href="discount-deals.html" target="_self"> life-style </a>    
@@ -697,28 +701,32 @@
     </main>
 	
 	
-	 <!-- FOOTER SECTION -->
+	  <!-----------------------------------
+	    ----------FOOTER SECTION----------
+	  -------------------------------------->
     <footer>
         <p>  &copy copyright-2024  quotes planet. all rights reserved </p>
         <div class="social-media">
-            <h3>Follow Us</h3>
+            <h2 style="margin-bottom: 10px;">  Follow Us  </h2>
             <a href="#" class="fa-brands fa-telegram" title="Telegram"></a>
             <a href="#" class="fa-brands fa-instagram" title="Instagram"></a>
             <a href="#" class="fa-brands fa-twitter" title="Twitter"></a>
             <a href="#" class="fa-brands fa-whatsapp" title="WhatsApp"></a>
             <a href="#" class="fa-brands fa-youtube" title="YouTube"></a>
         </div>
-        <nav style="column-count:auto;">
-            <a href="contact-us.html">Contact Us</a>
-            <a href="about-us.html">About Us</a>
-            <a href="privacy-policy.html">Privacy Policy</a>
-            <a href="terms-and-conditions.html">terms-and-conditions </a>
-            <a href="disclaimer.html">Disclaimer</a>
-            <a href="sitemap.html">Sitemap</a>
+        <nav>
+            <a href="contact-us.html" target="_self">Contact Us</a>
+            <a href="about-us.html" target="_self">About Us</a>
+            <a href="about-us.html" target="_self">Privacy & Policy</a>
+            <a href="about-us.html" target="_self">Terms & Conditions</a>
+            <a href="about-us.html" target="_self">Disclaimer</a>
+            <a href="my-sitemap.html" target="_self">Sitemap</a>
         </nav>
     </footer>
+	
+	
 	<script>
-	        const sidebar = document.getElementById("sidebar");
+	         const sidebar = document.getElementById("sidebar");
            const overlay = document.getElementById("overlay");
            const toggleButton = document.getElementById("toggleButton");
 
@@ -737,15 +745,13 @@
 
 
          //change Navigation background
-   window.addEventListener('scroll', function() {
-       const navbar = document.getElementById('header');
-       const scrolled = window.scrollY;
-
-       if (scrolled > 30) {
-       navbar.style.backgroundColor = '#01BAEF'; // Change this to the desired color
-     } else {
-       navbar.style.backgroundColor = '#181f1a'; // Change this to the default color
-     }
+     window.addEventListener('scroll', function() {
+       var scrollBox = document.getElementById('header');
+       if (window.scrollY > 0) {
+            scrollBox.style.boxShadow = '0px 0px 30px rgba(127, 137, 161, 0.25)';
+    } else {                             
+      scrollBox.style.boxShadow = 'none';
+    }
   });
 
 
