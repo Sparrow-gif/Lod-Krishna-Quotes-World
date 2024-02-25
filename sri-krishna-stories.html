@@ -15,23 +15,27 @@
   <meta name="description" content="Unlock the secrets of divine wisdom with 'The Story of Sri Krishna' website. Learn the profound teachings, discover timeless narratives, and get enlightened through an immersive exploration of Sri Krishna's saga. Start your journey to acquire spiritual insights and elevate your understanding today.">
   <title> Exploring Sri Krishna Stories and Wisdom: Unveiling Divine Tales and Teachings </title>
   <style>
-  * {
+   * {
           margin:0px;
           padding:0px;
           -webkit-box-sizing:border-box;
           box-sizing:border-box;
-          font-family: Roboto;
-          text-transform:capitalize;                     
+          font-family: roboto;
+          text-transform:capitalize;  
+          -webkit-user-select:none;  
+             -moz-user-select:none;  
+              -ms-user-select:none;  
+                  user-select:none;		  
         }  
-  body.sidebar-open {  overflow: hidden; }
-	html {   background-color:#f0f0f0; 
-		 box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+		
+   body.sidebar-open {  overflow: hidden; }
+   
+	       html {
+            background-color: ; 
+		    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 	     }
    header {
-            background-color: #181f1a;
-            color: white;
-            padding: 0px 10px;
-            position:sticky;
+            position:fixed;
             top: 0;
             left: 0;
             width: 100%;
@@ -41,26 +45,32 @@
             display: flex; 
             justify-content: space-between; 
             align-items: center; 
+		    background-color: #FFFFFF;
+            color: black;
+            width:100%;
+			padding:5px 10px;
         }
         .navbar-brand h1 {
-            margin: 0;
-            font-size: 24px;
-        }
+                 margin: 0;
+                 font-size: 28px;
+	             color:#5E2BFF;
+		        font-weight:bold;
+		 }
         
         .navbar-toggler {
             background: none;
             border: none;
             cursor: pointer;
-            font-size: 24px;
-            color: white;
-            padding: 10px;
-        }
-        
+            font-size:28px;
+            padding:6px;
+			font-weight:bold;
+            }
+       
         .sidebar {
             height: calc(100vh - 40px);
             width: 360px;
             position: fixed;
-            top: 43px;
+            top: 48px;
             right: -100%;
             background-color: #fff;
             overflow-y: auto;
@@ -68,6 +78,7 @@
             transition: 0.5s;
             z-index: 998;
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+			padding:10px 0px 20px 0px;
         }
         
         .sidebar.active {
@@ -94,11 +105,10 @@
             border-radius: 30px;
             text-align: center; /* Center align the text */
         }
-        
-        .menu li a:hover {
-            background-color: #2576e8;
-            color: white;
-        }
+        .menu li #active {
+              background-color: #6b40f7;
+              color: white;
+		}
         
         .social-links {
             margin-top: 20px;
@@ -108,7 +118,7 @@
         }
         
         .social-links a {
-            margin: 0 10px;
+            margin: 0px 10px;
             font-size: 20px;
             text-decoration: none;
             transition: transform 0.3s, color 0.3s;
@@ -120,11 +130,6 @@
             height: 40px;
         }
         
-        .social-links a:hover {
-            color: #fff;
-            background-color: #1e62d0;
-            transform: translateY(-5px);
-        }
         
         @media (max-width:550px) {
             .sidebar {
@@ -149,11 +154,13 @@
 }
 		
   .scroll-container {
+        margin-top:46px;
         width: 100%;
         overflow-x: auto;
         display:-webkit-box;
         display:-ms-flexbox;
         display:flex;        
+		justify-content: ;
         background:white;
         padding:6px 0px;
         position:relative ;
@@ -164,28 +171,24 @@
          display:none;
       }
  .scroll-container > .scroll-item {
-         color:dodgerblue;
-	 border:2px solid #ebe6fa;
+         color:#181f1a;
+		 border:2px solid #ebe6fa;
          text-align:center;
          min-width: 100px;
          text-decoration:none;
-         padding:5px;
+         padding:5px 5px;
          margin:0px 6px;
          border-radius:14px;
          overflow:scroll;
-	 scroll-snap-align:center;
-        }
+		 scroll-snap-align:center;
+		}
 	  .scroll-container > .scroll-item::-webkit-scrollbar{ display: none;}
     .scroll-container > #active {
-        color: white;
-        background:#6e0cf7;
-		 border:none;
+           color: black;
+           background:#f0f0f0;
+		   border:none;
         }
-   .scroll-container > .scroll-item:hover {
-          color: white;
-          background:#6e0cf7;
-		  border:none;
-       }
+  
    .scroll-container::-webkit-scrollbar{  width:2px; }
 
    .scroll-container::-webkit-scrollbar-track{  background: ;}
@@ -232,7 +235,9 @@
   .image-card .buttons button {
     border: none;
     cursor: pointer;
-    background: none;
+    color: #5E2BFF;
+	background:none;
+	Font-size:18px;
   }
   
    .like-counter {
@@ -247,51 +252,27 @@
 
 
     footer {
-         margin:0 auto;
-         background:#122029;
-         color:white;    
-         -webkit-user-select:none;    
-         -moz-user-select:none;    
-         -ms-user-select:none;    
-         user-select:none;  
-         padding:5px;
-         text-transform:capitalize;
-         overflow:hidden;
-         -webkit-user-select:none;
-         -moz-user-select:none;
-         -ms-user-select:none;         
-       }  
-   .sneha {
-        padding:10px;
-        color:white;
-       }
-   .sneha > a{
-        text-decoration:none;
-        color:white;
-        display:block;      
-        margin:3px;  
-        font-size:14px
+           background: #f0f0f0;
+            text-align: center;
+            color: #181f1a;
+            padding: 20px;
         }
-   select {
-        cursor:pointer;
-        margin:10px;
-        float:right;
-        width:40%;
-		max-width:210px;
-        height:40px;
-        outline:none;
-        border:2px solid #253330; 
-        border-radius:30px;
-        text-align:center;
-        font-size:16px;
-        font-weight:600px;
-        -webkit-transition:all 0.3s;
-        -o-transition:all 0.3s;
-        transition:all 0.3s;
-        background:white;
-        outline:2px solid white; 
-        text-transform:capitalize;
-       }
+       footer > nav > a {
+	         text-decoration:none;
+			 border-left:2px solid coral;
+			 margin:20px 10px;
+			 padding:6px 10px;
+			 column-count:auto;
+			 color: #181f1a;
+			 font-size:14px;
+			}		
+		
+		 footer > .social-media > a {
+		      		 text-decoration:none;
+		             color: #181f1a;
+			         margin: 10px;
+                     Font-size:1.50rem;  
+		 }
   
       @media only screen and (min-width: 480px) {
        
@@ -312,11 +293,35 @@
 	   
 	   
 	    @media only screen and (min-width:992px) { 
-		       html {
-	             margin:0 auto;
-			     max-width:70%;
-			     min-width:990px;
-		       }    
+		      html {
+	          margin:0 auto;
+			  max-width:65%;
+			  min-width:990px;
+		    }   
+		 #section >  #blur a:hover {
+         -webkit-transform:scale(0.90) ;
+             -ms-transform:scale(0.90) ;
+                 transform:scale(0.90) ;
+         border-radius:10px;
+     }
+         .menu li a:hover {
+              background-color: #6b40f7;
+              color: white;
+            }	
+          .social-links a:hover {
+                 color: #fff;
+                 background-color: #5E2BFF;
+                 transform: translateY(-5px);
+           }	
+         .scroll-container > .scroll-item:hover {
+                 color: black;
+                 background: #f0f0f0 ;
+		         border:none;
+		     }		
+        .navbar-toggler:hover {
+		       background: #ccc ;
+			   border-radius:50%;
+		    }		
 		}
 		
 		
@@ -337,7 +342,7 @@
             <li><a href="blog-videos.html" title="Explore Blogs"> videos</a></li>
             <li><a href="poem-sonnet-poetry.html" title="Read Poetry">books </a></li>
             <li><a href="web-news.html" title="Discover Web News">Web News</a></li>
-            <li><a href="https://www.amazon.in" target="_blank" rel="noopener noreferrer">Life-Style</a></li>
+            <li><a href="general-knowledge.html" target="_self">Life-Style</a></li>
             <li><a href="https://www.sportskeeda.com" target="_blank" rel="noopener noreferrer">Cricket</a></li>
             <li><a href="health-advice.html" title="Get Health Advice">Health</a></li>
             <li><a href="contact-us.html" title="Contact us">Contact us</a></li>
@@ -359,6 +364,7 @@
                <a class="scroll-item" href="motivational-quotes.html" target="_self"> Daily Quotes </a>     
                <a class="scroll-item" href="index.html" target="_self"> wishdom </a>
                <a class="scroll-item" id="active" href="sri-krishna-stories.html" target="_self"> Karma </a>
+			    <a class="scroll-item" href="general-knowledge.html" target="_self"> epic quiz </a> 
                <a class="scroll-item" href="blog-videos.html" target="_self"> videos </a>
                <a class="scroll-item" href="poem-sonnet-poetry.html" target="_self"> books </a>               
                <a class="scroll-item" href="best-educational-websites.html" target="_self"> study </a>
@@ -489,28 +495,31 @@
        
 
        
-       <footer title="footer">   <!------footer Section------->
-       <h2> Quotes World </h2>          
-      <select title="language-switcher">
-           <option> English</option>
-           <option> hindi   </option>
-           <option> Bengali </option>
-           <option> gujrati </option>
-           <option> tamil  </option>
-           <option> telugu  </option>
-           <option> odiya  </option>           
-     </select>
-    <div class="sneha">
-        <a href="about-us.html" target="_self"><p> Terms & privacy </p></a>
-        <a href="about-us.html" target="_self"><p> policy </p></a>
-		<a href="about-us.html" target="_self"><p> sitemap </p></a>
-        <a href="about-us.html" target="_self"><p> 2024® </p></a>
-       
-   </div>
-  </footer>
+       <!-----------------------------------
+	    ----------FOOTER SECTION----------
+	  -------------------------------------->
+    <footer>
+        <p>  &copy copyright-2024  quotes planet. all rights reserved </p>
+        <div class="social-media">
+            <h2 style="margin-bottom: 10px;">  Follow Us  </h2>
+            <a href="#" class="fa-brands fa-telegram" title="Telegram"></a>
+            <a href="#" class="fa-brands fa-instagram" title="Instagram"></a>
+            <a href="#" class="fa-brands fa-twitter" title="Twitter"></a>
+            <a href="#" class="fa-brands fa-whatsapp" title="WhatsApp"></a>
+            <a href="#" class="fa-brands fa-youtube" title="YouTube"></a>
+        </div>
+        <nav>
+            <a href="contact-us.html" target="_self">Contact Us</a>
+            <a href="about-us.html" target="_self">About Us</a>
+            <a href="about-us.html" target="_self">Privacy & Policy</a>
+            <a href="about-us.html" target="_self">Terms & Conditions</a>
+            <a href="about-us.html" target="_self">Disclaimer</a>
+            <a href="my-sitemap.html" target="_self">Sitemap</a>
+        </nav>
+    </footer>
      
    <script>
-           const sidebar = document.getElementById("sidebar");
+          const sidebar = document.getElementById("sidebar");
            const overlay = document.getElementById("overlay");
            const toggleButton = document.getElementById("toggleButton");
 
@@ -529,15 +538,13 @@
 
 
          //change Navigation background
-   window.addEventListener('scroll', function() {
-       const navbar = document.getElementById('header');
-       const scrolled = window.scrollY;
-
-       if (scrolled > 30) {
-       navbar.style.backgroundColor = '#01BAEF'; // Change this to the desired color
-     } else {
-       navbar.style.backgroundColor = '#181f1a'; // Change this to the default color
-     }
+     window.addEventListener('scroll', function() {
+       var scrollBox = document.getElementById('header');
+       if (window.scrollY > 0) {
+            scrollBox.style.boxShadow = '0px 0px 30px rgba(127, 137, 161, 0.25)';
+    } else {                             
+      scrollBox.style.boxShadow = 'none';
+    }
   });
 
 
@@ -554,6 +561,10 @@
 
      // Scroll the container to center the active item
              scrollContainer.scrollLeft = scrollItemCenter;
+			 
+			 
+			 
+			 
 
            // JavaScript for like functionality
   document.querySelectorAll('.like-btn').forEach(button => {
