@@ -14,27 +14,30 @@
   <meta name="description" content="Discover the top 10 educational websites in India on our review platform. Learn and explore with actionable insights to get the most out of your online education journey. From courses to resources, uncover the best tools to enhance your learning experience today!">
   <meta name="robots" content="nofollow, noarchive">
   <title> Best Educational Websites in India </title>
-   <style>
-
+   <style>       
      * {
           margin:0px;
           padding:0px;
           -webkit-box-sizing:border-box;
           box-sizing:border-box;
           font-family: roboto;
-          text-transform:capitalize;                           
+          text-transform:capitalize;  
+          -webkit-user-select:none;  
+             -moz-user-select:none;  
+              -ms-user-select:none;  
+                  user-select:none;		  
         }  
-   html {
-       scroll-behavior:smooth;
-       scroll-padding:2.80em;
-       background-color:#f0f0f0;   
-      }
-  body.sidebar-open {  overflow: hidden; }
+		
+   body.sidebar-open {  overflow: hidden; }
+   
+	       html {
+            scroll-behavior:smooth;
+            scroll-padding:2.80em;
+            background-color: ; 
+		    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	     }
    header {
-            background-color: #181f1a;
-            color: white;
-            padding: 0px 10px;
-            position:sticky;
+            position:fixed;
             top: 0;
             left: 0;
             width: 100%;
@@ -44,26 +47,32 @@
             display: flex; 
             justify-content: space-between; 
             align-items: center; 
+		    background-color: #FFFFFF;
+            color: black;
+            width:100%;
+			padding:5px 10px;
         }
         .navbar-brand h1 {
-            margin: 0;
-            font-size: 24px;
-        }
+                 margin: 0;
+                 font-size: 28px;
+	             color:#5E2BFF;
+		        font-weight:bold;
+		 }
         
         .navbar-toggler {
             background: none;
             border: none;
             cursor: pointer;
-            font-size: 24px;
-            color: white;
-            padding: 10px;
-        }
-        
+            font-size:28px;
+            padding:6px;
+			font-weight:bold;
+            }
+       
         .sidebar {
             height: calc(100vh - 40px);
             width: 360px;
             position: fixed;
-            top: 43px;
+            top: 48px;
             right: -100%;
             background-color: #fff;
             overflow-y: auto;
@@ -71,6 +80,7 @@
             transition: 0.5s;
             z-index: 998;
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+			padding:10px 0px 20px 0px;
         }
         
         .sidebar.active {
@@ -97,11 +107,10 @@
             border-radius: 30px;
             text-align: center; /* Center align the text */
         }
-        
-        .menu li a:hover {
-            background-color: #2576e8;
-            color: white;
-        }
+        .menu li #active {
+              background-color: #6b40f7;
+              color: white;
+		}
         
         .social-links {
             margin-top: 20px;
@@ -111,7 +120,7 @@
         }
         
         .social-links a {
-            margin: 0 10px;
+            margin: 0px 10px;
             font-size: 20px;
             text-decoration: none;
             transition: transform 0.3s, color 0.3s;
@@ -123,71 +132,65 @@
             height: 40px;
         }
         
-        .social-links a:hover {
-            color: #fff;
-            background-color: #1e62d0;
-            transform: translateY(-5px);
-        }
         
-        @media (max-width:520px) {
+        @media (max-width:550px) {
             .sidebar {
                 width: 100%;
             }
         }
 		
-	#overlay {
-         position: fixed;
-         top: 0;
-         left: 0;
-         width: 100%;
-         height: 100%;
-         background-color: rgba(0, 0, 0, 0.6); /* Adjust the transparency here */
-         z-index: 997; /* Ensure the overlay is below the sidebar */
-         display: none; /* Initially hidden */
-     }
-
-   #overlay.active {
-          display: block; /* Display when sidebar is active */
-     }
 		
-    .scroll-container {
-          width: 100%;
-          overflow-x: auto;
-          display:-webkit-box;
-          display:-ms-flexbox;
-          display:flex;        
-          background:white;
-          padding:5px;
-          position:relative ;
-          white-space: nowrap;
-	  scroll-snap-type: x mandatory;   
+   #overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /* Adjust the transparency here */
+  z-index: 997; /* Ensure the overlay is below the sidebar */
+  display: none; /* Initially hidden */
+}
+
+#overlay.active {
+  display: block; /* Display when sidebar is active */
+}
+		
+  .scroll-container {
+        margin-top:46px;
+        width: 100%;
+        overflow-x: auto;
+        display:-webkit-box;
+        display:-ms-flexbox;
+        display:flex;        
+		justify-content: ;
+        background:white;
+        padding:6px 0px;
+        position:relative ;
+        white-space: nowrap;
+		scroll-snap-type: x mandatory;
 	 }
  .scroll-container::-webkit-scrollber {
          display:none;
       }
  .scroll-container > .scroll-item {
-             color:dodgerblue;
-	     border:2px solid #ebe6fa;
-             text-align:center;
-             min-width: 100px;
-             text-decoration:none;
-             padding:5px;
-             margin:0px 6px;
-             border-radius:14px;
-             overflow:scroll;
-	     scroll-snap-align:center;
-		 }
+         color:#181f1a;
+		 border:2px solid #ebe6fa;
+         text-align:center;
+         min-width: 100px;
+         text-decoration:none;
+         padding:5px 5px;
+         margin:0px 6px;
+         border-radius:14px;
+         overflow:scroll;
+		 scroll-snap-align:center;
+		}
 	  .scroll-container > .scroll-item::-webkit-scrollbar{ display: none;}
     .scroll-container > #active {
-        color: white;
-        background:#6e0cf7;
-		border:none;
+           color: black;
+           background:#f0f0f0;
+		   border:none;
         }
-   .scroll-container > .scroll-item:hover {
-          color: white;
-          background:#6e0cf7;
-		  border:none;
-       }
+  
    .scroll-container::-webkit-scrollbar{  width:2px; }
 
    .scroll-container::-webkit-scrollbar-track{  background: ;}
@@ -197,6 +200,8 @@
           border-radius:0px;
           border:1px none #FFFFFF; */
            }
+		   
+		   
     #section {
        position:relative;       
        margin:0 ;
@@ -293,7 +298,7 @@
       }
     #contentable {
           margin:0 auto ;
-          padding:0px;
+          padding:20px 10px;
          -webkit-user-select:none;    
          -moz-user-select:none;    
          -ms-user-select:none;    
@@ -304,19 +309,31 @@
            color: #291769;
 		   font-family:roboto;
         }
-   #contentable > table{
-         border:1px solid black;
-         padding:0px;
+   #contentable > table {
+         border-collapse: collapse;
+         border-radius: 10px;
          width:100%;
          margin:20px auto;
          text-align:center;
-         font-family:roboto ;
-		 }
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.08);
+         background-color: #ffffff;
+        }
   table > tr, th, td {
-         border:1px solid green;
-         padding:7px;     
-         font-family: ;
+         padding: 15px 20px;
+         text-align: center;
+         border-bottom: 1px solid #ededed;
        }
+     th {
+        background-color: #f8f9fa;
+    }
+
+    tr:last-child td {
+        border-bottom: none;
+    }
+
+    tr:nth-child(even) {
+        background-color: #f8f9fa;
+    }
   
   
      #container {
@@ -349,7 +366,7 @@
      #container > div > h2{
            text-indent:0px;
            padding:5px 0px 3px 0px;
-           color: #29BF12 ;           
+           color: #5E2BFF ;           
        }
      #container > div > #des{
            text-indent:0px;
@@ -380,19 +397,15 @@
        }
     #container > div > p {
            font-size:14px ;
-           padding:0px;
-           font-family:roboto;
-           font-weight: ;
+           padding:10px;
         }
      .page {
            padding:10px;
            border:none;
-           background: #B33951;
+           background: #5E2BFF;
            border-radius:5px;
            cursor:pointer ;
-           -webkit-animation:scale 1s linear infinite;
-                   animation:scale 1s linear infinite;
-           -webkit-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+          -webkit-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
                    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;  
         }
      .page > a {
@@ -431,11 +444,7 @@
 		      -o-transition-duration:0.3s;
 		         transition-duration:0.3s;
 			 }
-     .article:hover{
-	     -webkit-transform:scale(1.04);
-	         -ms-transform:scale(1.04);
-	             transform:scale(1.04);
-	 }
+    
    .article img {
         max-width: 100%;
         aspect-ratio:1/1;  
@@ -470,7 +479,7 @@
           gap:10px;
           display:-ms-grid;
           display:grid;
-          grid-template-columns:repeat(auto-fit,minmax(min(20rem,100%),1fr)) ;              
+          grid-template-columns:repeat(auto-fit,minmax(min(26rem,100%),1fr)) ;              
         }
     #about > div > p {
            padding:6px;
@@ -553,73 +562,45 @@
      .panel > p::-webkit-scrollbar{ display:none; }
 
 
-    footer {     
-         width:100%;         
-         margin:0 auto;
-         background:#122029;
-         color:white;    
-         -webkit-user-select:none;    
-         -moz-user-select:none;    
-         -ms-user-select:none;    
-         user-select:none;  
-         padding:5px;
-         text-transform:capitalize;
-         overflow:hidden;                       
-       }
-   
-   .sneha {
-        padding:5px;
-        color:white;
-       }
-   .sneha > a{
-        text-decoration:none;
-        color:white;
-        display:block;      
-        margin:3px;  
-        font-size: ;
+     footer {
+           background: #f0f0f0;
+            text-align: center;
+            color: #181f1a;
+            padding: 20px;
         }
-   select {
-        margin:10px;
-        float:right;
-        width:40%;
-		max-width:210px;
-        height:40px;
-        outline:none;
-        border:2px solid #253330; 
-        border-radius:30px;
-        text-align:center;
-        font-size:16px;
-        font-weight:600px;
-        -webkit-transition:all 0.3s;
-        -o-transition:all 0.3s;
-        transition:all 0.3s;
-        background:white;
-        outline:2px solid white; 
-        text-transform:capitalize;
-       }    
+       footer > nav > a {
+	         text-decoration:none;
+			 border-left:2px solid coral;
+			 margin:20px 10px;
+			 padding:6px 10px;
+			 column-count:auto;
+			 color: #181f1a;
+			 font-size:14px;
+			}		
+		
+		 footer > .social-media > a {
+		      		 text-decoration:none;
+		             color: #181f1a;
+			         margin: 10px;
+                     Font-size:1.50rem;  
+		 }
    #topButton {
           display: none;
           position: fixed;
-          bottom: 20px;
-          right: 20px;
-          background-color: #FF5400; 
-		  color: white;
-          border: none;
-          border-radius: 50%;
-          padding: 10px 10px;
-          font-size: 16px;
-          cursor: pointer;
-          z-index:9;
-          font-size:1.30rem;
-            }
+          bottom: 2%;
+          right: 6px;
+          color: #fff;
+          background: #5E2BFF; /*#16df7e; */
+          width: 40px;
+          height: 40px;
+          border-radius: 4px;
+          z-index:1 ;
+		  border:none;
+		  font-size: 24px;
+        }
     
 
-    @Keyframes scale {
-         50%{ -webkit-transform:scale(0.85); -ms-transform:scale(0.85); transform:scale(0.85); }
-           }
-        
-        
-		    @media only screen and (min-width:600px) { 
+  	    @media only screen and (min-width:600px) { 
 	                 .article { width:220px; }
 	      }
 	  
@@ -637,12 +618,37 @@
 	   
 	   
 	   @media only screen and (min-width:992px) { 
-		       html {
-				   margin:0 auto;
-				   max-width:70%;
-				   min-width:990px;
-			       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-				   } 
+		        html {
+	          margin:0 auto;
+			  max-width:65%;
+			  min-width:990px;
+		    }   
+         .menu li a:hover {
+              background-color: #6b40f7;
+              color: white;
+            }	
+          .social-links a:hover {
+                 color: #fff;
+                 background-color: #5E2BFF;
+                 transform: translateY(-5px);
+           }	
+         .scroll-container > .scroll-item:hover {
+                 color: black;
+                 background: #f0f0f0 ;
+		         border:none;
+		     }		
+        .navbar-toggler:hover {
+		       background: #ccc ;
+			   border-radius:50%;
+		    }		
+		 .article:hover{
+	             -webkit-transform:scale(1.04);
+	             -ms-transform:scale(1.04);
+	             transform:scale(1.04);
+	      }
+		   tr:hover {
+            background-color: #e9ecef;
+      }
               #section > #background {  min-height: 540px;  }				   
 }
    </style>
@@ -1030,16 +1036,10 @@
 
 
     <!-----Recomended Article Section-------->
-	     <h1 Style="padding:10px; Font-family: ;color:#211b63;"> our Recommended top Articles </h1>
+	     <h1 Style="padding:10px; Font-family: ;color:#211b63;"> our Recommended Articles </h1>
          <section class="recommended-articles">
              
-       <!---Artical1----->
-          <div class="article">
-              <img src="INDEX/movie.webp" alt="Article 1 Image" loading="lazy">
-              <h3><a href="movie-sites.html"> Top Movie Download Websites for Quality Entertainment on Demand </a></h3>
-         </div>
-
-     <!---Artical2----->
+       <!---Artical2----->
           <div class="article">
              <img src="INDEX/webnews.webp" alt="Article 3 Image" loading="lazy">
              <h3><a href="web-news.html"> Stay Updated with the Latest Headlines on- web news </a></h3>
@@ -1107,60 +1107,62 @@
   </section>
    
          
-    <footer title="Footer">   <!------footer Section------->
-       <h2> Quotes planet </h2>          
-      <select title="language switcher">
-           <option> English</option>
-           <option> hindi   </option>
-           <option> Bengali </option>
-           <option> gujrati </option>
-           <option> tamil  </option>
-           <option> telugu  </option>
-           <option> odiya  </option>           
-     </select>
-     <div class="sneha">
-          <a href="about-us.html" target="_self"><p> Terms & privacy </p></a>
-          <a href="about-us.html" target="_self"><p> policy </p></a>
-		  <a href="about-us.html" target="_self"><p> sitemap </p></a>
-          <a href="about-us.html" target="_self"><p> 2024® </p></a>
-      <!----<a href="about-us.html" target="_self"><p> Quotes planet </p></a>------>
-    </div>
- </footer>
+    <!-----------------------------------
+	    ----------FOOTER SECTION----------
+	  -------------------------------------->
+    <footer>
+        <p>  &copy copyright-2024  quotes planet. all rights reserved </p>
+        <div class="social-media">
+            <h2 style="margin-bottom: 10px;">  Follow Us  </h2>
+            <a href="#" class="fa-brands fa-telegram" title="Telegram"></a>
+            <a href="#" class="fa-brands fa-instagram" title="Instagram"></a>
+            <a href="#" class="fa-brands fa-twitter" title="Twitter"></a>
+            <a href="#" class="fa-brands fa-whatsapp" title="WhatsApp"></a>
+            <a href="#" class="fa-brands fa-youtube" title="YouTube"></a>
+        </div>
+        <nav>
+            <a href="contact-us.html" target="_self">Contact Us</a>
+            <a href="about-us.html" target="_self">About Us</a>
+            <a href="about-us.html" target="_self">Privacy & Policy</a>
+            <a href="about-us.html" target="_self">Terms & Conditions</a>
+            <a href="about-us.html" target="_self">Disclaimer</a>
+            <a href="my-sitemap.html" target="_self">Sitemap</a>
+        </nav>
+    </footer>
              
    <script>
           
-		  const overlay = document.getElementById("overlay");
-          const sidebar = document.getElementById("sidebar");
-          const toggleButton = document.getElementById("toggleButton");
+		 const sidebar = document.getElementById("sidebar");
+           const overlay = document.getElementById("overlay");
+           const toggleButton = document.getElementById("toggleButton");
 
       function toggleNav() {
           sidebar.classList.toggle("active");
           toggleButton.innerHTML = sidebar.classList.contains("active") ? "&times;" : "&#9776;";
 
-     // Toggle visibility of overlay
+    // Toggle visibility of overlay
       overlay.classList.toggle("active");
 
     // Add/remove class to body to prevent scrolling
         document.body.classList.toggle("sidebar-open");
   };
-  
-  
 
-      //change Navigation background
-   window.addEventListener('scroll', function() {
-       const navbar = document.getElementById('header');
-       const scrolled = window.scrollY;
 
-       if (scrolled > 30) {
-       navbar.style.backgroundColor = '#01BAEF'; // Change this to the desired color
-     } else {
-       navbar.style.backgroundColor = '#181f1a'; // Change this to the default color
-     }
+
+
+         //change Navigation background
+     window.addEventListener('scroll', function() {
+       var scrollBox = document.getElementById('header');
+       if (window.scrollY > 0) {
+            scrollBox.style.boxShadow = '0px 0px 30px rgba(127, 137, 161, 0.25)';
+    } else {                             
+      scrollBox.style.boxShadow = 'none';
+    }
   });
-      
-	  
-	  
-	     // Find the active scroll item
+
+
+
+       // Find the active scroll item
               const activeItem = document.getElementById("active");
               const scrollContainer = document.querySelector(".scroll-container");
 
@@ -1172,6 +1174,7 @@
 
      // Scroll the container to center the active item
              scrollContainer.scrollLeft = scrollItemCenter;
+
 	  
 	  
         /* Go To Top Button */
