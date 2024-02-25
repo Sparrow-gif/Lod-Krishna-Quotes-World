@@ -202,81 +202,7 @@
            }
 		   
 		   
-    #section {
-       position:relative;       
-       margin:0 ;
-       padding:0 ;
-       -webkit-user-select:none;
-          -moz-user-select:none;
-           -ms-user-select:none;
-               user-select:none;
-       -o-object-fit:fill;
-          object-fit:fill;
-       overflow:hidden;
-      }
- #section >#blur >  h1{
-       font-size:30px;
-       text-transform:uppercase;
-       margin:0 auto ;
-       color: #e3e35f;
-    } 
- #section > #blur > p {
-       margin-top:20px ;
-       color:white; 
-      font-size:18px;
-     }
- #section > #background {
-         min-height: 380px;
-         width:100%;
-         background-image:url('EDU/logo.webp');    
-         background-size:cover;
-         background-position:center;
-         background-attachment: ;
-         -webkit-filter:blur(0px) ;
-                 filter:blur(0px) ;
-         -o-object-fit:fill;
-            object-fit:fill;
-         overflow:hidden;
-       }
-  #section > #blur {
-       position:absolute ;
-   /* backdrop-filter:blur(1px) ; */
-       top:50%;
-       left:50%;
-       -webkit-transform:translate(-50%,-50%) ;
-           -ms-transform:translate(-50%,-50%) ;
-               transform:translate(-50%,-50%) ;
-       z-index: 5 ;
-       width:90%;
-    /*   width:50%; */
-       padding: 10px ;  
-    /*  text-align:center;  */
-     /*  border:2px inset white; */
-     /*  border-radius:4px;       */
-     /* font-weight:bold;     */    
-     }
- #section >  #blur a {
-       display:inline-block;
-       padding:10px ;
-       max-width:60%;
-       min-width:320px;
-       font-size:18px;
-       text-decoration:none;
-       color: White ;
-       background: red;
-       margin-top:20px ;
-       text-align:center;
-       cursor:pointer;
-       -webkit-transition-duration:0.3s;
-            -o-transition-duration:0.3s;
-               transition-duration:0.3s;
-    }
-  #section >  #blur a:hover {
-         -webkit-transform:scale(0.90) ;
-             -ms-transform:scale(0.90) ;
-                 transform:scale(0.90) ;
-         border-radius:10px;
-     }
+   
   .contest > #banner {
        /*  background-image:url('image/Spider.jpg'); */
        /* background-size:cover; */
@@ -313,13 +239,13 @@
          border-collapse: collapse;
          border-radius: 10px;
          width:100%;
-         margin:20px auto;
+         margin:0px auto;
          text-align:center;
         box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.08);
          background-color: #ffffff;
         }
   table > tr, th, td {
-         padding: 15px 20px;
+         padding: 20px;
          text-align: center;
          border-bottom: 1px solid #ededed;
        }
@@ -344,17 +270,13 @@
          background: ;
          margin:0 auto ;
          width:100%;
-         gap:10px 10px ;
-         display:-ms-grid;
-         display:grid;
-         grid-template-columns:repeat(auto-fit,minmax(min(19rem,100%),1fr)) ;      
-          }
+           }
      #container > div {
             background: #FFFFFF;
             height:auto ;    
             padding:5px;     
-            margin:0 auto ;
-            max-width:550px;
+            margin:10px auto ;
+            max-width:420px;
       -webkit-user-select:none;    
          -moz-user-select:none;    
          -ms-user-select:none;    
@@ -522,10 +444,6 @@
          -webkit-box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
                  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
      }
- #askqtn > .accordion:hover {
-             background: #FFFCF2;
-             color: #FF5A5F;
-           }
 
      .accordion:after {
             content: '\002B';
@@ -611,9 +529,14 @@
 			  width:90%;
 			  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 				   }
-				 #section > #background {  min-height: 480px;  }
-                #contentable > table{  margin:0 auto; width:80%;}	
-                .article { width:260px; }				
+			
+                #contentable > table{  margin:0 auto; width:70%;}	
+                .article { width:260px; }	
+          #container { 
+			     gap:10px;
+                display:grid;
+                grid-template-columns:repeat(auto-fit,minmax(min(24rem,100%),1fr)) ;
+			 }				
 	   }
 	   
 	   
@@ -623,6 +546,12 @@
 			  max-width:65%;
 			  min-width:990px;
 		    }   
+		 #section >  #blur a:hover {
+         -webkit-transform:scale(0.90) ;
+             -ms-transform:scale(0.90) ;
+                 transform:scale(0.90) ;
+         border-radius:10px;
+     }
          .menu li a:hover {
               background-color: #6b40f7;
               color: white;
@@ -649,7 +578,11 @@
 		   tr:hover {
             background-color: #e9ecef;
       }
-              #section > #background {  min-height: 540px;  }				   
+           
+      #askqtn > .accordion:hover {
+             background: #FFFCF2;
+             color: #FF5A5F;
+           }			  
 }
    </style>
   </head>
@@ -702,17 +635,7 @@
           <!-- Add more items as needed -->
        </nav>
           
-                 <!-------100vh background ------>
-        <section id="section">
-          <div id="background">  </div>
-          <div id="blur"> 
-              <h1> unlock learning potential </h1>
-              <p> empower your growth with the best education resources and programs. 
-             </p>
-              <a href="#main" id="soundButton"> Explore Now  </a>
-              
-        </div> 
-     </section>
+               
            <!-----Main Body------>
           <main id="main"style="padding:15px;">             <!-------heading------->
                 <div class="heading">
