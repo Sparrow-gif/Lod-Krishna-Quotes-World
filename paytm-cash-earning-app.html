@@ -26,9 +26,10 @@
 		     -ms-user-select: none;
 		         user-select: none;
        }
-	  html {  background-color:#f0f0f0; 
-		       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-	   }
+	  html {   
+   	     background-color: ; 
+		 box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	     }
      .head-logo > a{
            padding: 10px 10px;
            text-decoration:none;   
@@ -108,19 +109,13 @@
          -moz-user-select:none;    
          -ms-user-select:none;    
          user-select:none;  
-         -webkit-box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;  
-                 box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-         }
+		 box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+        }
      
      #container > div > h2 {
            text-indent:0px;
            padding:5px 0px 3px 0px;
-           color: #29BF12;
-       }
-     #container > div > #des{
-           text-indent:0px;
-           padding:8px 5px;
-           color: #5E239D;
+           color: #5e2bff;
        }
       #container > div > #hvr {
             width:100%;
@@ -139,9 +134,6 @@
             background-size:cover;
             background-position:center;
         }
-    #container > div > #hvr > img:hover {
-           
-       }
     #container > div > p {
            font-size:16px;
            padding:0px;
@@ -151,7 +143,7 @@
      .page {
            padding:10px;
            border:none;
-           background: #6320EE;
+           background: #5e2bff;
            border-radius:5px;
            cursor:pointer ;
            -webkit-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -187,7 +179,7 @@
         margin:0px auto ;
 		padding:10px;
 		width:100%;
-        border-bottom:0.80px solid silver;
+        border-bottom:2px solid #f0f0f0;
       }
      fieldset >  div > a { 
          text-decoration: none; 
@@ -200,9 +192,7 @@
        }
     fieldset >  div > a:hover { 
          text-decoration: underline; 
-         color: ;
-         Font-size:14.5px;
-         padding:6px;
+         padding:4px;
       }
      fieldset >  div > img {
          -o-object-fit:cover;
@@ -263,136 +253,32 @@
        }
 
    
-        #gettouch {
-             margin:0 auto ;
-             padding:20px;    
-             background: ;    
-            -webkit-user-select:none;
-            -moz-user-select:none;
-            -ms-user-select:none;      
-             text-transform: capitalize ;    
-         }
-  #gettouch > form {
-        -webkit-user-select:none;
-           -moz-user-select:none;
-            -ms-user-select:none;
-                user-select:none;
-        margin:0 auto ;
-        max-width:630px;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-            -ms-flex-direction: column;
-                flex-direction: column;
-        gap:6px;
-       }
-   #gettouch > form > h1 {
-         color:#5E239D;
-         font-size: ;
-         font-family: ;
-         font-weight: ;
-       }
-   #gettouch > form > label {
-        width:100%;
-        display:block;
-        Font-family: ;
-        font-size: ;
-      }
-   #gettouch > form >  input {
-        width:100%;
-        padding:8px;
-        font-size: ;
-        display:block;
-        margin:0px auto ;
-        border: 1px solid #ccc;
-        border-radius:4px;
-        Font-family: ;
-		outline:none;
-         }
-		 
-	 #gettouch > form >  input:user-invalid { border:1.50px solid red;}
-	 #gettouch > form >  textarea:user-invalid { border:1.50px solid red;}
-	 
-  #gettouch > form >  textarea {
-        width:100%;
-        border: 1px solid #ccc;
-        border-radius:4px;
-        padding:8px;
-        font-size: ;
-        Font-family: ;
-		outline:none;
-      }
-  #gettouch > form > .btn {
-        Font-family: ;
-        font-size: ;
-        padding: 10px 20px;
-        background-color: #4CAF50;
-        color: white;
-        width:80%;
-        margin:10px auto;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-        -webkit-transition-duration:0.3s;
-             -o-transition-duration:0.3s;
-                transition-duration:0.3s;      
-         }
-  #gettouch > form > .btn:hover {
-        background-color: #45a049;
-       }
-  #gettouch > form > .btn:active {
-          -webkit-transform:scale(0.90) ;
-              -ms-transform:scale(0.90) ;
-                  transform:scale(0.90) ;
-       }
-  #comments {
-         margin-top: 20px;
-         Font-family: ;
-       }
-   
-  .comment {
-        background-color: ;
-        padding: 10px;
-        margin-bottom: 10px;
-        border-radius: 4px;
-        Font-family: ;
-     }
-   .didit > #community {
-       background-color: ;
-       padding: 7px;
-       margin:10px auto;
-       Font-family: ;
-       overflow:hidden;
-     }
-     .didit {
-          min-height:220px ;
-          max-height:auto ;
-          overflow:auto;
-		  padding:20px;
-       }
-	   
+        
 	   
 	   footer {
-	      background:#020122;
-		  text-align:center;
-		  color:#FFFFFF;
-		  padding:20px;
-	   }
-	   footer > a {
-	      text-decoration:none;
-		  color:white;
-		  margin: 10px;
-		  border-left:2px solid coral;
-		  padding:6px;
-	   }
-	     footer > .foot > a {
-		       text-decoration:none;
-		       color:white;
-			   margin: 10px;
-               Font-size:1.50rem;			   
+           background: #f0f0f0;
+            text-align: center;
+            color: #181f1a;
+            padding: 20px;
+        }
+       footer > nav > a {
+	         text-decoration:none;
+			 border-left:2px solid coral;
+			 margin:20px 10px;
+			 padding:6px 10px;
+			 column-count:auto;
+			 color: #181f1a;
+			 font-size:14px;
+			}		
+		
+		 footer > .social-media > a {
+		      		 text-decoration:none;
+		             color: #181f1a;
+			         margin: 10px;
+                     Font-size:1.50rem;  
 		 }
+		 
+		 
       @media only screen and (max-width: 767px) {
     /* Styles for small screens here */
        
@@ -423,7 +309,7 @@
     /* Styles for large screens here */
         html {
 	          margin:0 auto;
-			  max-width:70%;
+			  max-width:65%;
 			  min-width:990px;
 		    }   
 		 
@@ -436,7 +322,7 @@
           <!-----Main Body------>
           <header style="padding:15px;">             <!-------heading------->
                 <div class="heading">
-                     <h1 style="color:#069E2D;"> Unlocking Earnings: Discover the Best Paytm Cash Apps for Quick Rewards </h1>                   
+                     <h1 style="color:#5e2bff;"> Unlocking Earnings: Discover the Best Paytm Cash Apps for Quick Rewards </h1>                   
                      <p> Updated on : jan 06, 2024 </p>
                </div>
                              <!-------heading logo------->
@@ -483,7 +369,6 @@
                  <div id="website1">     <!----Application 1------->                     
                      <h2> 1) Rapid box </h2>
                      <div id="hvr"> <img src="PAYTM/IMG1.webp" alt="cash-img" loading="lazy"> </div>
-                     <h4 id="des"> Description </h4>                     
                      <p>
                        RapidBox is a D2C brand for online shopping. It’s your go-to app for fashion and high-quality sneakers in India for 
 					   those who want amazing quality products at unbeatable prices. We believe that everyone should have access to high-quality
@@ -497,7 +382,6 @@
                  <div id="website2">  <!-----Application 2----->
                      <h2> 2) koo </h2>
                      <div id="hvr"> <img src="PAYTM/IMG2.webp" alt="cash-img" loading="lazy"> </div>
-                     <h4 id="des"> Description </h4>
                      <p>
                        Koo is a globally available micro-blogging platform that houses over 50 million users from over 100 countries.
 					   It empowers people to express their thoughts in a language of their choice. It houses social news and updates 
@@ -510,7 +394,6 @@
 			     <div id="website3">     <!----Application 3------->                     
                      <h2> 3) mreward </h2>
                      <div id="hvr"> <img src="PAYTM/IMG3.webp" alt="cash-img" loading="lazy"> </div>
-                     <h4 id="des"> Description </h4>                     
                      <p>
                         The best money-earning app that gives you free rewards when you play games, Submit surveys, Refer the app to your friends and do specific app-based tasks. Earning free money has never been so easy and fun!
                <br/>
@@ -523,8 +406,7 @@
                  <div id="website4">  <!-----Application 4----->
                      <h2> 4) rummy time </h2>
                      <div id="hvr"> <img src="PAYTM/IMG4.webp" alt="cash-img" loading="lazy"> </div>
-                     <h4 id="des"> Description </h4>
-                     <p>
+                    <p>
                        Rummy / Rammy (रमी/रम्मी) is one of the most popular card games in India played with 2 or 6 players with single or double card deck, this is skill based game & different from Teen patti, 3 patti, 13 Card game & Poker.
                <br/>
                        RummyTime (रमीटाइम) offers unparalleled security to all Rummy Game players. Its safe and secure payment channels and RNG certification makes it one of the safest rummy game apps.
@@ -535,7 +417,6 @@
 			     <div id="website5">     <!----Application 5------->                     
                      <h2> 5) rummy cirle </h2>
                      <div id="hvr"> <img src="PAYTM/IMG5.webp" alt="cash-img" loading="lazy"> </div>
-                     <h4 id="des"> Description </h4>                     
                      <p>
                        Rummy Circle is the ultimate app to enjoy online rummy games free & win real cash prizes. With 5 crores+ players, it is one of the largest rummy game platforms in India.
 					   Created by Games24x7 in 2012, we are committed to providing the best online rummy cash game experience.
@@ -549,7 +430,6 @@
                  <div id="website6">  <!-----Application 6----->
                      <h2> 6) zupee </h2>
                      <div id="hvr"> <img src="PAYTM/IMG6.webp" alt="cash-img" loading="lazy"> </div>
-                     <h4 id="des"> Description </h4>
                      <p>
                       🚀Zupee stands out as a cutting-edge online gaming platform where you can have fun and play against real people. Enhance your gaming journey with Zupee and become a Ludo master. 
 					  Play games using your skills and strategy to win. You can enjoy 2 Ludo game:  <br/>
@@ -562,7 +442,6 @@
 			     <div id="website7">     <!----Application 7------->                     
                      <h2> 7) rush </h2>
                      <div id="hvr"> <img src="PAYTM/IMG7.webp" alt="cash-img" loading="lazy"> </div>
-                     <h4 id="des"> Description </h4>                     
                      <p>
                        Rush: Best Real money Gaming App for Board Games
                <br/>
@@ -578,7 +457,6 @@
                  <div id="website8">  <!-----Application 8----->
                      <h2> 8) 10X reward </h2>
                      <div id="hvr"> <img src="PAYTM/IMG8.webp" alt="cash-img" loading="lazy"> </div>
-                     <h4 id="des"> Description </h4>
                      <p>
                       Earn Daily with 10X Rewards
                   <br/>
@@ -591,7 +469,6 @@
 			     <div id="website9">  <!-----Application 9----->
                      <h2> 9) PAYTM FIRST GAMES </h2>
                      <div id="hvr"> <img src="PAYTM/IMG9.webp" alt="cash-img" loading="lazy"> </div>
-                     <h4 id="des"> Description </h4>
                      <p>
                        Paytm First Games is a gaming platform within the Paytm app where users can play various games and win real cash prizes. It offers a variety of games 
 					   including fantasy sports, trivia quizzes, card games, and more. Users can compete against each other and earn rewards or cash prizes.
@@ -602,7 +479,6 @@
 			     <div id="website10">  <!-----Application 10----->
                      <h2> 10) rozdhan</h2>
                      <div id="hvr"> <img src="PAYTM/IMG10.webp" alt="cash-img" loading="lazy"> </div>
-                     <h4 id="des"> Description </h4>
                      <p>
                        Roz Dhan is one of the most trusted Indian app on the Android play store and has been used by more than 25 million users till date. You can withdraw money to
 					   Paytm account after your first 2 days on the app, withdraw money immediately after completing "Instant Cash Tasks" and after reaching ₹300 in your RozDhan wallet.
@@ -613,7 +489,6 @@
 			    <div id="website9">  <!-----Application 11----->
                      <h2> 11) viewpoint </h2>
                      <div id="hvr"> <img src="PAYTM/viewpoint.webp" alt="cash-img" loading="lazy"> </div>
-                     <h4 id="des"> Description </h4>
                      <p>
                        Viewpoint is a platform that allows users to earn rewards by completing surveys and providing their opinions on various topics.Earn points for each survey completed,
 					   which can then be redeemed for cash, gift cards, or other rewards.
@@ -724,21 +599,8 @@
                         <div class="panel">
                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                        </div>
-			    </Section>
-				
-				
-				
-				
-				
-				     <!----COMMENT Section------>
-		     <div class="didit" title="COMMENT">
-                 <h2 style="font-family:Roboto;"> Recent Comments  </h2>
-                 <div id="comments"> </div> <!----messages-04----->
-                 <div id="community"> comments 0 </div> <!----messages-03----->
-                 <!---<div id="community"> <b> sneha:- </b> wows  </div>----messages-02---->
-                 <!---<div id="community"> <b> ajoy :- </b> best </div>----messages-01----->
-            </div>
-				 
+			    </Section>															
+								     
 		   </aside>
 		        
 		</section>	
@@ -747,49 +609,28 @@
 		
 		  
 		
-		
-				   <!----Comment Section------->
-          <div id="gettouch" class="comment-section">
-             <form action="#" method="post" id="comment-form">
-                 <h1> leave a comment </h1>
-                 
-                 <label for ="text"> Message </label>
-                 <textarea id="comment" name="w3review" rows="6" cols="40" placeholder="Your Comment*" required></textarea>
-                 
-                 <label for ="Name"> Name </label>
-                 <input type="text" id="name" placeholder="Your Name*" required>
-        
-                 <label for ="email"> Email </label>
-                 <input type="email" id="email" placeholder="Your email*" required>
-        
-                 
-                 <button class="btn" type="submit" value="Submit" title="button"><a href="https://forms.gle/omwCwxW7J9dkzEmZ8" style="text-decoration:none; color:white;"> submit </a> </button>
-            </form>
+			 <!-----------------------------------
+	    ----------FOOTER SECTION----------
+	  -------------------------------------->
+    <footer>
+        <p>  &copy copyright-2024  quotes planet. all rights reserved </p>
+        <div class="social-media">
+            <h2 style="margin-bottom: 10px;">  Follow Us  </h2>
+            <a href="#" class="fa-brands fa-telegram" title="Telegram"></a>
+            <a href="#" class="fa-brands fa-instagram" title="Instagram"></a>
+            <a href="#" class="fa-brands fa-twitter" title="Twitter"></a>
+            <a href="#" class="fa-brands fa-whatsapp" title="WhatsApp"></a>
+            <a href="#" class="fa-brands fa-youtube" title="YouTube"></a>
         </div>
-		
-		
-		
-		  
-		
-				  
-		     <!---FOOTER SECTION-------->
-		    <footer title="FOOTER">
-			      <p> &copy copyright-2023  quotes planet. all rights reserved </p>
-				   <div class="foot">
-				     <h3 style="display:block;"> follow us </h3>
-				     <a href="#" class="fa-brands fa-telegram" title="telegram"> </a>
-                     <a href="#" class="fa-brands fa-instagram" title="Instagram"> </a>
-                     <a href="#" class="fa-brands fa-twitter" title="twitter"> </a>
-                     <a href="#" class="fa-brands fa-whatsapp" title="whatsapp"> </a>
-                     <a href="#" class="fa-brands fa-youtube" title="YouTube"> </a>
-				  </div>
-				  
-				  <a href="contact-us.html"> contact us </a>
-				  <a href="about-us.html"> about us </a>
-			      <a href="about-us.html"> privacy policy </a>
-			   	  <a href="about-us.html"> terms & condition </a>
-				  <a href="about-us.html"> disclaimer </a>				 
-			</footer>																						
+        <nav>
+            <a href="contact-us.html" target="_self">Contact Us</a>
+            <a href="about-us.html" target="_self">About Us</a>
+            <a href="about-us.html" target="_self">Privacy & Policy</a>
+            <a href="about-us.html" target="_self">Terms & Conditions</a>
+            <a href="about-us.html" target="_self">Disclaimer</a>
+            <a href="my-sitemap.html" target="_self">Sitemap</a>
+        </nav>
+    </footer>																					
        
     <script>
 	
@@ -808,34 +649,9 @@
           panel.style.maxHeight = panel.scrollHeight + "px";
      } 
   });
-}
+};
    
-   
-           //Contact us 
-      document.getElementById('comment-form').addEventListener('submit', function(e) {
-         e.preventDefault();
-         const name = document.getElementById('name').value;
-         const commentText = document.getElementById('comment').value;
-         const email = document.getElementById('email').value;
-        if (name && commentText) {
-             addComment(name, commentText, email);
-             document.getElementById('comment-form').reset();
-			 alert('submitted successful');
-     } else {
-         alert('Please fill in all fields.');
-    }
-   });
-
-function addComment(name, commentText) {
-  const commentsSection = document.getElementById('comments');
-  const commentDiv = document.createElement('div');
-  commentDiv.classList.add('comment');
-  commentDiv.innerHTML = `<strong>${name}:</strong> ${commentText}`;
-  commentsSection.appendChild(commentDiv);
-}
-
-
-          //telegram share button
+     //telegram share button
 			  
        document.getElementById('telegramShareBtn').addEventListener('click', function() {
     // Replace 'your_message' and 'your_url' with your own message and URL
