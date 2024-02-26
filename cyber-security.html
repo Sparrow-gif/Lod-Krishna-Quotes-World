@@ -119,7 +119,7 @@
      fieldset >  div > a { 
          text-decoration: none; 
          color: black;
-         Font-size: ;
+         Font-size:14px ;
          cursor:pointer;
          -webkit-transition-duration:0.3s;
               -o-transition-duration:0.3s;
@@ -127,9 +127,7 @@
        }
     fieldset >  div > a:hover { 
          text-decoration: underline; 
-         color: ;
-         Font-size:16px;
-         padding:6px;
+         padding:4px;
       }
      fieldset >  div > img {
          -o-object-fit:cover;
@@ -302,23 +300,26 @@
 	   
 	   
 	   footer {
-	      background:#020122;
-		  text-align:center;
-		  color:#FFFFFF;
-		  padding:20px;
-	   }
-	   footer > a {
-	      text-decoration:none;
-		  color:white;
-		  margin: 10px;
-		  border-left:2px solid coral;
-		  padding:6px;
-	   }
-	     footer > .foot > a {
-		       text-decoration:none;
-		       color:white;
-			   margin: 10px;
-               Font-size:1.50rem;			   
+           background: #f0f0f0;
+            text-align: center;
+            color: #181f1a;
+            padding: 20px;
+        }
+       footer > nav > a {
+	         text-decoration:none;
+			 border-left:2px solid coral;
+			 margin:20px 10px;
+			 padding:6px 10px;
+			 column-count:auto;
+			 color: #181f1a;
+			 font-size:14px;
+			}		
+		
+		 footer > .social-media > a {
+		      		 text-decoration:none;
+		             color: #181f1a;
+			         margin: 10px;
+                     Font-size:1.50rem;  
 		 }
       @media only screen and (max-width: 767px) {
     /* Styles for small screens here */
@@ -730,24 +731,28 @@
 		 
 		
 				  
-		     <!---FOOTER SECTION-------->
-		    <footer title="FOOTER">
-			      <p> copyright-2024 quotes planet. all rights reserved </p>
-				   <div class="foot">
-				     <h3 style="display:block;"> follow us </h3>
-		     <a href="https://www.facebook.com/profile.php?id=100028875690917&mibextid=2JQ9oc" title="facebook" rel="noopener noreferrer" class="fa-brands fa-facebook-f"> </a>
-                     <a href="https://www.instagram.com/shri.krishna04?igsh=MXY5aWxnbGM0N293bw==" title="instagram" rel="noopener noreferrer" class="fa-brands fa-instagram"> </a>
-                     <a href="https://t.me/paytm_cash_hub" rel="noopener noreferrer" title="telegram" class="fa-brands fa-telegram"> </a>
-                     <a href="https://whatsapp.com/channel/0029VaNPC4QEVccDcycBlh0r" title="whatsapp" rel="noopener noreferrer" class="fa-brands fa-whatsapp"> </a>
-                     <a href="https://youtube.com/@Wings_dna?si=q_lyk1Tif5t1D-iJ" title="youtube" rel="noopener noreferrer" class="fa-brands fa-youtube"> </a>
-				  </div>
-				  
-				  <a href="contact-us.html"> contact us </a>
-				  <a href="about-us.html"> about us </a>
-			      <a href="about-us.html"> privacy policy </a>
-			   	  <a href="about-us.html"> terms & condition </a>
-				  <a href="about-us.html"> disclaimer </a>				 
-			</footer>																						
+		     <!-----------------------------------
+	    ----------FOOTER SECTION----------
+	  -------------------------------------->
+    <footer>
+        <p>  &copy copyright-2024  quotes planet. all rights reserved </p>
+        <div class="social-media">
+            <h2 style="margin-bottom: 10px;">  Follow Us  </h2>
+            <a href="#" class="fa-brands fa-telegram" title="Telegram"></a>
+            <a href="#" class="fa-brands fa-instagram" title="Instagram"></a>
+            <a href="#" class="fa-brands fa-twitter" title="Twitter"></a>
+            <a href="#" class="fa-brands fa-whatsapp" title="WhatsApp"></a>
+            <a href="#" class="fa-brands fa-youtube" title="YouTube"></a>
+        </div>
+        <nav>
+            <a href="contact-us.html" target="_self">Contact Us</a>
+            <a href="about-us.html" target="_self">About Us</a>
+            <a href="about-us.html" target="_self">Privacy & Policy</a>
+            <a href="about-us.html" target="_self">Terms & Conditions</a>
+            <a href="about-us.html" target="_self">Disclaimer</a>
+            <a href="my-sitemap.html" target="_self">Sitemap</a>
+        </nav>
+    </footer>																						
        
     <script>
 	            //ACCORDION
