@@ -253,6 +253,67 @@
 		}
 		
 		
+		
+		 .quiz-container {
+            max-width: 80%;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+       
+	   .quiz-container > .question {
+            font-size: 22px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .options {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        .option {
+            flex: 1 0 45%; /* Adjust based on screen size */
+            padding: 10px 20px;
+            margin: 5px;
+            border: 1px solid #ccc;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        .option:hover {
+            background-color: #e0e0e0;
+        }
+       .quiz-container > button {
+	        width:220px;
+            padding: 10px 20px;
+            margin-top: 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+   .quiz-container > button:hover {
+            background-color: #45a049;
+        }
+        .progress {
+            margin-top: 20px;
+            color: #666;
+			text-align:Center;
+        }
+        .result {
+            margin-top: 20px;
+            color: #333;
+        }
+		
+	
+		
 	
     .Answer > .article {
                   margin:0 auto;
@@ -452,11 +513,30 @@
 		       
 			   <h2 Style="margin:0px 3px 30px 0px;"> Explore the Epics: Ramayana and Mahabharata Trivia  </h2>
 			   
+			   
+			   <!---------------------------------------------------------
+		  --------------------QUIZ Section-------------
+		  --------------------------------------------------------->
+		
+		 <div class="quiz-container">
+              <h1>Simple Quiz</h1>
+              <div class="progress" id="progress"></div>
+              <div class="question" id="question"></div>
+              <div class="options" id="options"></div>
+             <button id="actionButton" onclick="nextQuestion()">Next</button>
+        </div>
+
+         <div class="result" id="result"></div>
+		
+		
+		
 			   <div class="tab-container">
                      <button class="tablinks" onclick="openTab(event, 'tab1')">  Ramayana </button>
                      <button class="tablinks" onclick="openTab(event, 'tab2')">  Mahabharat </button>
              </div>
 			  
+			  
+
 		<!-----------------------------------------------------------------------------------
           ----------------------------Tab CONTAINER ONE--------------------------------------
           ---------------------------------------------------------------------------------->
@@ -698,6 +778,8 @@
 		
 		
 		
+		
+		
 		  <!---------------------------------------------------------
 		  --------------------Recomended Article Section-------------
 		  ----------------------------------------------------------->
@@ -812,6 +894,131 @@
          }
         document.getElementById(tabName).style.display = "block";
        };
+	   
+	   
+	          
+			    
+				  const questions = [
+            {
+                question: "What is the capital of France?",
+                options: ["Paris", "London", "Berlin", "Rome"],
+                answer: "Paris"
+            },
+            {
+                question: "Which planet is known as the Red Planet?",
+                options: ["Venus", "Mars", "Jupiter", "Saturn"],
+                answer: "Mars"
+            },
+            {
+                question: "What is 2 + 2?",
+                options: ["3", "4", "5", "6"],
+                answer: "4"
+            },
+            {
+                question: "Who painted the Mona Lisa?",
+                options: ["Vincent van Gogh", "Leonardo da Vinci", "Pablo Picasso", "Michelangelo"],
+                answer: "Leonardo da Vinci"
+            },
+            {
+                question: "What is the powerhouse of the cell?",
+                options: ["Mitochondria", "Nucleus", "Ribosome", "Endoplasmic reticulum"],
+                answer: "Mitochondria"
+            },
+            {
+                question: "What is the tallest mammal?",
+                options: ["Elephant", "Giraffe", "Rhino", "Horse"],
+                answer: "Giraffe"
+            },
+            {
+                question: "Which country won the 2018 FIFA World Cup?",
+                options: ["Brazil", "Germany", "France", "Argentina"],
+                answer: "France"
+            },
+            {
+                question: "What is the chemical symbol for water?",
+                options: ["H2O", "CO2", "O2", "H2SO4"],
+                answer: "H2O"
+            },
+            {
+                question: "What is the largest ocean on Earth?",
+                options: ["Pacific Ocean", "Atlantic Ocean", "Indian Ocean", "Arctic Ocean"],
+                answer: "Pacific Ocean"
+            },
+            {
+                question: "Who wrote 'Romeo and Juliet'?",
+                options: ["William Shakespeare", "Jane Austen", "Charles Dickens", "Leo Tolstoy"],
+                answer: "William Shakespeare"
+            }
+        ];
+
+        let currentQuestionIndex = 0;
+        let correctAnswers = 0;
+        let incorrectAnswers = 0;
+
+        function loadQuestion() {
+            const currentQuestion = questions[currentQuestionIndex];
+            document.getElementById("question").textContent = currentQuestion.question;
+            document.getElementById("progress").textContent = `Question ${currentQuestionIndex + 1}/${questions.length}`;
+
+            const optionsContainer = document.getElementById("options");
+            optionsContainer.innerHTML = '';
+
+            currentQuestion.options.forEach(option => {
+                const optionElement = document.createElement("div");
+                optionElement.textContent = option;
+                optionElement.classList.add("option");
+                optionElement.onclick = () => checkAnswer(option);
+                optionsContainer.appendChild(optionElement);
+            });
+        }
+
+        function checkAnswer(selectedAnswer) {
+            const currentQuestion = questions[currentQuestionIndex];
+            if (selectedAnswer === currentQuestion.answer) {
+                alert("Correct!");
+                correctAnswers++;
+            } else {
+                alert("Wrong answer. The correct answer is: " + currentQuestion.answer);
+                incorrectAnswers++;
+            }
+
+            currentQuestionIndex++;
+            if (currentQuestionIndex < questions.length) {
+                loadQuestion();
+            } else {
+                displayResult();
+            }
+        }
+
+        function nextQuestion() {
+            if (currentQuestionIndex < questions.length) {
+                loadQuestion();
+                document.getElementById("actionButton").textContent = "Next";
+            } else {
+                resetQuiz();
+            }
+        }
+
+        function displayResult() {
+            const resultContainer = document.getElementById("result");
+            resultContainer.innerHTML = `
+                <h2>Quiz Result</h2>
+                <p>Correct Answers: ${correctAnswers}</p>
+                <p>Incorrect Answers: ${incorrectAnswers}</p>
+            `;
+            document.getElementById("actionButton").textContent = "Play Again";
+        }
+
+        function resetQuiz() {
+            currentQuestionIndex = 0;
+            correctAnswers = 0;
+            incorrectAnswers = 0;
+            loadQuestion();
+            document.getElementById("result").innerHTML = '';
+            document.getElementById("actionButton").textContent = "Next";
+        }
+
+        loadQuestion();
 	</script>
 </body>
 </html>
