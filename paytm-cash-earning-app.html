@@ -312,7 +312,12 @@
 			  max-width:65%;
 			  min-width:990px;
 		    }   
-		 
+		  #container {
+		          gap:10px;
+                 display:-ms-grid;
+                 display:grid;
+                 grid-template-columns:repeat(auto-fit,minmax(min(20rem,100%),1fr)) ;				  
+		     }
       }
 
  </style>
