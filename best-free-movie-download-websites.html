@@ -233,12 +233,13 @@
          -moz-user-select:none;    
          -ms-user-select:none;    
          user-select:none;  
-          width:100% ;
+         width:100%;
         }
   #contentable > table {
-         border-collapse: collapse;
+          border-collapse: collapse;
          border-radius: 10px;
-         width:100%;
+         min-width:100% ;
+		 max-width:560px;
          margin:20px auto;
          text-align:center;
 		 border:2px solid #f0f0f0;
@@ -298,10 +299,9 @@
        }
     
       #container > figure > img {
-	              Display:block;
-                  min-width:100%;
-            	  max-width:360px;	
-				  aspect-ratio:1/0.60;
+	              min-width:100%;
+				  max-width:70%;
+	              aspect-ratio:1/0.65;
                   margin:0 auto;    
                   background-size:cover;
                   background-position:center;
@@ -396,7 +396,7 @@
 	    background-position:center;
      }
 
-     .article h3 {
+     .article p {
            margin-top:10px;
            -webkit-transition-duration:0.3s;
                 -o-transition-duration:0.3s;
@@ -406,17 +406,15 @@
 	     font-size:15px;
            }
 
-      .article h3 a {
+      .article p a {
             text-decoration: none;
             color:#6e14b3;
             text-align:center;
          }
 
-     .article h3 a:hover {
-          text-decoration: underline;
-      }
 
-    footer {
+
+   footer {
            background: #f0f0f0;
             text-align: center;
             color: #181f1a;
@@ -555,8 +553,8 @@
 				   margin:0 auto;
 				   width:90%;
 				 }
-            .contest > #banner { width:90%;}
-			 #contentable > table{ width:80%; margin:0 auto; }
+          
+		
 			 .article {  margin:0 auto;   width: 260px ; }
 		   
         }
@@ -601,8 +599,8 @@
 	   tr:hover {
             background-color: #e9ecef;
       }
-		 .contest > #banner { width:80%;}
-		   #contentable > table{ width:70%; margin:10px auto; }
+		
+		
 		
     }
    </style>
@@ -647,7 +645,7 @@
 	           <a class="scroll-item" href="general-knowledge-gk-quiz-on-ramayana-and-mahabharat.html" target="_self"> epic quiz </a>
                <a class="scroll-item" href="blogs-blog-videos.html" target="_self"> videos </a>
                <a class="scroll-item" href="books-poem-sonnet-poetry.html" target="_self"> books </a>               
-               <a class="scroll-item" href="best-education-website-india.html" target="_self"> study </a>
+               <a class="scroll-item" href="best-education-websites-india.html" target="_self"> study </a>
                <a class="scroll-item" href="best-online-mobile-games.html" target="_self"> gaming </a>
                <a class="scroll-item" href="online-shoping-mobiles-dresses-shirt-camera-shoes-accessories.html" target="_self"> life-style </a>    
                <a class="scroll-item" id="active" href="best-free-movie-download-websites.html" target="_self"> cinema </a>                                        
@@ -663,8 +661,8 @@
                   <h1 style=" "> best movie download websites for free in 2024 </h1>
 		          <div class="heading">
          				<p> Updated on : jan 06, 2024 
-						    <i class="fa fa-eye" style="font-size:16px; color:#a7a8a7; margin:0px 8px;"> 122 </i> 
-							<i class="fa fa-reply" style="font-size:16px; color:#a7a8a7; margin:0px 8px;"> 31 </i>
+						    <i class="fa fa-eye" style="font-size:16px; color:#181f1a; margin:0px 8px;"> 122 </i> 
+							<i class="fa fa-reply" style="font-size:16px; color:#181f1a; margin:0px 8px;"> 31 </i>
 					  </p>
 			    </div>
                             
@@ -680,11 +678,23 @@
                    </p>							 
                 </div>
 
+    <!----- <article>
+		       <h2> Why Choose Free Movie Download Websites? </h2>
+			   <p> In today's digital age, entertainment should be accessible to all. Free movie download 
+			       websites offer unparalleled access to a wide range of films without the burden of subscription 
+				   fees or rental costs. Whether you're a casual moviegoer or a dedicated cinephile, these 
+				   platforms cater to all tastes and preferences. With an extensive library of titles spanning
+				   various genres, eras, and cultures, there's something for everyone to enjoy. Plus, by 
+				   adhering to legal guidelines and supporting legitimate sources, you can indulge in guilt-free
+				   movie-watching experiences.  
+			  </p>
+		 </article>--------->
+
 
                  <!-------------NEW RELESES MOVIES----------------------------->
                         <h1 id="latest" style="color:#202a57;"> Letest release movies </h1>
       <article id="seen">
-           <a href="#"> <img src="#" alt="movies" loading="lazy"></a> <!-----MOVIE BANNER 1-------->
+           <a href="#"> <img src="#" alt="movies" loading="auto"></a> <!-----MOVIE BANNER 1-------->
 		   <a href="#"> <img src="#" alt="movies" loading="auto"></a> <!-----MOVIE BANNER 2-------->
 		   <a href="#"> <img src="#" alt="movies" loading="auto"></a> <!-----MOVIE BANNER 3-------->
 		   <a href="#"> <img src="#" alt="movies" loading="auto"></a> <!-----MOVIE BANNER 4-------->
@@ -761,7 +771,7 @@
   <div id="container">        
        <figure id="website1">
 		      <h2> 1) Bollyflix </h2>
-			  <img src="" alt="" loading="auto">
+			  <img src="MOVIE/IMG1.webp" alt="bollyflix" loading="auto">
               <p> 
                  Bollyflix is a well-known online platform recognized for offering a wide array of
                  movies, TV shows, and web series for downloading or streaming. It's popular for its 
@@ -776,7 +786,7 @@
 
        <figure id="website2"> <!----Biography 2----->
            <h2> 2) hdhub4u </h2>
-           <img src="MOVIE/IMG2.webp" alt="movies">
+           <img src="MOVIE/IMG2.webp" alt="hdhub4u" loading="auto">
            <p> 
               HDHub4u is an online platform that caters to movie and TV show enthusiasts seeking a diverse range of 
 			  high-definition content. Offering a user-friendly interface, the website strives to provide a seamless 
@@ -787,7 +797,7 @@
 
        <figure id="website3">  <!----Biography 3----->
            <h2> 3) allmovieshub </h2>
-           <img src="MOVIE/IMG3.webp" alt="movies">
+           <img src="MOVIE/IMG3.webp" alt="allmovieshub" loading="auto">
            <p> 
               "allmovieshub" is a legitimate and legal website, it could potentially be a platform dedicated to
 			  providing a hub for various movies, possibly offering a wide range of genres and titles for users
@@ -799,7 +809,7 @@
 
        <figure id="website4"> <!----Biography 4----->
            <h2> 4) themoviesflix </h2>
-           <img src="MOVIE/IMG4.webp" alt="movies"> 
+           <img src="MOVIE/IMG4.webp" alt="themoviesflix" loading="auto"> 
            <p> 
               themoviesflix is a well-known online platform recognized for offering a wide array of
               movies, TV shows, and web series for downloading or streaming. It's popular for its 
@@ -813,7 +823,7 @@
 
         <figure id="website5"> <!----Biography 5----->
            <h2> 5) moviesmod </h2>
-           <img src="MOVIE/IMG5.webp" alt="movies"> 
+           <img src="MOVIE/IMG5.webp" alt="moviesmod" loading="auto"> 
            <p> 
               moviesmod is a notable online platform known for its wide array of movies, TV series, 
               and web content available for streaming or downloading. It stands out for its diverse 
@@ -827,7 +837,7 @@
 
        <figure id="website6"> <!----Biography 6----->
            <h2> 6) Bolly4u </h2>
-           <img src="MOVIE/IMG6.webp" alt="movies">
+           <img src="MOVIE/IMG6.webp" alt="bolly4u" loading="auto">
            <p> 
               Bolly4u is an online platform renowned for its extensive collection of Bollywood movies, 
               Hollywood films, TV shows, and web series available for download. It's recognized for 
@@ -840,7 +850,7 @@
 
       <figure id="website7"> <!----Biography 7----->
            <h2> 7) Vegamovies </h2>
-            <img src="MOVIE/IMG7.webp" alt="movies"> 
+            <img src="MOVIE/IMG7.webp" alt="Vegamoviesmovies" loading="auto"> 
            <p> 
               Vegamovies is a well-known online platform recognized for offering a wide array of
               movies, TV shows, and web series for downloading or streaming. It's popular for its 
@@ -854,7 +864,7 @@
 
        <figure id="website8"> <!----Biography 8----->
            <h2> 8) movies4u </h2>
-           <img src="MOVIE/IMG8.webp" alt="movies"> 
+           <img src="MOVIE/IMG8.webp" alt="movies4u" loading="auto"> 
            <p> 
               movies4u is an online platform that caters to movie and TV show enthusiasts seeking a diverse range of 
 			  high-definition content. Offering a user-friendly interface, the website strives to provide a seamless 
@@ -865,7 +875,7 @@
 
        <figure id="website9"> <!----Biography 9----->
            <h2> 9) 9xflix </h2>
-           <img src="MOVIE/IMG9.webp" alt="movies"> 
+           <img src="MOVIE/IMG9.webp" alt="9xflix" loading="auto"> 
            <p> 
               9xflix is an online platform celebrated for its comprehensive library of movies, 
               TV series, and web content available for streaming and downloading. This platform
@@ -878,7 +888,7 @@
 
       <figure id="website10"> <!----Biography 10----->
            <h2> 10) dotmovies </h2>
-           <img src="MOVIE/IMG10.webp" alt="movies"> 
+           <img src="MOVIE/IMG10.webp" alt="dotmovie" loading="auto"> 
            <p> 
               dotmovies is a well-known online platform recognized for offering a wide array of
               movies, TV shows, and web series for downloading or streaming. It's popular for its 
@@ -950,66 +960,66 @@
      <!---Artical2----->
           <div class="article">
              <img src="INDEX/webnews.webp" alt="Article 3 Image" loading="lazy">
-             <h3><a href="web-news.html"> Stay Updated with the Latest Headlines on- web news </a></h3>
+             <p><a href="web-news.html"> Stay Updated with the Latest Headlines on- web news </a></p>
          </div>
 
      <!---Artical4----->
           <div class="article">
              <img src="INDEX/CYBER1.webp" alt="Article 3 Image" loading="lazy">
-             <h3><a href="cyber-security.html"> SecureCyber: Your Trusted Resource for Cyber Security Insights and Solutions </a></h3>
+             <p><a href="cyber-security.html"> SecureCyber: Your Trusted Resource for Cyber Security Insights and Solutions </a></p>
          </div>
 
      <!---Artical5----->
           <div class="article">
              <img src="INDEX/poetry.webp" alt="Article 4 Image" loading="lazy">
-             <h3><a href="poem-sonnet-poetry.html"> Discover the Beauty of Poetry: Explore Poems, Analysis, and Inspiration Here </a></h3>
+             <p><a href="poem-sonnet-poetry.html"> Discover the Beauty of Poetry: Explore Poems, Analysis, and Inspiration Here </a></p>
          </div>
 
     <!---Artical6----->
           <div class="article">
              <img src="INDEX/BLOG2.webp" alt="Article 5 Image" loading="lazy">
-             <h3><a href="blog-videos.html"> Explore Engaging Video Blogs: Your Destination for Informative Content </a></h3>
+             <p><a href="blog-videos.html"> Explore Engaging Video Blogs: Your Destination for Informative Content </a></p>
          </div>
 
      <!---Artical7----->
           <div class="article">
              <img src="INDEX/education.webp" alt="Article 6 Image" loading="lazy">
-             <h3><a href="best-education-website-india.html"> Top 10 useful education Websites for students </a></h3>
+             <p><a href="best-education-websites-india.html"> Top 10 useful education Websites for students </a></p>
          </div>
 
 	 <!---Artical10----->
           <div class="article">
              <img src="INDEX/banner.webp" alt="Article 10 Image" loading="lazy">
-             <h3><a href="best-mobile-games.html"> Best mobile games in India: discover the best Games, tips, and reviews </a></h3>
+             <p><a href="best-mobile-games.html"> Best mobile games in India: discover the best Games, tips, and reviews </a></p>
          </div>
 		 
 	 <!---Artical11----->
           <div class="article">
              <img src="INDEX/health.webp" alt="Article 11 Image" loading="lazy">
-             <h3><a href="health-advice.html"> discover vital health tips & advice for a thriving lifestyle </a></h3>
+             <p><a href="health-advice.html"> discover vital health tips & advice for a thriving lifestyle </a></p>
          </div>
 	 <!---Artical12----->
           <div class="article">
              <img src="INDEX/cash.webp" alt="Article 12 Image" loading="lazy">
-             <h3><a href="paytm-cash-earning-app.html"> Discover top paytm cash earning apps: maximize your earning Today </a></h3>
+             <p><a href="paytm-cash-earning-app.html"> Discover top paytm cash earning apps: maximize your earning Today </a></p>
          </div>
     <!-- You can add more articles using the same structure -->
   </section>
    
 
      <!----Comment Section------->
+	       <h1 style="color:#5E2BFF;text-align:Center;"> leave a comment </h1>
           <div id="gettouch" class="comment-section">
-             <form action="#" method="post" id="myForm"> <!--id comment-form--->
-                 <h1 style="color:#5E2BFF;"> leave a comment </h1>
+             <form action="#" method="post" id="myForm"> <!--id comment-form--->                
                  
                  <label for ="Name"> Name </label>
-                 <input type="text" id="name" name="name" spellcheck="true" required>
+                 <input type="text" id="name" name="name" placeholder="name" spellcheck="true" required>
                 
 				 <label for ="email"> Email </label>
-                 <input type="email" id="email" name="email" spellcheck="true" required>
+                 <input type="email" id="email" name="email" placeholder="email"spellcheck="true" required>
                 
 				 <label for ="text"> Message </label>
-				 <textarea id="msg" name="msg" rows="6" cols="40" spellcheck="true" required></textarea>
+				 <textarea id="msg" name="msg" rows="6" cols="40" placeholder="Message" spellcheck="true" required></textarea>
                  
                 <button class="btn" type="submit"> Submit </button>
             </form>   
