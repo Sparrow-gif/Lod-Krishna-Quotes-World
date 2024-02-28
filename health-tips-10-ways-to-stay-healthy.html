@@ -29,7 +29,9 @@
                   user-select:none;		  
         }  
   body.sidebar-open {  overflow: hidden; }
-	  html {   
+	  html {  
+         scroll-behavior:smooth;
+         scroll-padding:3.50em;	  
    	     background-color: ; 
 		 box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 	     }
@@ -192,31 +194,27 @@
           border:1px none #FFFFFF; */
            }
 		
-		.heading > a {
-		   margin:5px ;
-		   Font-size:;
-		   color:#6828de;
-		   font-family:;
-		   padding: ;
+		
+		#goo > a {
+		     text-decoration:none;
+			 margin:0px 5px;
+			 color:#5E2BFF;
+			 font-size:12px;
+			 Background: #f3f0fc;
+			 padding:4px 6px;
+			border-radius:10px;
 		}
- 
+		
    .tips > ul > li{
           padding:7px 0px;
 		  Font-size:;
 		  color:;
          font-family:;
    }
-  .tips > h1 {
-		     text-align:center;
-			 font-weight: ;
-			 color:#200a57;
-			 font-family: ;
-		  }
-		
-      main {
+   main {
           display:flex;
           flex-wrap:wrap;
-          justify-content: space-between;
+          justify-content: space-around;
           align-items:center;
         /*  background: #d5ebf7;  */
           gap:17px 15px;
@@ -273,12 +271,13 @@
        }
    
      fieldset >  div > img {
-         -o-object-fit:cover;
-            object-fit:cover;
+         -o-object-fit:fill;
+            object-fit:fill;
          width:80px;
          height: 60px;
          border:none;
          outline:none;
+		 border-radius:6px;
         }
 	   
 	    .askqtn {
@@ -508,10 +507,10 @@
                <a class="scroll-item" href="inspiration-motivation-positive-quotes.html" target="_self"> Daily Quotes </a>     
                <a class="scroll-item" href="index.html" target="_self"> wishdom </a>
                <a class="scroll-item" href="karma-&-truth.html" target="_self"> Karma </a>
-	       <a class="scroll-item" href="general-knowledge-gk-quiz-on-ramayana-and-mahabharat.html" target="_self"> epic quiz </a>
+	           <a class="scroll-item" href="general-knowledge-gk-quiz-on-ramayana-and-mahabharat.html" target="_self"> epic quiz </a>
                <a class="scroll-item" href="blogs-blog-videos.html" target="_self"> videos </a>
                <a class="scroll-item" href="books-poem-sonnet-poetry.html" target="_self"> books </a>               
-               <a class="scroll-item" href="best-educational-websites.html" target="_self"> study </a>
+               <a class="scroll-item" href="best-education-websites-india.html" target="_self"> study </a>
                <a class="scroll-item" href="best-online-mobile-games.html" target="_self"> gaming </a>
                <a class="scroll-item" href="online-shoping-mobiles-dresses-shirt-camera-shoes-accessories.html" target="_self"> life-style </a>    
                <a class="scroll-item" href="best-free-movie-download-websites.html" target="_self"> cinema </a>                                        
@@ -523,25 +522,13 @@
           
                  
 				 
-		  <div id="dites" style="padding:6px;">             <!-------heading------->
-                <div class="heading">
-                     <h1 style="color:#200a57;"> Boost Your Well-being: Expert Health Tips for a Vibrant Life </h1>                   
-                     <p> Updated on : jan 30, 2024 </p>
-					 <a href="#" title="fiber"> #fiber    </a> 
-					 <a href="#" title="c"> #vitamin c  </a>
-					 <a href="#" title="p"> #potassium </a> 
-					 <a href="#" title="an"> #antioxidant </a>
-					 <a href="#" title="v"> #vitamin b6  </a> 
-					 <a href="#" title="v"> #vitamin k  </a>
-					 <a href="#" title="v"> #vitamin e </a> 
-					 <a href="#" title="v"> #vitamin  </a>
-               </div>
-                         
-			   
-                             <!-------main div------->
-                <div class="contest">
-                     
-                     <div id="cont"> <!-------headind paragraph------->
+		  <aside id="dites" style="padding:0px 8px;">  
+                      <p id="goo"> <a href="#weight"> weight loss strategies </a> <a href="#Nutrition"> nutrition tips </a> <a href="#tips"> workout routines </a>   <p/>		  
+                                <!-------heading------->               
+                     <h1 style="color:#6a40f5;"> Boost Your Well-being: Expert Health Tips for a Vibrant Life </h1>                                        
+					 <p> Updated on : jan 30, 2024 </p>
+					
+                             <!-------main div------->               
                           <p class="texts" style="font-size:15px;">  
                            Welcome to our natural health and nutrition tips website, a hub for cultivating wellness through mindful choices.
 						   Dive into a treasure trove of advice, from nourishing recipes to evidence-backed insights, designed to harmonize
@@ -550,14 +537,13 @@
 						   is your ally. Join us in making informed choices that resonate with your body's innate balance, promoting a healthier 
 						   and more vibrant life. Here, we share a journey towards optimal well-being, encouraging you to thrive through the 
 						   wisdom of natural health and nutrition.					
-                         </p>
-                    </div>
-               </div>
-        </div>
-				 
-				 
-		 <div class="tips" style="padding: 6px 0px;">
-               <h1> importent health tips </h1>
+                         </p>                    
+        </aside>
+		
+		
+		
+		 <div class="tips" id="tips" style="padding: 6px 0px;">
+               <h1 style="color:#6a40f5; padding:0px 6px;"> health tips </h1>
 			   <ul>
 			        <li>  Stay hydrated by drinking plenty of water throughout the day.   </li>
 			        <li>  Include a variety of colorful fruits and vegetables in your diet for a range of nutrients   </li>
@@ -582,9 +568,25 @@
 			   </ul>
 		 </div>
 				 
+				 
+		 <figure id="weight" style="padding:10px;">
+               <h1 style="color:#6a40f5;"> weight loss strategies </h1>
+			   <p> 1. <b> Balanced Diet : </b> Focus on consuming a balanced diet rich in fruits, vegetables, lean proteins, and whole grains. Aim for portion control and moderation. </p>
+			   <p> 2. <b> Regular Exercise : </b> Incorporate both cardiovascular exercises (like walking, jogging, swimming) and strength training into your routine to burn calories and build muscle. </p>
+			   <p> 3. <b> Monitor Caloric Intake : </b> Keep track of your daily food intake and ensure you are consuming fewer calories than you expend to create a calorie deficit for weight loss. </p>
+			   <p> 4. <b> Include Protein : </b> Incorporate protein-rich foods into your meals and snacks as they can help you feel fuller for longer and preserve muscle mass during weight loss. </p>
+			   <p> 5. <b> Get Enough Sleep : </b> Aim for 7-9 hours of quality sleep per night as inadequate sleep can disrupt hunger hormones and lead to weight gain. </p>
+			   <p> 6. <b> Stay Active Throughout the Day : </b>  Find opportunities to move more during the day, such as taking short walks, using stairs instead of elevators, or doing household chores. </p>
+			   <p> 7. <b> Stay Consistent : </b> Stick to your weight loss plan consistently, even on weekends or during holidays. </p>
+			   <p> 8. <b> Limit Alcohol Intake : </b> Alcoholic beverages are high in calories and can hinder weight loss progress. Limit your intake or opt for lower-calorie options. </p>
+			   <p> 9. <b> Consult a Professional : </b> Consider consulting a registered dietitian or nutritionist for personalized guidance and support on your weight loss journey. </p>
+       </figure>		
+				 
+				 
+				 		 
            <!-----Main Body------>
    <article>
-        <main>		  
+        <main id="Nutrition">		  
            <img src="HEALTH/apple.webp" alt="froots" loading="lazy">   <!------Image 01------->
            <img src="HEALTH/banana.webp" alt="froots" loading="lazy">   <!------Image 02------->
            <img src="HEALTH/berries.webp" alt="froots" loading="lazy">   <!------Image 03------->
@@ -644,7 +646,7 @@
                  </div>
   
                   <div> <!-----Post 7----->
-                      <a href="best-educational-websites.html"> Top 10 useful education Websites for students </a>
+                      <a href="best-education-websites-india.html"> Top 10 useful education Websites for students </a>
                       <img src="INDEX/education.webp" alt="PaytmCash" loading="lazy">
                   </div>
 				
