@@ -27,7 +27,7 @@
 		         user-select: none;
        }
 	  html {   
-   	     background-color: ; 
+   	     background-color:#f5f8fa ; 
 		 box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 	     }
      .head-logo > a{
@@ -48,44 +48,20 @@
           -webkit-box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
                   box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;      
        }
-  .head-logo > a:hover{ -webkit-transform:scale(1.20); -ms-transform:scale(1.20); transform:scale(1.20)}
-   .head-logo > a:nth-child(1) {
-         color:white;
-         background: #266DD3;
-       }
-   .head-logo > a:nth-child(2) {
-         color:white;
-         background: #F75C03 ;
-       }
-   .head-logo > a:nth-child(3) {
-         color:white;
-         background: #7BB2D9 ;
-       }
-   .head-logo > a:nth-child(4) {
-         color:white;
-         background: #31D843 ;
-       }
-   .head-logo > a:nth-child(5) {
-         color:white;
-         background: #F42B03 ;
-       }
+ 
   .contest > #banner {
-       /*  background-image:url('image/Spider.jpg'); */
-       /* background-size:cover; */
-       /*  background-position:center; */
-       /*  background-attachment: ; */
-        aspect-ratio:1/0.50;
-         max-width:860px;
+         aspect-ratio:1/0.60;
+         max-width:620px;
          margin:10px auto;
          resize:both;
          overflow:auto;
-         }
+		  }
   .contest > #banner > img {
          width:100%;
-         aspect-ratio:1/0.50;
+         height:100%;
          background-size:cover;
-         background-position:center;
-		 
+         background-position:center;	
+         object-fit:fill;		 
       }
 
   
@@ -99,8 +75,7 @@
          margin:0 auto ;
          width:100%;
 		   }
-     #container > div {
-            background: #FFFFFF;
+     #container > figure {
             height:auto ;    
             padding:5px;     
             margin:15px auto ;
@@ -109,53 +84,46 @@
          -moz-user-select:none;    
          -ms-user-select:none;    
          user-select:none;  
-		 box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
-        }
+		 border:3px solid #f9f9f9;
+		 border-radius:6px;
+		 }
      
-     #container > div > h2 {
+     #container > figure > h2 {
            text-indent:0px;
            padding:5px 0px 3px 0px;
            color: #5e2bff;
        }
-      #container > div > #hvr {
+      #container > figure > #hvr {
             width:100%;
             min-height:120px;
             max-height: 320px;
-           overflow:hidden;
+            overflow:hidden;
         }
-      #container > div > #hvr > img {
+      #container > figure > #hvr > img {
             width:100%;
-            min-height:100%;
-            max-height:320px;			
+            min-height:120px;
+            max-height: 320px;			
             margin:0 auto;    
             -webkit-transition-duration:0.3s;    
                  -o-transition-duration:0.3s;    
                     transition-duration:0.3s;
             background-size:cover;
             background-position:center;
+			object-fit:fill;
         }
-    #container > div > p {
-           font-size:16px;
-           padding:0px;
-           font-family: ;
-           font-weight: ;
-        }
-     .page {
-           padding:10px;
-           border:none;
-           background: #5e2bff;
-           border-radius:5px;
-           cursor:pointer ;
-           -webkit-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-                   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;  
-		   -webkit-transition:0.3s;  
-		   -o-transition:0.3s;  
-		   transition:0.3s;
-        }
-	 #page:hover { background: #8075FF ; -webkit-transform:scale(0.90); -ms-transform:scale(0.90); transform:scale(0.90);}
-     .page > a {
-           text-decoration:none;
-           color:white ;
+    #download {
+          text-decoration:none;
+		  padding:10px 30px;
+          background: linear-gradient(145deg, #ff9a9e, #fad0c4);
+          border: none;
+          border-radius: 25px;
+          box-shadow:  6px 6px 12px #d9d9d9,-6px -6px 12px #ffffff;
+          transition: all 0.3s ease;
+          font-weight: bold;
+          font-size: 16px;
+          color: #fff;
+          cursor: pointer;
+          outline: none;
         }
 
 
@@ -290,15 +258,7 @@
 	        html {
 	                margin:0 auto;
 		            width:90%;
-			   }
-           #container {
-		          gap:10px;
-                 display:-ms-grid;
-                 display:grid;
-                 grid-template-columns:repeat(auto-fit,minmax(min(16rem,100%),1fr)) ;				  
-		     }
-			 		 
-			  #flex { Display:flex; flex-wrap:wrap;}
+		  #flex { Display:flex; flex-wrap:wrap;}
 			  #flex > main { width:60%; }
               #flex > aside { width:36%; overflow:hidden; }
 		 
@@ -312,12 +272,7 @@
 			  max-width:65%;
 			  min-width:990px;
 		    }   
-		  #container {
-		          gap:10px;
-                 display:-ms-grid;
-                 display:grid;
-                 grid-template-columns:repeat(auto-fit,minmax(min(20rem,100%),1fr)) ;				  
-		     }
+		
       }
 
  </style>
@@ -325,53 +280,28 @@
 <body oncontextmenu="return false">
 
           <!-----Main Body------>
-          <header style="padding:15px;">             <!-------heading------->
+          <header style="padding:10px;">             <!-------heading------->
                 <div class="heading">
-                     <h1 style="color:#5e2bff;"> Unlocking Earnings: Discover the Best Paytm Cash Apps for Quick Rewards </h1>                   
-                     <p> Updated on : jan 06, 2024 </p>
+                     <h1> Unlocking Earnings: Discover the Best Paytm Cash Apps for Quick Rewards </h1>                   
+                     <p> Updated on : <time> jan 06, 2024 </title> </p>
                </div>
-                             <!-------heading logo------->
-                <div class="head-logo">
-                     <a id="telegramShareBtn" class="fa-brands fa-telegram" title="telegram" target="" rel="noopener noreferrer"> </a>
-                     <a id="instagramShareBtn" class="fa-brands fa-instagram" title="Instagram" target="" rel="noopener noreferrer"> </a>
-                     <a id="twitterShareBtn" class="fa-brands fa-twitter" title="twitter" target="" rel="noopener noreferrer"> </a>
-                     <a id="whatsappButton" class="fa-brands fa-whatsapp" title="whatsapp" target="" rel="noopener noreferrer"> </a>
-                     <a href="#" class="fa-brands fa-youtube" title="YouTube" target="" rel="noopener noreferrer"> </a>
-               </div>
-			   
-	
-   
-			   
-                             <!-------main div------->
+                   <!-------main div------->
                 <article class="contest">
-                     <div id="banner"> <img src="PAYTM/IMG000.webp" alt="banner" loading="lazy"> </div><!-------headind banner------->
+                     <div id="banner"> <img src="PAYTM/Paytm.webp" alt="paytm cash esrning apps" loading="auto"> </div><!-------headind banner------->
                           
                      <div id="cont"> <!-------headind paragraph------->
-                          <p class="texts" style="font-size:14px ;">  
-                               Welcome To Our Platform, Where Unlocking Your Earning Potential Is Made Simple And Rewarding. 
-                               Our Website Hosts The Ultimate Earning App, Carefully Crafted To Empower Users From All Walks 
-                               Of Life. We Pride Ourselves On Offering A Seamless, Intuitive Experience That Caters To Everyone,
-                               Ensuring Accessibility And Inclusivity In The Pursuit Of Financial Growth. Whether You're A Student, 
-                               A Homemaker, Or A Professional Seeking Extra Income, Our Diverse Range Of Earning Opportunities, 
-                               From Surveys To Micro-Tasks, Stands Ready To Match Your Aspirations. Our Commitment To Providing 
-                               The Best-In-Class App Is Matched Only By Our Dedication To Your Success. Join Our Community And
-                               Embark On A Journey Where Earning Meets Convenience, Where Every Click, Every Task Completed,
-                               Brings You Closer To Your Financial Goals. Experience The Simplicity, The Diversity, And The 
-                               Satisfaction Of Using Our Website – The One-Stop Destination For Maximizing Your Earnings Effortlessly.
-			<marquee style="color:red;"> different companies are launching different types of apps in the market and many apps are closhed so *join  our telegram chennel to get latest updates* </marquee>
-                         </p>
+                          <p class="texts" style="font-size:16px ;">  
+                        </p>
                     </div>
                </article>
-        </header>
-		
-		
+        </header>		
 		
                             
-              <h1 style="color:dodgerblue; text-align:center;"> here the list of best paytm cash earning apps </h1>
-        <section id="flex">             
-		                    
+             
+        <section id="flex" style="padding:10px;">             
+		        <h1>  </h1>          
               <main id="container" style="padding:15px;">      
-                 <div id="website1">     <!----Application 1------->                     
+                 <figure id="website1">     <!----Application 1------->                     
                      <h2> 1) Rapid box </h2>
                      <div id="hvr"> <img src="PAYTM/IMG1.webp" alt="cash-img" loading="lazy"> </div>
                      <p>
@@ -381,10 +311,10 @@
 					   management, allowing us to offer you the most comfortable and high-quality products. With RapidBox - A made-in-India sports 
 					   lifestyle brand, you can shop with confidence, knowing that you're getting the same quality as top brands, without the premium price tag.
                      <p/>         
-                     <button class="page"> <a href="https://play.google.com/store/apps/details?id=com.rapidbox"> download </a></button> 
-                </div>
+                     <a href="https://play.google.com/store/apps/details?id=com.rapidbox" id="download"> download </a>
+                </figure>
 
-                 <div id="website2">  <!-----Application 2----->
+                 <figure id="website2">  <!-----Application 2----->
                      <h2> 2) koo </h2>
                      <div id="hvr"> <img src="PAYTM/IMG2.webp" alt="cash-img" loading="lazy"> </div>
                      <p>
@@ -392,11 +322,11 @@
 					   It empowers people to express their thoughts in a language of their choice. It houses social news and updates 
 					   from millions of people.
                      <p>         
-                    <button class="page"> <a href="https://play.google.com/store/apps/details?id=com.koo.app" target="_self">  download </a></button> 
-               </div>
+                    <a href="https://play.google.com/store/apps/details?id=com.koo.app" target="_self">  download </a>
+               </figure>
 			   
 			   
-			     <div id="website3">     <!----Application 3------->                     
+			     <figure id="website3">     <!----Application 3------->                     
                      <h2> 3) mreward </h2>
                      <div id="hvr"> <img src="PAYTM/IMG3.webp" alt="cash-img" loading="lazy"> </div>
                      <p>
@@ -405,10 +335,10 @@
                         Earn coins and redeem the coins to get free vouchers of your favorite eCommerce website, streaming services free subscriptions, or just straight cash! The best way to utilize your free time and earn 
 						cash is by doing specific tasks or just by playing favorite games or installing the best quality apps from the play store!  
                      <p/>         
-                     <button class="page"> <a href="https://play.google.com/store/apps/details?id=com.gspl.mrewards">  download </a></button> 
-                </div>
+                     <a href="https://play.google.com/store/apps/details?id=com.gspl.mrewards">  download </a>
+                </figure>
 
-                 <div id="website4">  <!-----Application 4----->
+                 <figure id="website4">  <!-----Application 4----->
                      <h2> 4) rummy time </h2>
                      <div id="hvr"> <img src="PAYTM/IMG4.webp" alt="cash-img" loading="lazy"> </div>
                     <p>
@@ -416,10 +346,10 @@
                <br/>
                        RummyTime (रमीटाइम) offers unparalleled security to all Rummy Game players. Its safe and secure payment channels and RNG certification makes it one of the safest rummy game apps.
                      <p>         
-                    <button class="page"> <a href="https://play.google.com/store/apps/details?id=com.rummytime.googleplay" target="_self">  download </a></button> 
-               </div>
+                     <a href="https://play.google.com/store/apps/details?id=com.rummytime.googleplay" target="_self">  download </a> 
+               </figure>
 			   
-			     <div id="website5">     <!----Application 5------->                     
+			     <figure id="website5">     <!----Application 5------->                     
                      <h2> 5) rummy cirle </h2>
                      <div id="hvr"> <img src="PAYTM/IMG5.webp" alt="cash-img" loading="lazy"> </div>
                      <p>
@@ -429,10 +359,10 @@
                        Rummy Circle is one of India's most played & popular rummy games. Dive into Indian rummy games and win cash while having fun. Play rummy, test your card game skills,
 					   and earn rewards in this online rummy game.
                      <p/>         
-                     <button class="page"> <a href="https://play.google.com/store/apps/details?id=com.games24x7.rummycircle.rummy">  download </a></button> 
-                </div>
+                     <a href="https://play.google.com/store/apps/details?id=com.games24x7.rummycircle.rummy">  download </a> 
+                </figure>
 
-                 <div id="website6">  <!-----Application 6----->
+                 <figure id="website6">  <!-----Application 6----->
                      <h2> 6) zupee </h2>
                      <div id="hvr"> <img src="PAYTM/IMG6.webp" alt="cash-img" loading="lazy"> </div>
                      <p>
@@ -441,10 +371,10 @@
                       Ludo Supreme: multiplayer games online <br/>
                       Ludo Supreme League: online Leaderboard Ludo tournament
                      <p>         
-                    <button class="page"> <a href="https://www.coursera.org" target="_self">  download </a></button> 
-               </div>
+                     <a href="https://www.coursera.org" target="_self">  download </a>
+               </figure>
 			   
-			     <div id="website7">     <!----Application 7------->                     
+			     <figure id="website7">     <!----Application 7------->                     
                      <h2> 7) rush </h2>
                      <div id="hvr"> <img src="PAYTM/IMG7.webp" alt="cash-img" loading="lazy"> </div>
                      <p>
@@ -456,10 +386,10 @@
                <br/>
                        Looking for more casual games to play with friends? Try these different real money games on Rush & win real cash daily!
                      <p/>         
-                     <button class="page"> <a href="">  download </a></button> 
-                </div>
+                      <a href="">  download </a>
+                </figure>
 
-                 <div id="website8">  <!-----Application 8----->
+                 <figure id="website8">  <!-----Application 8----->
                      <h2> 8) 10X reward </h2>
                      <div id="hvr"> <img src="PAYTM/IMG8.webp" alt="cash-img" loading="lazy"> </div>
                      <p>
@@ -468,38 +398,38 @@
                       Ready to explore a world of incentives? Absolutely! With 10X Rewards, you can unlock various rewards. Discover the ease of earning gift cards effortlessly.
 					  Our app, 10X Rewards, offers the opportunity to acquire free Gift Cards by completing simple tasks.
                      <p>         
-                    <button class="page"> <a href="https://play.google.com/store/apps/details?id=reward.instant.withdraw.redeemcode.earntospin.scartchtowin" target="_self">  download </a></button> 
-               </div>
+                     <a href="https://play.google.com/store/apps/details?id=reward.instant.withdraw.redeemcode.earntospin.scartchtowin" target="_self">  download </a>
+               </figure>
 			   
-			     <div id="website9">  <!-----Application 9----->
+			     <figure id="website9">  <!-----Application 9----->
                      <h2> 9) PAYTM FIRST GAMES </h2>
                      <div id="hvr"> <img src="PAYTM/IMG9.webp" alt="cash-img" loading="lazy"> </div>
                      <p>
                        Paytm First Games is a gaming platform within the Paytm app where users can play various games and win real cash prizes. It offers a variety of games 
 					   including fantasy sports, trivia quizzes, card games, and more. Users can compete against each other and earn rewards or cash prizes.
                      <p>         
-                    <button class="page"> <a href="https://www.coursera.org" target="_self">  download </a></button> 
-               </div>
+                     <a href="https://www.coursera.org" target="_self">  download </a>
+               </figure>
 			   
-			     <div id="website10">  <!-----Application 10----->
+			     <figure id="website10">  <!-----Application 10----->
                      <h2> 10) rozdhan</h2>
                      <div id="hvr"> <img src="PAYTM/IMG10.webp" alt="cash-img" loading="lazy"> </div>
                      <p>
                        Roz Dhan is one of the most trusted Indian app on the Android play store and has been used by more than 25 million users till date. You can withdraw money to
 					   Paytm account after your first 2 days on the app, withdraw money immediately after completing "Instant Cash Tasks" and after reaching ₹300 in your RozDhan wallet.
                      <p>         
-                    <button class="page"> <a href="https://play.google.com/store/apps/details?id=videos.share.rozdhan" target="_self">  download </a></button> 
-               </div>
+                     <a href="https://play.google.com/store/apps/details?id=videos.share.rozdhan" target="_self">  download </a>
+               </figure>
 			   
-			    <div id="website9">  <!-----Application 11----->
+			    <figure id="website9">  <!-----Application 11----->
                      <h2> 11) viewpoint </h2>
                      <div id="hvr"> <img src="PAYTM/viewpoint.webp" alt="cash-img" loading="lazy"> </div>
                      <p>
                        Viewpoint is a platform that allows users to earn rewards by completing surveys and providing their opinions on various topics.Earn points for each survey completed,
 					   which can then be redeemed for cash, gift cards, or other rewards.
                      <p>         
-                    <button class="page"> <a href="https://play.google.com/store/apps/details?id=com.facebook.viewpoints" target="_self">  download </a></button> 
-               </div>
+                     <a href="https://play.google.com/store/apps/details?id=com.facebook.viewpoints" target="_self">  download </a>
+               </figure>
            </main>
 		    
 			
@@ -511,12 +441,12 @@
                 <legend style="border:none;"><h1> related posts </h1></legend>
            
                   <div> <!-----Post 1------>
-                       <a href="movie-sites.html"> Top Movie Download Websites for Quality Entertainment on Demand </a>
+                       <a href="best-free-movie-download-websites.html"> Top Movie Download Websites for Quality Entertainment on Demand </a>
                        <img src="INDEX/movie.webp" alt="PaytmCash" loading="lazy">
                  </div>
 
                  <div> <!-----Post 2------>
-                      <a href="web-news.html"> Stay Updated with the Latest Headlines on-web news </a>
+                      <a href="latest-breaking-viral-news-update.html"> Stay Updated with the Latest Headlines on-web news </a>
                      <img src="INDEX/webnews.webp" alt="PaytmCash" loading="lazy">
                     </div>
 
@@ -526,17 +456,17 @@
                   </div>
 
                   <div> <!-----Post 4------>
-                    <a href="cyber-security.html"> SecureCyber: Your Trusted Resource for Cyber Security Insights and Solutions </a>
+                    <a href="cyber-security-what-is-cybersecurity.html"> SecureCyber: Your Trusted Resource for Cyber Security Insights and Solutions </a>
                     <img src="INDEX/CYBER1.webp" alt="PaytmCash" loading="lazy">
                  </div>
 
                    <div> <!-----Post 5------>
-                     <a href="poem-sonnet-poetry.html"> Discover the Beauty of Poetry: Explore Poems, Analysis, and Inspiration Here </a>
+                     <a href="books-poem-sonnet-poetry.html"> Discover the Beauty of Poetry: Explore Poems, Analysis, and Inspiration Here </a>
                      <img src="INDEX/poetry.webp" alt="PaytmCash" loading="lazy">
                   </div>
 
                  <div> <!-----Post 6----->
-                      <a href="blog-videos.html"> Explore Engaging Video Blogs: Your Destination for Informative Content </a>
+                      <a href="blogs-blog-videos.html"> Explore Engaging Video Blogs: Your Destination for Informative Content </a>
                      <img src="INDEX/BLOG2.webp" alt="PaytmCash" loading="lazy">
                  </div>
   
@@ -546,30 +476,26 @@
                   </div>
 				
 				   <div> <!-----Post 8----->
-                      <a href="sri-krishna-stories.html"> Exploring Sri Krishna Stories and Wisdom: Unveiling Divine Tales and Teachings </a>
+                      <a href="general-knowledge-gk-quiz-on-ramayana-and-mahabharat.html"> Exploring Sri Krishna Stories and Wisdom: Unveiling Divine Tales and Teachings </a>
                       <img src="INDEX/cute.webp" alt="PaytmCash" loading="lazy">
                   </div>
 				  
 				   <div> <!-----Post 9----->
-                      <a href="discount-deals.html"> Discover unbeatable deals:a diverse range of products at unbeatable price </a>
+                      <a href="online-shoping-mobiles-dresses-shirt-camera-shoes-accessories.html"> Discover unbeatable deals:a diverse range of products at unbeatable price </a>
                       <img src="INDEX/loot.webp" alt="PaytmCash" loading="lazy">
                   </div>
 				  
 				  <div> <!-----Post 10----->
-                      <a href="best-mobile-games.html"> Best mobile games in India: discover the best Games, tips, and reviews </a>
+                      <a href="best-online-mobile-games.html"> Best mobile games in India: discover the best Games, tips, and reviews </a>
                       <img src="INDEX/banner.webp" alt="PaytmCash" loading="lazy">
                   </div>
 				  
 				  <div> <!-----Post 11----->
-                      <a href="health-advice.html"> discover vital health tips & advice for a thriving lifestyle </a>
+                      <a href="health-tips-10-ways-to-stay-healthy.html"> discover vital health tips & advice for a thriving lifestyle </a>
                       <img src="INDEX/health.webp" alt="PaytmCash" loading="lazy">
                   </div>
 				  
-				  <div> <!-----Post 12----->
-                      <a href="paytm-cash-earning-app.html"> Discover top paytm cash earning apps: maximize your earning Today </a>
-                      <img src="INDEX/cash.webp" alt="PaytmCash" loading="lazy">
-                  </div>
-             </fieldset>  <!--------------FIELDSET SECTI0N CLOSE HERE------------------------>
+			</fieldset>  <!--------------FIELDSET SECTI0N CLOSE HERE------------------------>
 			 
 			 
 			 
