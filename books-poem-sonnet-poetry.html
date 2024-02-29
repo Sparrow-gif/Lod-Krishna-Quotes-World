@@ -330,8 +330,8 @@
    .article img {
         max-width: 100%;
         aspect-ratio:1/1;  
-        -o-object-fit: cover;  
-        object-fit: cover;
+        -o-object-fit:fill;  
+        object-fit: fill;
 	background-position:center;
      }
 
@@ -340,10 +340,8 @@
            -webkit-transition-duration:0.3s;
                 -o-transition-duration:0.3s;
                    transition-duration:0.3s;
-	    font-family: ;
 	    text-align:center;
-	     font-size:15px;
-           }
+	       }
 
       .article p a {
             text-decoration: none;
@@ -505,6 +503,12 @@
          }
       }	
 	   
+	    @media only screen and (max-width:500px) { 
+	          .article {  margin:0 auto;   width:90% ; aspect-ratio:1/0.60;}
+			   .article img { width:100% ; aspect-ratio:1/0.50;}
+			
+	  }
+	  
 	   @media only screen and (min-width:600px) { 
 	          .article {  margin:0 auto;   width: 220px ; }
 			
@@ -609,7 +613,7 @@
             <li><a href="blogs-blog-videos.html" title="Explore Blogs"> videos </a></li>
             <li><a href="books-poem-sonnet-poetry.html" title="Read Poetry"> books </a></li>
             <li><a href="latest-breaking-viral-news-update.html" title="Discover Web News"> Web News </a></li>
-		 <li><a href="business-news.html" title="share market"> business </a>
+			<li><a href="business-news.html" title="share market"> business </a>
             <li><a href="online-shoping-mobiles-dresses-shirt-camera-shoes-accessories.html" target="_self" title="shoping"> Life-Style</a></li>
             <li><a href="https://www.sportskeeda.com" target="_blank" rel="noopener noreferrer">Cricket</a></li>
             <li><a href="health-tips-10-ways-to-stay-healthy.html" title="Get Health Advice"> Health</a></li>
@@ -632,7 +636,7 @@
                <a class="scroll-item" href="inspiration-motivation-positive-quotes.html" target="_self"> Daily Quotes </a>     
                <a class="scroll-item" href="index.html" target="_self"> wishdom </a>
                <a class="scroll-item" href="karma-&-truth.html" target="_self"> Karma </a>
-	       <a class="scroll-item" href="general-knowledge-gk-quiz-on-ramayana-and-mahabharat.html" target="_self"> epic quiz </a>
+	           <a class="scroll-item" href="general-knowledge-gk-quiz-on-ramayana-and-mahabharat.html" target="_self"> epic quiz </a>
                <a class="scroll-item" href="blogs-blog-videos.html" target="_self"> videos </a>
                <a class="scroll-item" id="active" href="books-poem-sonnet-poetry.html" target="_self"> books </a>               
                <a class="scroll-item" href="best-education-websites-india.html" target="_self"> study </a>
@@ -640,7 +644,7 @@
                <a class="scroll-item" href="online-shoping-mobiles-dresses-shirt-camera-shoes-accessories.html" target="_self"> life-style </a>    
                <a class="scroll-item" href="best-free-movie-download-websites.html" target="_self"> cinema </a>                                        
                <a class="scroll-item" href="health-tips-10-ways-to-stay-healthy.html" target="_self"> health </a>
-		 <a class="scroll-item" href="business-news.html" target="_self"> business </a>
+			   <a class="scroll-item" href="business-news.html" target="_self"> business </a>
                <a class="scroll-item" href="latest-breaking-viral-news-update.html" target="_self"> web news </a>                
                <!---<a class="scroll-item" href="#" target="_self" onclick="notevel()"> More...</a>----->
           <!-- Add more items as needed -->
@@ -674,7 +678,7 @@
 			</p>
       </div>
 
-         <h1 id="discover" style="text-align:center;padding:20px;background: #e9f3f5;">  Discover our poetry collection  </h1>
+         <h1 id="discover" style="text-align:center;padding:20px;background:#5e2bff;color:#FFFFFF;">  Discover our poetry collection  </h1>
                       <!-----------QUOTES--CONTAUNER----------------->
         
         <!-------Most Read Poems--------->
