@@ -293,7 +293,25 @@
 		 transition-duration:0.3s;
 	 }
         
- 
+   .overview {
+          Display:flex;
+		 -ms-flex-wrap:wrap;
+		 flex-wrap:wrap;
+	     gap:20px 20px;
+	     justify-content:space-evenly ;
+		 margin:10px 20px;
+    }
+	.overview > div {
+	     display:flex;
+		 flex-wrap:wrap;
+		 justify-content:Center;
+		 align-items:Center;
+         flex-direction:column;
+		 border:2px solid #5e2bff;
+		 padding:20px;
+		 max-width:100%;
+		 min-width:230px;
+		 }
      .recommended-articles {
              width: 100%;
              margin: 0 auto;
@@ -598,7 +616,7 @@
 		}
    </style>
   </head>
-  <body oncontextmenu="return false">
+  <body ncontextmenu="return false">
         <header id="header">
     <nav id="navbar">
         <div class="navbar-brand">
@@ -678,6 +696,29 @@
 			</p>
       </div>
 
+            <!--------------------------------------------------------
+			-----------------------OVERVIEWS----------------------------------
+			---------------------------------------------------------->
+     <article class="overview">
+            <div> 
+                <i class="fa-solid fa-book-open-reader" style="color: #FFD43B; font-size:60px;"></i>
+				<h1>  100+ </h1>
+				<p> Total Poetrys </p>
+			</div>
+			
+			 <div> 
+                <i class="fa-solid fa-users" style="color: #FFD43B; font-size:60px;"></i>
+				<h1>  500+ </h1>
+				<p> Active Readers </p>
+			</div>
+			
+			 <div> 
+                <i class="fa-solid fa-trophy" style="color: #FFD43B; font-size:60px;"></i>
+				<h1>  3 </h1>
+				<p> Got Awards </p>
+			</div>
+     </article>
+
          <h1 id="discover" style="text-align:center;padding:15px;background:#5e2bff;color:#FFFFFF;">  Discover our poetry collection  </h1>
                       <!-----------QUOTES--CONTAUNER----------------->
         
@@ -709,17 +750,6 @@
           <!-- Add more images as needed -->
     </div>
 
-          <!------upcoming poems---------->
-          <h2 style="padding:2px 5px; color:#5E2BFF;"> upcoming poems  </h2>
-     <div class="gallery">
-          <img src="images/me.jpg" alt="sonnet" class="lightbox-trigger" loading="lazy" title="">            
-          <img src="images/Img2.jpeg" alt="poetry" class="lightbox-trigger" loading="lazy" title="">
-          <img src="images/Img1.jpeg" alt="poems" class="lightbox-trigger" loading="lazy" title="">            
-          <img src="images/Img2.jpeg" alt="sonnet" class="lightbox-trigger" loading="lazy" title="">    
-          <img src="images/me.jpg" alt="poetry" class="lightbox-trigger" loading="lazy" title="">            
-          <!-- Add more images as needed -->
-    </div>
-  
      <div class="lightbox" id="lightbox">
           <span class="close-btn" onclick="closeLightbox()">&times;</span>
           <img src="" alt="Lightbox Image" class="lightbox-content">
@@ -772,11 +802,11 @@
              <p><a href="best-education-websites-india.html"> Top 10 useful education Websites for students </a></p>
          </div>
 
-    <!---Artical8----->
+    <!---Artical8---
           <div class="article">
              <img src="INDEX/cute.webp" alt="Article 8 Image" loading="lazy">
              <p><a href="karma-&-truth.html"> Exploring Sri Krishna Stories and Wisdom: Unveiling Divine Tales and Teachings </a></p>
-         </div>
+         </div>-------->
 		 
 	 <!---Artical9----->
           <div class="article">
