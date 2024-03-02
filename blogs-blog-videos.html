@@ -8,14 +8,13 @@
   <link href="https://fonts.googleapis.com/css2?family=Cabin&family=Domine:wght@400;500;600&family=Lato:wght@300;400&family=Montserrat:wght@200;300;400&family=Open+Sans:wght@300;400;600&family=PT+Sans:ital@0;1&family=Playfair+Display:wght@400;500&family=Quicksand:wght@300;400;500&family=Roboto:wght@300;400&display=swap" rel="stylesheet">   
   <link rel="icon" type="image/x-icon" href="favicon.jpeg">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="robots" content="nofollow, noarchive">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <meta name="keywords" content="Travel vlogs, Food vlogs, Lifestyle vlogs, Fitness vlogs, Tech vlogs, Cooking vlogs">
   <meta name="description" content="Embark on a captivating journey of self-discovery and knowledge with our dynamic vlog platform! Dive into a world of engaging content where you can learn, discover, and get inspired by a diverse range of topics. Elevate your online experience with our thought-provoking vlogs – your gateway to endless learning and exploration. Subscribe now to unlock a wealth of insights and join a community passionate about knowledge and discovery!">
   <title> Explore Engaging Video Blogs: Your Destination for Informative Content </title>
    <style>
-      * {
+     * {
           margin:0px;
           padding:0px;
           -webkit-box-sizing:border-box;
@@ -34,7 +33,8 @@
             scroll-behavior:smooth;
             scroll-padding:2.80em;
             background-color: ; 
-		    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+		    -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+		            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 	     }
    header {
             position:fixed;
@@ -44,9 +44,15 @@
             z-index: 999;
         }
         #navbar {
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex; 
-            justify-content: space-between; 
-            align-items: center; 
+            -webkit-box-pack: justify; 
+                -ms-flex-pack: justify; 
+                    justify-content: space-between; 
+            -webkit-box-align: center; 
+                -ms-flex-align: center; 
+                    align-items: center; 
 		    background-color: #FFFFFF;
             color: black;
             width:100%;
@@ -54,7 +60,7 @@
         }
         .navbar-brand h1 {
                  margin: 0;
-                 font-size: 28px;
+                 font-size: 24px;
 	             color:#5E2BFF;
 	 }
         
@@ -75,9 +81,12 @@
             background-color: #fff;
             overflow-y: auto;
             padding-top: 20px; /* Adjusted padding top */
+            -webkit-transition: 0.5s;
+            -o-transition: 0.5s;
             transition: 0.5s;
             z-index: 998;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+                    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 			padding:10px 0px 20px 0px;
         }
         
@@ -101,6 +110,8 @@
             margin:10px 10px;
             text-decoration: none;
             color: black;
+            -webkit-transition: background-color 0.3s;
+            -o-transition: background-color 0.3s;
             transition: background-color 0.3s;
             border-radius: 30px;
             text-align: center; /* Center align the text */
@@ -112,8 +123,12 @@
         
         .social-links {
             margin-top: 20px;
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
-            justify-content: center;
+            -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                    justify-content: center;
             padding: 0;
         }
         
@@ -121,11 +136,21 @@
             margin: 0px 10px;
             font-size: 20px;
             text-decoration: none;
+            -webkit-transition: color 0.3s, -webkit-transform 0.3s;
+            transition: color 0.3s, -webkit-transform 0.3s;
+            -o-transition: transform 0.3s, color 0.3s;
             transition: transform 0.3s, color 0.3s;
+            transition: transform 0.3s, color 0.3s, -webkit-transform 0.3s;
             border-radius: 50%;
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
-            justify-content: center;
-            align-items: center;
+            -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                    justify-content: center;
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
             width: 40px;
             height: 40px;
         }
@@ -160,12 +185,15 @@
         display:-webkit-box;
         display:-ms-flexbox;
         display:flex;        
-		justify-content: ;
+		-webkit-box-pack: ;        
+		    -ms-flex-pack: ;        
+		        justify-content: ;
         background:white;
         padding:6px 0px;
         position:relative ;
         white-space: nowrap;
-		scroll-snap-type: x mandatory;
+		-ms-scroll-snap-type: x mandatory;
+		    scroll-snap-type: x mandatory;
 	 }
  .scroll-container::-webkit-scrollber {
          display:none;
@@ -276,10 +304,11 @@
                  transform:scale(0.90) ;
          border-radius:10px;
        }
-    #inttro {
+	   
+   #inttro {
           margin:0 auto ;
           padding:10px 6px;
-          background: ;  */#deed9a */
+          background: ;  /* #deed9a */
           font-family: ;
           font-size: ;
       }
@@ -294,10 +323,18 @@
             margin:0 auto ;
             padding:10px;
 			Display:flex;
-			flex-wrap: ;
-			justify-content:center;
-			align-items:center;
-			flex-direction:column;
+			-ms-flex-wrap: ;
+			    flex-wrap: ;
+			-webkit-box-pack:center;
+			    -ms-flex-pack:center;
+			        justify-content:center;
+			-webkit-box-align:center;
+			    -ms-flex-align:center;
+			        align-items:center;
+			-webkit-box-orient:vertical;
+			-webkit-box-direction:normal;
+			    -ms-flex-direction:column;
+			        flex-direction:column;
 			gap:15px;
            }
    #blogvdos > iframe {
@@ -331,13 +368,24 @@
 			 aspect-ratio:1/0.60;
              display:inline-block;
 			 margin:4px 6px;
+             background: -o-linear-gradient(330deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
              background: linear-gradient(120deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
              background-size: 200% 100%; 
-             animation: loading 1.5s ease-in-out infinite;
+             -webkit-animation: loading 1.5s ease-in-out infinite; 
+                     animation: loading 1.5s ease-in-out infinite;
 			 border-radius:4px;
 			 outline:none;
 			 border:none;
         }
+	 
+	@-webkit-keyframes loading {
+         0% {
+            background-position: 200% 0;
+          }
+        100% {
+            background-position: -200% 0;
+         }
+     }
 	 
 	@keyframes loading {
          0% {
@@ -378,15 +426,12 @@
          -webkit-transition-duration:0.3s;
               -o-transition-duration:0.3s;
                  transition-duration:0.3s;  
-          font-size:14px;				 
+          font-size:16px;				 
        }
-    fieldset >  div > a:hover { 
-         text-decoration: underline; 
-         padding:6px;
-      }
-     fieldset >  div > img {
-         -o-object-fit:cover;
-            object-fit:cover;
+  
+  fieldset >  div > img {
+         -o-object-fit:fill;
+            object-fit:fill;
          width:80px;
          height: 60px;
          border:none;
@@ -406,11 +451,9 @@
                   user-select:none;
          }
    #ourwork > h1 {
-            text-align: ;
             color: #5e41f0;
-            margin:20px 0px 40px 0px;
-			Font-family: ;
-         }
+            margin:20px 0px 20px 0px;
+		  }
    #ourwork > .grid {
             margin:0 auto ;
             gap:20px;
@@ -420,7 +463,7 @@
          }
    #ourwork > .grid > div {
            height:auto;
-           width:90%;
+           width:100%;
            padding:15px;
            background: #0e0636;
            color:#ecebf2 ;
@@ -443,20 +486,13 @@
          }
     .aboutus > h1  {
            margin-bottom:25px;
-           Font-family: ;
-           font-size: ;
-		   color: #5e41f0 ;
-         }
-     .aboutus > p {
-           Font-family: ;
-           font-size: ;
-		   color: ;
+           color: #5e41f0 ;
          }
     .aboutus > iframe {
 	       width:100%;
 		   aspect-ratio:1/0.60;
            border:0px solid black;
-           margin:0 auto;
+           margin:10px auto;
 		  -webkit-box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
 		          box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
 	}
@@ -487,27 +523,22 @@
 		max-width:550px;
        }
    #gettouch > form > h1 {
-         color:#5E239D;
-         font-size: ;
-         font-family: ;
-         font-weight: ;
+         color:#5E2BFF;
+         font-size:30px ;
+         font-weight:700 ;
        }
    #gettouch > form > label {
         width:100%;
         display:block;
-        Font-family: ;
-        font-size: ;
-      }
+     }
    #gettouch > form >  input {
         width:100%;
         padding:8px;
-        font-size: ;
         display:block;
         margin:0px auto ;
         border: 1px solid #ccc;
         border-radius:4px;
-        Font-family: ;
-		outline:none;
+        outline:none;
          }
 		 
 	 #gettouch > form >  input:user-invalid { border:1.50px solid red;}
@@ -583,7 +614,9 @@
 			 border-left:2px solid coral;
 			 margin:20px 10px;
 			 padding:6px 10px;
-			 column-count:auto;
+			 -webkit-column-count:auto;
+			    -moz-column-count:auto;
+			         column-count:auto;
 			 color: #181f1a;
 			 font-size:14px;
 			}		
@@ -611,8 +644,8 @@
         }
       #ytb {          
           position: fixed;
-          bottom:80px;
-          right: 20px;
+          bottom: 10%;
+          right: 6px;
           background-color:red;
           color: white;
           border: none;
@@ -629,7 +662,7 @@
             }
 
 
-@media only screen and (max-width: 767px) {       
+@media only screen and (max-width: 991px) {       
          #related1  {
 		        display:none;
 		    }
@@ -652,23 +685,7 @@
                  position:absolute;                 
                  }
             
-			 .flow {
-		         display:-webkit-box;
-		         display:-ms-flexbox;
-		         display:flex;
-			     justify-Content:space-evenly;
-			     gap:10px;
-	     	  }				
-       		 .flow > main { width:65%; }
-			 .flow > aside { width:32%; }
-			 
-			  #related1  {
-		        display:block;
-                 }
-             #related2  {
-		        display:none;
-		        }
-				
+			
       .watchmore {padding: 15px 10%;}
       .watchmore > iframe {
            width:100%;
@@ -696,7 +713,16 @@
 	          margin:0 auto;
 			  max-width:65%;
 			  min-width:990px;
-		    }   
+		    }   			
+			
+			 
+			  #related1  {
+		        display:block;
+                 }
+             #related2  {
+		        display:none;
+		        }
+				
 		 #section >  #blur a:hover {
          -webkit-transform:scale(0.90) ;
              -ms-transform:scale(0.90) ;
@@ -710,7 +736,9 @@
           .social-links a:hover {
                  color: #fff;
                  background-color: #5E2BFF;
-                 transform: translateY(-5px);
+                 -webkit-transform: translateY(-5px);
+                     -ms-transform: translateY(-5px);
+                         transform: translateY(-5px);
            }	
          .scroll-container > .scroll-item:hover {
                  color: black;
@@ -723,7 +751,15 @@
 		    }		
 		   
 				    #section > #background {  height: 540px;}
-				   
+				 .flow {
+		             display:-webkit-box;
+		             display:-ms-flexbox;
+		             display:flex;
+			         justify-Content:space-evenly;
+			         gap:10px;
+	     	  }				
+       		 .flow > main { width:60%; }
+			 .flow > aside { width:38%; }   
               .watchmore > div > a > img {
                    background-position:center;
                    width:420px;
@@ -737,7 +773,7 @@
          <header id="header">
     <nav id="navbar">
         <div class="navbar-brand">
-            <h1>Quotes World</h1>
+            <h1>  Quotehubspot  </h1>
         </div>
         <button class="navbar-toggler" id="toggleButton" onclick="toggleNav()" aria-label="Toggle navigation">&#9776;</button>
     </nav>
@@ -771,7 +807,7 @@
                <a class="scroll-item" href="inspiration-motivation-positive-quotes.html" target="_self"> Daily Quotes </a>     
                <a class="scroll-item" href="index.html" target="_self"> wishdom </a>
                <a class="scroll-item" href="karma-&-truth.html" target="_self"> Karma </a>
-	       <a class="scroll-item" href="general-knowledge-gk-quiz-on-ramayana-and-mahabharat.html" target="_self"> epic quiz </a>
+	           <a class="scroll-item" href="general-knowledge-gk-quiz-on-ramayana-and-mahabharat.html" target="_self"> epic quiz </a>
                <a class="scroll-item" id="active" href="blogs-blog-videos.html" target="_self"> videos </a>
                <a class="scroll-item" href="books-poem-sonnet-poetry.html" target="_self"> books </a>               
                <a class="scroll-item" href="best-education-websites-india.html" target="_self"> study </a>
@@ -779,7 +815,7 @@
                <a class="scroll-item" href="online-shoping-mobiles-dresses-shirt-camera-shoes-accessories.html" target="_self"> life-style </a>    
                <a class="scroll-item" href="best-free-movie-download-websites.html" target="_self"> cinema </a>                                        
                <a class="scroll-item" href="health-tips-10-ways-to-stay-healthy.html" target="_self"> health </a>
-	       <a class="scroll-item" href="business-news.html" target="_self"> business </a>
+	           <a class="scroll-item" href="business-news.html" target="_self"> business </a>
                <a class="scroll-item" href="latest-breaking-viral-news-update.html" target="_self"> web news </a>                
                <!---<a class="scroll-item" href="#" target="_self" onclick="notevel()"> More...</a>----->
           <!-- Add more items as needed -->
@@ -825,12 +861,12 @@
                 <legend style="border:none;"> <h1 Style="color:#3454D1; color:#5e41f0;Font-family:roboto;">  Related posts </h1> </legend>
            
                   <div> <!-----Post 1------>
-                       <a href="movie-sites.html"> Top Movie Download Websites for Quality Entertainment on Demand </a>
+                       <a href="best-free-movie-download-websites.html"> Top Movie Download Websites for Quality Entertainment on Demand </a>
                        <img src="INDEX/movie.webp" alt="PaytmCash" loading="lazy">
                  </div>
 
                  <div> <!-----Post 2------>
-                      <a href="web-news.html"> Stay Updated with the Latest Headlines on-web news </a>
+                      <a href="latest-breaking-viral-news-update.html"> Stay Updated with the Latest Headlines on-web news </a>
                      <img src="INDEX/webnews.webp" alt="PaytmCash" loading="lazy">
                     </div>
 
@@ -840,47 +876,47 @@
                   </div>
 
                   <div> <!-----Post 4------>
-                    <a href="cyber-security.html"> SecureCyber: Your Trusted Resource for Cyber Security Insights and Solutions </a>
+                    <a href="cyber-security-what-is-cybersecurity.html"> SecureCyber: Your Trusted Resource for Cyber Security Insights and Solutions </a>
                     <img src="INDEX/CYBER1.webp" alt="PaytmCash" loading="lazy">
                  </div>
 
                    <div> <!-----Post 5------>
-                     <a href="poem-sonnet-poetry.html"> Discover the Beauty of Poetry: Explore Poems, Analysis, and Inspiration Here </a>
+                     <a href="books-poem-sonnet-poetry.html"> Discover the Beauty of Poetry: Explore Poems, Analysis, and Inspiration Here </a>
                      <img src="INDEX/poetry.webp" alt="PaytmCash" loading="lazy">
                   </div>
 
                  <div> <!-----Post 6----->
-                      <a href="blog-videos.html"> Explore Engaging Video Blogs: Your Destination for Informative Content </a>
+                      <a href="blogs-blog-videos.html"> Explore Engaging Video Blogs: Your Destination for Informative Content </a>
                      <img src="INDEX/BLOG2.webp" alt="PaytmCash" loading="lazy">
                  </div>
   
                   <div> <!-----Post 7----->
-                      <a href="best-educational-websites.html"> Top 10 useful education Websites for students </a>
+                      <a href="best-education-websites-india.html"> Top 10 useful education Websites for students </a>
                       <img src="INDEX/education.webp" alt="PaytmCash" loading="lazy">
                   </div>
 				
 				   <div> <!-----Post 8----->
-                      <a href="sri-krishna-stories.html"> Exploring Sri Krishna Stories and Wisdom: Unveiling Divine Tales and Teachings </a>
+                      <a href="general-knowledge-gk-quiz-on-ramayana-and-mahabharat.html"> Exploring Sri Krishna Stories and Wisdom: Unveiling Divine Tales and Teachings </a>
                       <img src="INDEX/cute.webp" alt="PaytmCash" loading="lazy">
                   </div>
 				  
 				   <div> <!-----Post 9----->
-                      <a href="discount-deals.html"> Discover unbeatable deals:a diverse range of products at unbeatable price </a>
+                      <a href="online-shoping-mobiles-dresses-shirt-camera-shoes-accessories.html"> Discover unbeatable deals:a diverse range of products at unbeatable price </a>
                       <img src="INDEX/loot.webp" alt="PaytmCash" loading="lazy">
                   </div>
 				  
 				  <div> <!-----Post 10----->
-                      <a href="best-mobile-games.html"> Best mobile games in India: discover the best Games, tips, and reviews </a>
+                      <a href="best-online-mobile-games.html"> Best mobile games in India: discover the best Games, tips, and reviews </a>
                       <img src="INDEX/banner.webp" alt="PaytmCash" loading="lazy">
                   </div>
 				  
 				  <div> <!-----Post 11----->
-                      <a href="health-advice.html"> discover vital health tips & advice for a thriving lifestyle </a>
+                      <a href="health-tips-10-ways-to-stay-healthy.html"> discover vital health tips & advice for a thriving lifestyle </a>
                       <img src="INDEX/health.webp" alt="PaytmCash" loading="lazy">
                   </div>
 				  
 				  <div> <!-----Post 12----->
-                      <a href="paytm-cash-earning-app.html"> Discover top paytm cash earning apps: maximize your earning Today </a>
+                      <a href="best-instant-free-paytm-cash-earning-apps.html"> Discover top paytm cash earning apps: maximize your earning Today </a>
                       <img src="INDEX/cash.webp" alt="PaytmCash" loading="lazy">
                   </div>
              </fieldset>  
@@ -898,9 +934,9 @@
 				   <div>
                        <a href="#" target="frames"> <img src="#" alt="blogs"> </img> </a>       
                        <a href="#" target="frames"> <img src="#" alt="blogs"> </img> </a> 
-		       <a href="#" target="frames"> <img src="#" alt="blogs"> </img> </a>       
+		               <a href="#" target="frames"> <img src="#" alt="blogs"> </img> </a>       
                        <a href="#" target="frames"> <img src="#" alt="blogs"> </img> </a> 
-		       <a href="#" target="frames"> <img src="#" alt="blogs"> </img> </a>       
+		               <a href="#" target="frames"> <img src="#" alt="blogs"> </img> </a>       
                        <a href="#" target="frames"> <img src="#" alt="blogs"> </img> </a> 
 				  </div>
 				 
@@ -909,9 +945,9 @@
 				  <div>
                        <a href="#" target="frames"> <img src="#" alt="blogs"> </img> </a>       
                        <a href="#" target="frames"> <img src="#" alt="blogs"> </img> </a> 
-		       <a href="#" target="frames"> <img src="#" alt="blogs"> </img> </a>       
+		               <a href="#" target="frames"> <img src="#" alt="blogs"> </img> </a>       
                        <a href="#" target="frames"> <img src="#" alt="blogs"> </img> </a> 
-		       <a href="#" target="frames"> <img src="#" alt="blogs"> </img> </a>       
+		               <a href="#" target="frames"> <img src="#" alt="blogs"> </img> </a>       
                        <a href="#" target="frames"> <img src="#" alt="blogs"> </img> </a>   
                  </div>
 		 </section>
@@ -958,12 +994,12 @@
                 <legend style="border:none;"> <h1 Style="color:#3454D1; color:#5e41f0;Font-family:roboto;">  Related posts </h1> </legend>
            
                  <div> <!-----Post 1------>
-                       <a href="movie-sites.html"> Top Movie Download Websites for Quality Entertainment on Demand </a>
+                       <a href="best-free-movie-download-websites.html"> Top Movie Download Websites for Quality Entertainment on Demand </a>
                        <img src="INDEX/movie.webp" alt="PaytmCash" loading="lazy">
                  </div>
 
                  <div> <!-----Post 2------>
-                      <a href="web-news.html"> Stay Updated with the Latest Headlines on-web news </a>
+                      <a href="latest-breaking-viral-news-update.html"> Stay Updated with the Latest Headlines on-web news </a>
                      <img src="INDEX/webnews.webp" alt="PaytmCash" loading="lazy">
                     </div>
 
@@ -973,17 +1009,17 @@
                   </div>
 
                   <div> <!-----Post 4------>
-                    <a href="cyber-security.html"> SecureCyber: Your Trusted Resource for Cyber Security Insights and Solutions </a>
+                    <a href="cyber-security-what-is-cybersecurity.html"> SecureCyber: Your Trusted Resource for Cyber Security Insights and Solutions </a>
                     <img src="INDEX/CYBER1.webp" alt="PaytmCash" loading="lazy">
                  </div>
 
                    <div> <!-----Post 5------>
-                     <a href="poem-sonnet-poetry.html"> Discover the Beauty of Poetry: Explore Poems, Analysis, and Inspiration Here </a>
+                     <a href="books-poem-sonnet-poetry.html"> Discover the Beauty of Poetry: Explore Poems, Analysis, and Inspiration Here </a>
                      <img src="INDEX/poetry.webp" alt="PaytmCash" loading="lazy">
                   </div>
 
                  <div> <!-----Post 6----->
-                      <a href="blog-videos.html"> Explore Engaging Video Blogs: Your Destination for Informative Content </a>
+                      <a href="blogs-blog-videos.html"> Explore Engaging Video Blogs: Your Destination for Informative Content </a>
                      <img src="INDEX/BLOG2.webp" alt="PaytmCash" loading="lazy">
                  </div>
   
@@ -993,27 +1029,27 @@
                   </div>
 				
 				   <div> <!-----Post 8----->
-                      <a href="sri-krishna-stories.html"> Exploring Sri Krishna Stories and Wisdom: Unveiling Divine Tales and Teachings </a>
+                      <a href="general-knowledge-gk-quiz-on-ramayana-and-mahabharat.html"> Exploring Sri Krishna Stories and Wisdom: Unveiling Divine Tales and Teachings </a>
                       <img src="INDEX/cute.webp" alt="PaytmCash" loading="lazy">
                   </div>
 				  
 				   <div> <!-----Post 9----->
-                      <a href="discount-deals.html"> Discover unbeatable deals:a diverse range of products at unbeatable price </a>
+                      <a href="online-shoping-mobiles-dresses-shirt-camera-shoes-accessories.html"> Discover unbeatable deals:a diverse range of products at unbeatable price </a>
                       <img src="INDEX/loot.webp" alt="PaytmCash" loading="lazy">
                   </div>
 				  
 				  <div> <!-----Post 10----->
-                      <a href="best-mobile-games.html"> Best mobile games in India: discover the best Games, tips, and reviews </a>
+                      <a href="best-online-mobile-games.html"> Best mobile games in India: discover the best Games, tips, and reviews </a>
                       <img src="INDEX/banner.webp" alt="PaytmCash" loading="lazy">
                   </div>
 				  
 				  <div> <!-----Post 11----->
-                      <a href="health-advice.html"> discover vital health tips & advice for a thriving lifestyle </a>
+                      <a href="health-tips-10-ways-to-stay-healthy.html"> discover vital health tips & advice for a thriving lifestyle </a>
                       <img src="INDEX/health.webp" alt="PaytmCash" loading="lazy">
                   </div>
 				  
 				  <div> <!-----Post 12----->
-                      <a href="paytm-cash-earning-app.html"> Discover top paytm cash earning apps: maximize your earning Today </a>
+                      <a href="best-instant-free-paytm-cash-earning-apps.html"> Discover top paytm cash earning apps: maximize your earning Today </a>
                       <img src="INDEX/cash.webp" alt="PaytmCash" loading="lazy">
                   </div>
              </fieldset> 
@@ -1051,7 +1087,7 @@
 	    ----------FOOTER SECTION----------
 	  -------------------------------------->
      <footer>
-        <p>  &copy copyright-2024  quotes planet. all rights reserved </p>
+        <p>  &copy copyright-2024  Quotehubspot. all rights reserved </p>
         <div class="social-media">
             <h2 style="margin-bottom: 10px;">  Follow Us  </h2>
             <a href="https://www.facebook.com/profile.php?id=100028875690917&mibextid=2JQ9oc" target="_blank" rel="noopener noreferrer" title="Facebook"><i class="fab fa-facebook-f"></i></a>
