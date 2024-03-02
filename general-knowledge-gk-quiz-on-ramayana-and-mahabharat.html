@@ -10,12 +10,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <meta name="robots" content="nofollow, noarchive">
   <meta name="keywords" content="ramayana, mahabharat, lod krishna, shree ram, lod ram, sita, arjun, karna, hanuman,">
   <meta name="description" content="Explore the timeless tales of Ramayana and Mahabharata on our website. Discover ancient wisdom, epic narratives, and profound insights into Indian mythology. Dive into the rich tapestry of Hindu culture and history today!">
   <title>  Explore the Epics: Ramayana and Mahabharata Q&A  </title>
     <style>
-       * {
+      * {
           margin:0px;
           padding:0px;
           -webkit-box-sizing:border-box;
@@ -30,7 +29,8 @@
    body.sidebar-open {  overflow: hidden; }
 	 html {   
    	     background-color: ; 
-		 box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+		 -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+		         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 	     }
    header {
             position:fixed;
@@ -40,9 +40,15 @@
             z-index: 999;
         }
         #navbar {
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex; 
-            justify-content: space-between; 
-            align-items: center; 
+            -webkit-box-pack: justify; 
+                -ms-flex-pack: justify; 
+                    justify-content: space-between; 
+            -webkit-box-align: center; 
+                -ms-flex-align: center; 
+                    align-items: center; 
 		    background-color: #FFFFFF;
             color: black;
             width:100%;
@@ -50,7 +56,7 @@
         }
         .navbar-brand h1 {
                  margin: 0;
-                 font-size: 28px;
+                 font-size: 24px;
 	             color:#5E2BFF;
 		 }
         
@@ -71,9 +77,12 @@
             background-color: #fff;
             overflow-y: auto;
             padding-top: 20px; /* Adjusted padding top */
+            -webkit-transition: 0.5s;
+            -o-transition: 0.5s;
             transition: 0.5s;
             z-index: 998;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+                    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 			padding:10px 0px 20px 0px;
         }
         
@@ -97,6 +106,8 @@
             margin:10px 10px;
             text-decoration: none;
             color: black;
+            -webkit-transition: background-color 0.3s;
+            -o-transition: background-color 0.3s;
             transition: background-color 0.3s;
             border-radius: 30px;
             text-align: center; /* Center align the text */
@@ -108,8 +119,12 @@
         
         .social-links {
             margin-top: 20px;
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
-            justify-content: center;
+            -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                    justify-content: center;
             padding: 0;
         }
         
@@ -117,11 +132,21 @@
             margin: 0px 10px;
             font-size: 20px;
             text-decoration: none;
+            -webkit-transition: color 0.3s, -webkit-transform 0.3s;
+            transition: color 0.3s, -webkit-transform 0.3s;
+            -o-transition: transform 0.3s, color 0.3s;
             transition: transform 0.3s, color 0.3s;
+            transition: transform 0.3s, color 0.3s, -webkit-transform 0.3s;
             border-radius: 50%;
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
-            justify-content: center;
-            align-items: center;
+            -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                    justify-content: center;
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
             width: 40px;
             height: 40px;
         }
@@ -156,12 +181,15 @@
         display:-webkit-box;
         display:-ms-flexbox;
         display:flex;        
-		justify-content: ;
+		-webkit-box-pack: ;        
+		    -ms-flex-pack: ;        
+		        justify-content: ;
         background:white;
         padding:6px 0px;
         position:relative ;
         white-space: nowrap;
-		scroll-snap-type: x mandatory;
+		-ms-scroll-snap-type: x mandatory;
+		    scroll-snap-type: x mandatory;
 	 }
  .scroll-container::-webkit-scrollber {
          display:none;
@@ -220,9 +248,7 @@
   }
   
         section > article {
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            border-radius: 6px;
             margin: 10px 0px;
             padding: 10px;
 			border:2px solid #f0f0f0;
@@ -247,7 +273,8 @@
 			  background-position:center;
 			  background-attachment:fixed;
 			  background-size: cover;
-			  object-fit:cover;
+			  -o-object-fit:cover;
+			     object-fit:cover;
 			  background-repeat:no-repeat;
 			  margin:10px auto;
 		}
@@ -269,18 +296,27 @@
             color: #333;
         }
         .options {
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
+            -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                    justify-content: center;
+            -ms-flex-wrap: wrap;
+                flex-wrap: wrap;
             gap: 10px;
             margin-top: 10px;
         }
         .option {
-            flex: 1 0 45%; /* Adjust based on screen size */
+            -webkit-box-flex: 1;
+                -ms-flex: 1 0 45%;
+                    flex: 1 0 45%; /* Adjust based on screen size */
             padding: 10px 20px;
             margin: 5px;
             border: 1px solid #ccc;
             cursor: pointer;
+            -webkit-transition: background-color 0.3s;
+            -o-transition: background-color 0.3s;
             transition: background-color 0.3s;
             border-radius: 5px;
             background-color: #f9f9f9;
@@ -297,6 +333,8 @@
             border: none;
             border-radius: 5px;
             cursor: pointer;
+            -webkit-transition: background-color 0.3s;
+            -o-transition: background-color 0.3s;
             transition: background-color 0.3s;
         }
    .quiz-container > button:hover {
@@ -315,7 +353,7 @@
 	
 		
 	
-    .Answer > .article {
+   .Answer > .article {
                   margin:0 auto;
                   max-width: 280px;
                   border: 0px solid #ccc;
@@ -374,7 +412,9 @@
 			 border-left:2px solid coral;
 			 margin:20px 10px;
 			 padding:6px 10px;
-			 column-count:auto;
+			 -webkit-column-count:auto;
+			    -moz-column-count:auto;
+			         column-count:auto;
 			 color: #181f1a;
 			 font-size:14px;
 			}		
@@ -390,9 +430,15 @@
     @media only screen and (max-width:767px) { 
 	        .Answer {
                   gap:10px;
+                  display:-webkit-box;
+                  display:-ms-flexbox;
                   display:flex;
-				  flex-wrap:wrap;
-                  flex-direction:;
+				  -ms-flex-wrap:wrap;
+				      flex-wrap:wrap;
+                  -webkit-box-orient:vertical;
+                  -webkit-box-direction:normal;
+                      -ms-flex-direction:;
+                          flex-direction:;
           }
 	  }
 	  
@@ -403,9 +449,12 @@
 		            width:90%;
 			   }
 			main {
+			   display:-webkit-box;
+			   display:-ms-flexbox;
 			   display:flex;
 			   gap:20px 20px;
-			   justify-content:space-around;			   
+			   -ms-flex-pack:distribute;
+			       justify-content:space-around;			   
 			  }
 			.Question {   width:63%;  }
 			.Answer {  
@@ -432,7 +481,9 @@
           .social-links a:hover {
                  color: #fff;
                  background-color: #5E2BFF;
-                 transform: translateY(-5px);
+                 -webkit-transform: translateY(-5px);
+                     -ms-transform: translateY(-5px);
+                         transform: translateY(-5px);
            }	
          .scroll-container > .scroll-item:hover {
                  color: black;
@@ -464,7 +515,7 @@
     <header id="header">
     <nav id="navbar">
         <div class="navbar-brand">
-            <h1>Quotes World</h1>
+            <h1>  Quotehubspot  </h1>
         </div>
         <button class="navbar-toggler" id="toggleButton" onclick="toggleNav()" aria-label="Toggle navigation">&#9776;</button>
     </nav>
@@ -791,25 +842,25 @@
               <h1 Style="padding:10px 0px; color:#5E2BFF; width:100%; Display:block;"> related Articles </h1>		
             <!---Artical1----->
               <div class="article">
-                  <img src="INDEX/Lod7.webp" alt="Article 2 Image" loading="lazy">
+                  <img src="INDEX/Lod7.webp" alt="krishna" loading="auto">
                   <p><a href="index.html" id="dnl"> Explore enlightening quotes from the Bhagavad Gita by Sri Krishna </a></p>
              </div>
 
             <!---Artical2----->
               <div class="article">
-                  <img src="INDEX/webnews.webp" alt="Article 3 Image" loading="lazy">
+                  <img src="INDEX/webnews.webp" alt="news" loading="auto">
                   <p><a href="latest-breaking-viral-news-update.html"> Stay Updated with the Latest Headlines on- web news </a></p>
              </div>
 
             <!---Artical3----->
               <div class="article">
-                  <img src="INDEX/poetry.webp" alt="Article 4 Image" loading="lazy">
+                  <img src="INDEX/poetry.webp" alt="poems" loading="auto">
                   <p><a href="books-poem-sonnet-poetry.html"> Discover the Beauty of Poetry: Explore Poems, Analysis, and Inspiration Here </a></p>
             </div>
 
             <!---Artical4----->
               <div class="article">
-                  <img src="INDEX/loot.webp" alt="Article 9 Image" loading="lazy">
+                  <img src="INDEX/loot.webp" alt="Amazon" loading="auto">
                   <p><a href="online-shoping-mobiles-dresses-shirt-camera-shoes-accessories.html"> discover unbeatable deals:a diverse range of products at unbeatable price </a></p>
          </div>
 			
