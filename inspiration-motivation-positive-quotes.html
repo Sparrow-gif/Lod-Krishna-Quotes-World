@@ -46,8 +46,9 @@
         }
         .navbar-brand h1 {
                  margin: 0;
-                 font-size: 28px;
-	         color:#5E2BFF;
+                 font-size: 24px;
+	             color:#5E2BFF;
+				 font-weight:700;
 		 }
         
         .navbar-toggler {
@@ -279,6 +280,66 @@
              box-shadow: rgba(255, 255, 255) 0px 7px 29px 0px;
 	   }
 	
+    section {
+	     padding:10px;
+		 margin:10px auto;
+		 background: #fafafa ;
+	  }	
+	section > ul > li {
+	       list-style-position: inside;
+		   padding:6px 2px;
+	}
+	section > ul > li > a {
+	     text-decoration:none;
+	}
+	
+	
+   .quiz-container {
+         max-width: 600px;
+         margin: 0 auto;
+         background-color: #fff;
+         padding: 20px;
+         border-radius: 8px;
+     }
+
+     .quiz-container > h2 {
+          text-align: center;
+      }
+
+   #question {
+           font-size: 18px;
+           margin-bottom: 10px;
+      }
+
+    #options {
+          margin-bottom: 15px;
+      }
+
+   #options label {
+         display: block;
+         margin-bottom: 10px;
+       }
+
+#next-btn {
+  display: block;
+  margin: 0 auto;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#result {
+  text-align: center;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+
+
+	
 	 footer {
            background: #f0f0f0;
             text-align: center;
@@ -367,7 +428,7 @@
         <header id="header">
     <nav id="navbar">
         <div class="navbar-brand">
-            <h1>Quotes World</h1>
+            <h1> Quotehubspot </h1>
         </div>
         <button class="navbar-toggler" id="toggleButton" onclick="toggleNav()" aria-label="Toggle navigation">&#9776;</button>
     </nav>
@@ -401,7 +462,7 @@
                <a class="scroll-item" id="active" href="inspiration-motivation-positive-quotes.html" target="_self"> Daily Quotes </a>     
                <a class="scroll-item" href="index.html" target="_self"> wishdom </a>
                <a class="scroll-item" href="karma-&-truth.html" target="_self"> Karma </a>
-	       <a class="scroll-item" href="general-knowledge-gk-quiz-on-ramayana-and-mahabharat.html" target="_self"> epic quiz </a>
+	           <a class="scroll-item" href="general-knowledge-gk-quiz-on-ramayana-and-mahabharat.html" target="_self"> epic quiz </a>
                <a class="scroll-item" href="blogs-blog-videos.html" target="_self"> videos </a>
                <a class="scroll-item" href="books-poem-sonnet-poetry.html" target="_self"> books </a>               
                <a class="scroll-item" href="best-education-websites-india.html" target="_self"> study </a>
@@ -409,7 +470,7 @@
                <a class="scroll-item" href="online-shoping-mobiles-dresses-shirt-camera-shoes-accessories.html" target="_self"> life-style </a>    
                <a class="scroll-item" href="best-free-movie-download-websites.html" target="_self"> cinema </a>                                        
                <a class="scroll-item" href="health-tips-10-ways-to-stay-healthy.html" target="_self"> health </a>
-		 <a class="scroll-item" href="business-news.html" target="_self"> business </a>
+		       <a class="scroll-item" href="business-news.html" target="_self"> business </a>
                <a class="scroll-item" href="latest-breaking-viral-news-update.html" target="_self"> web news </a>                
                <!---<a class="scroll-item" href="#" target="_self" onclick="notevel()"> More...</a>----->
           <!-- Add more items as needed -->
@@ -508,13 +569,32 @@
 			  <img src="TOP/motive10.webp" alt="motivation" loading="lazy">   <!--------motivation images10--------->
 			  			  			  
 	  </main>
+	  
 	 
-	 
+	  <section>
+	       <h2> Explore real-life success stories </h2>
+		   <ul>
+		       <li> <a href="#"> From Homeless to Entrepreneur: The Inspiring Journey of Chris Gardner </a> </li>
+			   <li> <a href="#"> Michael Jordan - From Cut High School Player to Basketball Legend  </a> </li>
+			   <li> <a href="#"> Elon Musk: The Visionary Entrepreneur  </a> </li>	
+		   </ul>
+	 </section>
+	      
+		   <!------------------------------------------------------------------------
+		    -----------------------------QUIZ SECTION---------------------------------
+		    -------------------------------------------------------------------------->
+	 <div class="quiz-container">
+         <h2>Motivation Quiz</h2>
+         <div id="question"></div>
+         <div id="options"></div>
+         <button id="next-btn">Next Question</button>
+         <div id="result"></div>
+    </div>
     <!-----------------------------------
 	    ----------FOOTER SECTION----------
 	  -------------------------------------->
      <footer>
-        <p>  &copy copyright-2024  quotes planet. all rights reserved </p>
+        <p>  &copy copyright-2024  Quotehubspot. all rights reserved </p>
         <div class="social-media">
             <h2 style="margin-bottom: 10px;">  Follow Us  </h2>
             <a href="https://www.facebook.com/profile.php?id=100028875690917&mibextid=2JQ9oc" target="_blank" rel="noopener noreferrer" title="Facebook"><i class="fab fa-facebook-f"></i></a>
@@ -578,8 +658,82 @@
      // Scroll the container to center the active item
              scrollContainer.scrollLeft = scrollItemCenter;
   
+  
+  
       
-	      
+	      const questions = [
+  {
+    question: "What is the first step towards achieving your goals?",
+    options: ["Believe in yourself", "Make a plan", "Take action"],
+    answer: "Believe in yourself"
+  },
+  {
+    question: "What is the key to staying motivated?",
+    options: ["Setting realistic goals", "Staying positive", "Both"],
+    answer: "Both"
+  },
+  {
+    question: "What is the importance of failure in personal development?",
+    options: ["Failure is a setback", "Failure is a learning opportunity", "Failure doesn't matter"],
+    answer: "Failure is a learning opportunity"
+  }
+];
+
+let currentQuestion = 0;
+let score = 0;
+
+const questionElement = document.getElementById('question');
+const optionsElement = document.getElementById('options');
+const nextButton = document.getElementById('next-btn');
+const resultElement = document.getElementById('result');
+
+function showQuestion() {
+  const q = questions[currentQuestion];
+  questionElement.textContent = q.question;
+  optionsElement.innerHTML = '';
+
+  q.options.forEach(option => {
+    const input = document.createElement('input');
+    input.type = 'radio';
+    input.name = 'option';
+    input.value = option;
+    optionsElement.appendChild(input);
+
+    const label = document.createElement('label');
+    label.textContent = option;
+    optionsElement.appendChild(label);
+
+    optionsElement.appendChild(document.createElement('br'));
+  });
+}
+
+function checkAnswer() {
+  const userAnswer = document.querySelector('input[name="option"]:checked');
+  if (!userAnswer) return;
+
+  if (userAnswer.value === questions[currentQuestion].answer) {
+    score++;
+  }
+}
+
+function showResult() {
+  resultElement.textContent = `You scored ${score} out of ${questions.length}!`;
+}
+
+nextButton.addEventListener('click', () => {
+  checkAnswer();
+  currentQuestion++;
+
+  if (currentQuestion < questions.length) {
+    showQuestion();
+  } else {
+    showResult();
+    nextButton.style.display = 'none';
+  }
+});
+
+showQuestion();
+
    </script>
 </body>
 </html>
