@@ -32,7 +32,8 @@
    
 	       html {
             background-color: ; 
-		    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+		    -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+		            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 	     }
    header {
             position:fixed;
@@ -42,9 +43,15 @@
             z-index: 999;
         }
         #navbar {
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex; 
-            justify-content: space-between; 
-            align-items: center; 
+            -webkit-box-pack: justify; 
+                -ms-flex-pack: justify; 
+                    justify-content: space-between; 
+            -webkit-box-align: center; 
+                -ms-flex-align: center; 
+                    align-items: center; 
 		    background-color: #FFFFFF;
             color: black;
             width:100%;
@@ -52,7 +59,7 @@
         }
         .navbar-brand h1 {
                  margin: 0;
-                 font-size: 28px;
+                 font-size: 24px;
 	             color:#5E2BFF;
 	 }
         
@@ -73,9 +80,12 @@
             background-color: #fff;
             overflow-y: auto;
             padding-top: 20px; /* Adjusted padding top */
+            -webkit-transition: 0.5s;
+            -o-transition: 0.5s;
             transition: 0.5s;
             z-index: 998;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+                    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 			padding:10px 0px 20px 0px;
         }
         
@@ -99,6 +109,8 @@
             margin:10px 10px;
             text-decoration: none;
             color: black;
+            -webkit-transition: background-color 0.3s;
+            -o-transition: background-color 0.3s;
             transition: background-color 0.3s;
             border-radius: 30px;
             text-align: center; /* Center align the text */
@@ -110,8 +122,12 @@
         
         .social-links {
             margin-top: 20px;
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
-            justify-content: center;
+            -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                    justify-content: center;
             padding: 0;
         }
         
@@ -119,11 +135,21 @@
             margin: 0px 10px;
             font-size: 20px;
             text-decoration: none;
+            -webkit-transition: color 0.3s, -webkit-transform 0.3s;
+            transition: color 0.3s, -webkit-transform 0.3s;
+            -o-transition: transform 0.3s, color 0.3s;
             transition: transform 0.3s, color 0.3s;
+            transition: transform 0.3s, color 0.3s, -webkit-transform 0.3s;
             border-radius: 50%;
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
-            justify-content: center;
-            align-items: center;
+            -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                    justify-content: center;
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
             width: 40px;
             height: 40px;
         }
@@ -158,12 +184,15 @@
         display:-webkit-box;
         display:-ms-flexbox;
         display:flex;        
-		justify-content: ;
+		-webkit-box-pack: ;        
+		    -ms-flex-pack: ;        
+		        justify-content: ;
         background:white;
         padding:6px 0px;
         position:relative ;
         white-space: nowrap;
-		scroll-snap-type: x mandatory;
+		-ms-scroll-snap-type: x mandatory;
+		    scroll-snap-type: x mandatory;
 	 }
  .scroll-container::-webkit-scrollber {
          display:none;
@@ -200,11 +229,21 @@
 	  
 	  
     .container {
+         display: -webkit-box;
+         display: -ms-flexbox;
          display: flex;
-         flex-wrap: wrap;
-         justify-content: center;
-		 flex-direction:column;
-		 align-items:center;
+         -ms-flex-wrap: wrap;
+             flex-wrap: wrap;
+         -webkit-box-pack: center;
+             -ms-flex-pack: center;
+                 justify-content: center;
+		 -webkit-box-orient:vertical;
+		 -webkit-box-direction:normal;
+		     -ms-flex-direction:column;
+		         flex-direction:column;
+		 -webkit-box-align:center;
+		     -ms-flex-align:center;
+		         align-items:center;
      }
   
   .image-card {
@@ -213,7 +252,8 @@
         border:none;
         border-radius: 5px;
         overflow: hidden;
-	box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+	-webkit-box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+	        box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
        }
   
   .image-card img {
@@ -224,9 +264,15 @@
   
   .image-card .buttons {
     padding: 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     background-color: ;
   }
   
@@ -260,7 +306,9 @@
 			 border-left:2px solid coral;
 			 margin:20px 10px;
 			 padding:6px 10px;
-			 column-count:auto;
+			 -webkit-column-count:auto;
+			    -moz-column-count:auto;
+			         column-count:auto;
 			 color: #181f1a;
 			 font-size:14px;
 			}		
@@ -309,7 +357,9 @@
           .social-links a:hover {
                  color: #fff;
                  background-color: #5E2BFF;
-                 transform: translateY(-5px);
+                 -webkit-transform: translateY(-5px);
+                     -ms-transform: translateY(-5px);
+                         transform: translateY(-5px);
            }	
          .scroll-container > .scroll-item:hover {
                  color: black;
@@ -329,7 +379,7 @@
          <header id="header">
     <nav id="navbar">
         <div class="navbar-brand">
-            <h1>Quotes World</h1>
+            <h1> Quotehubspot  </h1>
         </div>
         <button class="navbar-toggler" id="toggleButton" onclick="toggleNav()" aria-label="Toggle navigation">&#9776;</button>
     </nav>
@@ -340,7 +390,7 @@
             <li><a href="blogs-blog-videos.html" title="Explore Blogs"> videos </a></li>
             <li><a href="books-poem-sonnet-poetry.html" title="Read Poetry"> books </a></li>
             <li><a href="latest-breaking-viral-news-update.html" title="Discover Web News"> Web News </a></li>
-		<li><a href="business-news.html" title="share market"> business </a>
+		    <li><a href="business-news.html" title="share market"> business </a>
             <li><a href="online-shoping-mobiles-dresses-shirt-camera-shoes-accessories.html" target="_self" title="shoping"> Life-Style</a></li>
             <li><a href="https://www.sportskeeda.com" target="_blank" rel="noopener noreferrer">Cricket</a></li>
             <li><a href="health-tips-10-ways-to-stay-healthy.html" title="Get Health Advice"> Health</a></li>
@@ -489,7 +539,7 @@
 	    ----------FOOTER SECTION----------
 	  -------------------------------------->
     <footer>
-        <p>  &copy copyright-2024  quotes planet. all rights reserved </p>
+        <p>  &copy copyright-2024  Quotehubspot. all rights reserved </p>
         <div class="social-media">
             <h2 style="margin-bottom: 10px;">  Follow Us  </h2>
             <a href="https://www.facebook.com/profile.php?id=100028875690917&mibextid=2JQ9oc" target="_blank" rel="noopener noreferrer" title="Facebook"><i class="fab fa-facebook-f"></i></a>
