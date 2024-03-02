@@ -14,18 +14,19 @@
   <meta name="description" content="Discover a powerhouse of motivation quotes at our website, igniting inspiration and fueling success.Unleash your potential with uplifting words that propel you forward. Get ready to embark on a transformative journey – Learn, Achieve, and Conquer with our curated collection of motivational quotes. Elevate your mindset today!">
   <title> Boost Your Day with Daily Motivation Quotes: Inspire, Energize, and Achieve! </title>
   <style>
-   * {
+  * {
           margin:0px;
           padding:0px;
           -webkit-box-sizing:border-box;
           box-sizing:border-box;
-          font-family:roboto ;
+          font-family:roboto;
           text-transform:capitalize;  
         }  
    body.sidebar-open {  overflow: hidden; }
 	 html {   
    	        background-color: ; 
-		box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+		-webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+		        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 	     }
    header {
             position:fixed;
@@ -35,9 +36,15 @@
             z-index: 999;
         }
         #navbar {
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex; 
-            justify-content: space-between; 
-            align-items: center; 
+            -webkit-box-pack: justify; 
+                -ms-flex-pack: justify; 
+                    justify-content: space-between; 
+            -webkit-box-align: center; 
+                -ms-flex-align: center; 
+                    align-items: center; 
 		    background-color: #FFFFFF;
             color: black;
             width:100%;
@@ -66,9 +73,12 @@
             background-color: #fff;
             overflow-y: auto;
             padding-top: 20px; /* Adjusted padding top */
+            -webkit-transition: 0.5s;
+            -o-transition: 0.5s;
             transition: 0.5s;
             z-index: 998;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+                    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 			padding:10px 0px 20px 0px;
         }
         
@@ -92,6 +102,8 @@
             margin:10px 10px;
             text-decoration: none;
             color: black;
+            -webkit-transition: background-color 0.3s;
+            -o-transition: background-color 0.3s;
             transition: background-color 0.3s;
             border-radius: 30px;
             text-align: center; /* Center align the text */
@@ -103,8 +115,12 @@
         
         .social-links {
             margin-top: 20px;
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
-            justify-content: center;
+            -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                    justify-content: center;
             padding: 0;
         }
         
@@ -112,11 +128,21 @@
             margin: 0px 10px;
             font-size: 20px;
             text-decoration: none;
+            -webkit-transition: color 0.3s, -webkit-transform 0.3s;
+            transition: color 0.3s, -webkit-transform 0.3s;
+            -o-transition: transform 0.3s, color 0.3s;
             transition: transform 0.3s, color 0.3s;
+            transition: transform 0.3s, color 0.3s, -webkit-transform 0.3s;
             border-radius: 50%;
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
-            justify-content: center;
-            align-items: center;
+            -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                    justify-content: center;
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
             width: 40px;
             height: 40px;
         }
@@ -151,12 +177,15 @@
         display:-webkit-box;
         display:-ms-flexbox;
         display:flex;        
-		justify-content: ;
+		-webkit-box-pack: ;        
+		    -ms-flex-pack: ;        
+		        justify-content: ;
         background:white;
         padding:6px 0px;
         position:relative ;
         white-space: nowrap;
-		scroll-snap-type: x mandatory;
+		-ms-scroll-snap-type: x mandatory;
+		    scroll-snap-type: x mandatory;
 	 }
  .scroll-container::-webkit-scrollber {
          display:none;
@@ -239,9 +268,15 @@
 		padding:10px;
 		width:100%;
 		background: ;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-direction: column;
-		box-sizing:border-box;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+		-webkit-box-sizing:border-box;
+		        box-sizing:border-box;
 	 }
 	main > div {
 	    background: #F1FFFA;
@@ -251,6 +286,10 @@
 	     text-align:center;
 		 font-family:Roboto;
 	}
+	main > div > .Quotes::-moz-selection {
+                              color: red;
+                              background: yellow;
+                           }
 	main > div > .Quotes::selection {
                               color: red;
                               background: yellow;
@@ -260,6 +299,10 @@
 		font-weight: ;
 		font-family:;
 	 }	
+    main > div > .name::-moz-selection {
+                              color: red;
+                              background: yellow;
+                           }	
     main > div > .name::selection {
                               color: red;
                               background: yellow;
@@ -275,7 +318,8 @@
               margin:20px auto;     
               border:0px solid black;  
               border-radius:4px;
-             box-shadow: rgba(255, 255, 255) 0px 7px 29px 0px;
+             -webkit-box-shadow: rgba(255, 255, 255) 0px 7px 29px 0px;
+                     box-shadow: rgba(255, 255, 255) 0px 7px 29px 0px;
 	   }
 	
     section {
@@ -285,11 +329,12 @@
 	  }	
 	section > ul > li {
 	       list-style-position: ;
-		   padding:6px 2px;
+		   padding:6px 2px;		 
 	}
 	section > ul > li > a {
 	     text-decoration:none;
-		 color:dodgerblue;
+		 color: #1c69ed;
+		 display:block;
 	}
 	
 	
@@ -339,7 +384,7 @@
 
 
 	
-	 footer {
+	footer {
            background: #f0f0f0;
             text-align: center;
             color: #181f1a;
@@ -350,7 +395,9 @@
 			 border-left:2px solid coral;
 			 margin:20px 10px;
 			 padding:6px 10px;
-			 column-count:auto;
+			 -webkit-column-count:auto;
+			    -moz-column-count:auto;
+			         column-count:auto;
 			 color: #181f1a;
 			 font-size:14px;
 			}		
@@ -392,7 +439,9 @@
           .social-links a:hover {
                  color: #fff;
                  background-color: #5E2BFF;
-                 transform: translateY(-5px);
+                 -webkit-transform: translateY(-5px);
+                     -ms-transform: translateY(-5px);
+                         transform: translateY(-5px);
            }	
          .scroll-container > .scroll-item:hover {
                  color: black;
@@ -566,10 +615,9 @@
 		   </div>
 		       
 			  <img src="TOP/motive10.webp" alt="motivation" loading="auto">   <!--------motivation images10--------->
-			  			  			  
-	  </main>
-	  
-	 
+	
+	</main> 
+	
 	  <section>
 	       <h2> Explore real-life success stories </h2>
 		   <ul>
@@ -578,7 +626,8 @@
 			   <li> <a href="#"> Elon Musk: The Visionary Entrepreneur  </a> </li>	
 		   </ul>
 	 </section>
-	      
+ 
+  
 		   <!------------------------------------------------------------------------
 		    -----------------------------QUIZ SECTION---------------------------------
 		    -------------------------------------------------------------------------->
