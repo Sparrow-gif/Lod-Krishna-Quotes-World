@@ -30,7 +30,8 @@
    body.sidebar-open {  overflow: hidden; }
 	 html {   
    	     background-color: ; 
-		 box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+		 -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+		         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 	     }
    header {
             position:fixed;
@@ -40,9 +41,15 @@
             z-index: 999;
         }
         #navbar {
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex; 
-            justify-content: space-between; 
-            align-items: center; 
+            -webkit-box-pack: justify; 
+                -ms-flex-pack: justify; 
+                    justify-content: space-between; 
+            -webkit-box-align: center; 
+                -ms-flex-align: center; 
+                    align-items: center; 
 		    background-color: #FFFFFF;
             color: black;
             width:100%;
@@ -71,9 +78,12 @@
             background-color: #fff;
             overflow-y: auto;
             padding-top: 20px; /* Adjusted padding top */
+            -webkit-transition: 0.5s;
+            -o-transition: 0.5s;
             transition: 0.5s;
             z-index: 998;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+                    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 			padding:10px 0px 20px 0px;
         }
         
@@ -97,6 +107,8 @@
             margin:10px 10px;
             text-decoration: none;
             color: black;
+            -webkit-transition: background-color 0.3s;
+            -o-transition: background-color 0.3s;
             transition: background-color 0.3s;
             border-radius: 30px;
             text-align: center; /* Center align the text */
@@ -104,8 +116,12 @@
         
         .social-links {
             margin-top: 20px;
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
-            justify-content: center;
+            -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                    justify-content: center;
             padding: 0;
         }
         
@@ -113,11 +129,21 @@
             margin: 0px 10px;
             font-size: 20px;
             text-decoration: none;
+            -webkit-transition: color 0.3s, -webkit-transform 0.3s;
+            transition: color 0.3s, -webkit-transform 0.3s;
+            -o-transition: transform 0.3s, color 0.3s;
             transition: transform 0.3s, color 0.3s;
+            transition: transform 0.3s, color 0.3s, -webkit-transform 0.3s;
             border-radius: 50%;
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
-            justify-content: center;
-            align-items: center;
+            -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                    justify-content: center;
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
             width: 40px;
             height: 40px;
         }
@@ -152,12 +178,15 @@
         display:-webkit-box;
         display:-ms-flexbox;
         display:flex;        
-		justify-content: ;
+		-webkit-box-pack: ;        
+		    -ms-flex-pack: ;        
+		        justify-content: ;
         background:white;
         padding:6px 0px;
         position:relative ;
         white-space: nowrap;
-		scroll-snap-type: x mandatory;
+		-ms-scroll-snap-type: x mandatory;
+		    scroll-snap-type: x mandatory;
 	 }
  .scroll-container::-webkit-scrollber {
          display:none;
@@ -194,17 +223,30 @@
    
      .market {
 	     Display:flex;
-		 flex-wrap:wrap;
-		 justify-content:Center;
-		 align-items:Center;
+		 -ms-flex-wrap:wrap;
+		     flex-wrap:wrap;
+		 -webkit-box-pack:Center;
+		     -ms-flex-pack:Center;
+		         justify-content:Center;
+		 -webkit-box-align:Center;
+		     -ms-flex-align:Center;
+		         align-items:Center;
 		 gap:10px 10px;
 	 }
     .market > div {
 	      Display:flex;
-		 flex-wrap:wrap;
-		 justify-content:Center;
-		 align-items:Center;
-		 flex-direction:column;
+		 -ms-flex-wrap:wrap;
+		     flex-wrap:wrap;
+		 -webkit-box-pack:Center;
+		     -ms-flex-pack:Center;
+		         justify-content:Center;
+		 -webkit-box-align:Center;
+		     -ms-flex-align:Center;
+		         align-items:Center;
+		 -webkit-box-orient:vertical;
+		 -webkit-box-direction:normal;
+		     -ms-flex-direction:column;
+		         flex-direction:column;
 		 height:160px;
 		 min-width:170px;
 		 max-width:50%;
@@ -228,13 +270,15 @@
 	   }
 	.news {
 	     gap:10px;
+             display:-ms-grid;
              display:grid;
              grid-template-columns:repeat(auto-fit,minmax(min(23rem,100%),1fr)) ;      
              margin: 10px auto;
              padding:10px 10px;
              background-color: #f9f9f9;
              border-radius: 8px;
-	     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	     -webkit-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
           }
 	   
 	 .news > figure > img {
@@ -242,7 +286,8 @@
               aspect-ratio:1/0.60;
               border-radius: 0px;
               margin:0 auto;
-              object-fit:fill;
+              -o-object-fit:fill;
+                 object-fit:fill;
 	   }
 	 /* Style for the heading */
   .news h1 {
@@ -260,6 +305,8 @@
         font-size: 14px;
         border-radius: 4px;
         cursor: pointer;
+        -webkit-transition: background-color 0.3s ease;
+        -o-transition: background-color 0.3s ease;
         transition: background-color 0.3s ease;
      }
 
@@ -271,6 +318,8 @@
     padding-top: 15px;
     border-top: 1px solid #ccc;
     opacity: 0;
+    -webkit-transition: opacity 0.3s ease;
+    -o-transition: opacity 0.3s ease;
     transition: opacity 0.3s ease;
   }
 
@@ -301,7 +350,9 @@
 			 border-left:2px solid coral;
 			 margin:20px 10px;
 			 padding:6px 10px;
-			 column-count:auto;
+			 -webkit-column-count:auto;
+			    -moz-column-count:auto;
+			         column-count:auto;
 			 color: #181f1a;
 			 font-size:14px;
 			}		
@@ -360,7 +411,9 @@
           .social-links a:hover {
                  color: #fff;
                  background-color: #5E2BFF;
-                 transform: translateY(-5px);
+                 -webkit-transform: translateY(-5px);
+                     -ms-transform: translateY(-5px);
+                         transform: translateY(-5px);
            }	
          .scroll-container > .scroll-item:hover {
                  color: black;
