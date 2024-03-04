@@ -21,7 +21,8 @@
           box-sizing:border-box;
           font-family:roboto;
           text-transform:capitalize;  
-        }  
+		  user-select:none;
+		  }  
    body.sidebar-open {  overflow: hidden; }
 	 html {   
    	        background-color: ; 
@@ -156,15 +157,15 @@
 		
 		
    #overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.6); /* Adjust the transparency here */
-  z-index: 997; /* Ensure the overlay is below the sidebar */
-  display: none; /* Initially hidden */
-}
+         position: fixed;
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 100%;
+         background-color: rgba(0, 0, 0, 0.6); /* Adjust the transparency here */
+         z-index: 997; /* Ensure the overlay is below the sidebar */
+         display: none; /* Initially hidden */
+     }
 
 #overlay.active {
   display: block; /* Display when sidebar is active */
@@ -263,65 +264,33 @@
        }
 	   
 	 
-	 main {
-	    margin:10px auto;   
-		padding:10px;
-		width:100%;
-		background: ;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-            -ms-flex-direction: column;
-                flex-direction: column;
-		-webkit-box-sizing:border-box;
-		        box-sizing:border-box;
-	 }
-	main > div {
-	    background: #F1FFFA;
-		padding:25px 30px;		
-	}
-	main > div > .Quotes {
-	     text-align:center;
-		 font-family:Roboto;
-	}
-	main > div > .Quotes::-moz-selection {
-                              color: red;
-                              background: yellow;
-                           }
-	main > div > .Quotes::selection {
-                              color: red;
-                              background: yellow;
-                           }
-   main > div > .name {
-	    text-align:right;
-		font-weight: ;
-		font-family:;
-	 }	
-    main > div > .name::-moz-selection {
-                              color: red;
-                              background: yellow;
-                           }	
-    main > div > .name::selection {
-                              color: red;
-                              background: yellow;
-                           }
-	main > div > .Quotes > span {
-	     font-size:1.30rem;
-		 font-family: ;
-	} 
-   main > figure  {
-	          min-width:330px;
-              max-width:380px;
-              aspect-ratio: 1/1;
-              margin:20px auto;     
-              border:0px solid black;  
-              border-radius:4px;
-             -webkit-box-shadow: rgba(255, 255, 255) 0px 7px 29px 0px;
-                     box-shadow: rgba(255, 255, 255) 0px 7px 29px 0px;
-	   }
-	main > figure > img { width:100%; height:100%;}
+	main {
+       padding: 10px;
+   }
+
+section {
+    margin-bottom: 30px;
+}
+
+h2 {
+    margin: 10px 0px 20px 0px;  
+    color: #333;
+	
+}
+
+.quotes-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.quote {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 10px;
+    flex: 1 1 420px;
+}
+  
 	
 	
     section {
@@ -336,7 +305,7 @@
 	section > ul > li > a {
 	     text-decoration:none;
 		 color: #1c69ed;
-		 display:block;
+		 display:inline-block;
 	}
 	
 	
@@ -543,81 +512,21 @@
 	  
 	        <!-------main content in my webpage--------->
 	  <main>
-	       <div>
-		       <p class="Quotes"> <span>1.</span> "Don't be pushed around by the fears in your mind. Be led by the dreams in your heart." </p>
-			   <p class="name"> - Roy T. Bennett  </p>
-		   </div>
-		       
-			<figure> <img src="TOP/Motive1.webp" alt="motivation quotes" loading="auto">  </figure> <!--------motivation images01--------->
-			  
-		   <div>
-		       <p class="Quotes"> <span>2.</span> "Success is stumbling from failure to failure with no loss of enthusiasm." </p>
-			   <p class="name"> - Winston S. Churchill  </p>
-		   </div>
-		       
-			<figure>  <img src="TOP/motive2.webp" alt="Inspire quotes" loading="auto">  </figure> <!--------motivation images02--------->
-			  
-           <div>
-		       <p class="Quotes"> <span>3.</span> "The only way to do great work is to love what you do." </p>
-			   <p class="name"> -Steve Jobs  </p>
-		   </div>
-		       
-			<figure>  <img src="TOP/motive3.webp" alt="motivation quotes" loading="auto">  </figure> <!--------motivation images03--------->
-			  
-
-           <div>
-		       <p class="Quotes"> <span>4.</span> "The secret of getting ahead is getting started." </p>
-			   <p class="name"> -Mark Twain  </p>
-		   </div>
-		       
-			<figure>  <img src="TOP/motive4.webp" alt="Inspire quotes" loading="auto">  </figure> <!--------motivation images04--------->
-			  
-
-           <div>
-		       <p class="Quotes"> <span>5.</span> "It always seems impossible until it is done." </p>
-			   <p class="name"> -Nelson Mandela  </p>
-		   </div>
-		       
-			<figure>  <img src="TOP/motive5.webp" alt="motivation quotes" loading="auto"> </figure>  <!--------motivation images05--------->
-			  			  
-			 <div>
-		       <p class="Quotes"> <span>6.</span> "The future belongs to those who believe in the beauty of their dreams." </p>
-			   <p class="name"> -Eleanor Roosevelt  </p>
-		   </div>
-		       
-			<figure>  <img src="TOP/motive6.webp" alt="Inspire quotes" loading="auto"> </figure>  <!--------motivation images06--------->
-			  
-		   <div>
-		       <p class="Quotes"> <span>7.</span> "The only limit to our realization of tomorrow will be our doubts of today." </p>
-			   <p class="name"> -Franklin D. Roosevelt  </p>
-		   </div>
-		       
-			<figure>  <img src="TOP/motive7.webp" alt="motivation quotes" loading="auto"> </figure>  <!--------motivation images07--------->
-			  
-           <div>
-		       <p class="Quotes"> <span>8.</span> "It does not matter how slowly you go as long as you do not stop." </p>
-			   <p class="name"> -Confucius  </p>
-		   </div>
-		       
-			<figure>  <img src="TOP/motive8.webp" alt="Inspire quotes" loading="auto">  </figure> <!--------motivation images08--------->
-			  
-
-           <div>
-		       <p class="Quotes"> <span>9.</span> "Your time is limited, don't waste it living someone else's life." </p>
-			   <p class="name"> -Steve Jobs </p>
-		   </div>
-		       
-			<figure>  <img src="TOP/motive9.webp" alt="motivation quotes" loading="auto">  </figure> <!--------motivation images09-------->
-			  
-
-           <div>
-		       <p class="Quotes"> <span>10.</span> "You are never too old to set another goal or to dream a new dream." </p>
-			   <p class="name"> - C.S. Lewis  </p>
-		   </div>
-		       
-			<figure>  <img src="TOP/motive10.webp" alt="Inspire quotes" loading="auto">  </figure> <!--------motivation images10--------->
+        <section id="success">
+            <h2>Success Quotes</h2>
+            <div id="success-quotes" class="quotes-container"></div>
+        </section>
+        <section id="life">
+            <h2>Life Quotes</h2>
+            <div id="life-quotes" class="quotes-container"></div>
+        </section>
+        <section id="love">
+            <h2>Love Quotes</h2>
+            <div id="love-quotes" class="quotes-container"></div>
+        </section>
+    </main>
 	
-	</main> 
+	
 	
 	  <section>
 	       <h2> Explore real-life success stories </h2>
@@ -782,6 +691,66 @@ nextButton.addEventListener('click', () => {
 });
 
 showQuestion();
+
+
+
+
+
+                   const successQuotes = [
+    "Success is not final, failure is not fatal: It is the courage to continue that counts. - Winston Churchill",
+    "Success is not how high you have climbed, but how you make a positive difference to the world. - Roy T. Bennett",
+    "Success is not the key to happiness. Happiness is the key to success. If you love what you are doing, you will be successful. - Albert Schweitzer",
+    "The only limit to our realization of tomorrow will be our doubts of today. - Franklin D. Roosevelt",
+    "Success is not just about making money. It's about making a difference. - Unknown",
+    "Success is not in what you have, but who you are. - Bo Bennett",
+    "Success is not the destination, but the road that you're on. Being successful means that you're working hard and walking your walk every day. You can only live your dream by working hard towards it. - Will Smith",
+    "Success is the sum of small efforts, repeated day in and day out. - Robert Collier",
+    "The road to success and the road to failure are almost exactly the same. - Colin R. Davis",
+    "The only way to do great work is to love what you do. If you haven't found it yet, keep looking. Don't settle. - Steve Jobs"
+];
+
+const lifeQuotes = [
+    "Life is what happens when you're busy making other plans. - John Lennon",
+    "In the end, it's not the years in your life that count. It's the life in your years. - Abraham Lincoln",
+    "Life is either a daring adventure or nothing at all. - Helen Keller",
+    "Life is like riding a bicycle. To keep your balance, you must keep moving. - Albert Einstein",
+    "The purpose of our lives is to be happy. - Dalai Lama",
+    "Life is 10% what happens to us and 90% how we react to it. - Charles R. Swindoll",
+    "The biggest adventure you can take is to live the life of your dreams. - Oprah Winfrey",
+    "Life is short, and it is up to you to make it sweet. - Sarah Louise Delany",
+    "Life is what we make it, always has been, always will be. - Grandma Moses",
+    "Life is not a problem to be solved, but a reality to be experienced. - Soren Kierkegaard"
+];
+
+const loveQuotes = [
+    "The best thing to hold onto in life is each other. - Audrey Hepburn",
+    "Love is composed of a single soul inhabiting two bodies. - Aristotle",
+    "Love isn't something you find. Love is something that finds you. - Loretta Young",
+    "The best love is the kind that awakens the soul and makes us reach for more, that plants a fire in our hearts and brings peace to our minds. - Nicholas Sparks",
+    "Being deeply loved by someone gives you strength, while loving someone deeply gives you courage. - Lao Tzu",
+    "Love is when the other person's happiness is more important than your own. - H. Jackson Brown, Jr.",
+    "The greatest happiness of life is the conviction that we are loved; loved for ourselves, or rather, loved in spite of ourselves. - Victor Hugo",
+    "You know you're in love when you can't fall asleep because reality is finally better than your dreams. - Dr. Seuss",
+    "The best and most beautiful things in this world cannot be seen or even heard, but must be felt with the heart. - Helen Keller",
+    "Love cures people—both the ones who give it and the ones who receive it. - Karl A. Menninger"
+];
+
+function displayQuotes(quotes, containerId) {
+    const container = document.getElementById(containerId);
+    quotes.forEach(quote => {
+        const div = document.createElement("div");
+        div.classList.add("quote");
+        div.textContent = quote;
+        container.appendChild(div);
+    });
+}
+
+window.onload = function () {
+    displayQuotes(successQuotes, "success-quotes");
+    displayQuotes(lifeQuotes, "life-quotes");
+    displayQuotes(loveQuotes, "love-quotes");
+};
+
 
    </script>
 </body>
