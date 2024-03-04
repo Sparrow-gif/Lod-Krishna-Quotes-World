@@ -268,7 +268,7 @@
        padding: 10px;
    }
 
-section {
+ main > section {
     margin-bottom: 30px;
 }
 
@@ -353,7 +353,70 @@ h2 {
 }
 
 
+     .container {
+         max-width: 100%;
+         margin: 20px auto;
+         padding: 20px;
+         background-color: #fff;
+      }
 
+   .container > h1 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #333;
+    }
+
+    .recommended-pages {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 20px;
+    }
+
+    .page {
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      overflow: hidden;
+      transition: transform 0.3s ease;
+      text-align: center;
+      text-decoration: none;
+      color: #333;
+      display: block;
+	  object-fit:fill;
+	  background-size: cover;
+      background-position: center;
+    }
+
+    .page img {
+      max-width: 100%;
+      aspect-ratio:1/0.70;
+      border-top-left-radius: 8px;
+      border-top-right-radius: 8px;
+	  object-fit:fill;
+	  background-size: cover;
+      background-position: center;
+    }
+
+    .page-content {
+      padding: 15px;
+    }
+
+    .page h2 {
+      margin-top: 0;
+      font-size: 18px;
+    }
+
+    @media screen and (max-width: 600px) {
+      .container {
+        padding: 10px;
+      }
+
+      .page {
+        margin-bottom: 20px;
+      }
+    }
+	
+	
 	
 	footer {
            background: #f0f0f0;
@@ -383,17 +446,19 @@ h2 {
 	  
       @media only screen and (min-width: 500px) {
                                                         /* Styles for small screens here */
-               main > img { 
-			         width:500px;
-					 aspect-ratio:1/1;
-			   }
+               .recommended-pages {
+                           display: grid;
+                           grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+                           gap: 20px;
+                      }
       }
      @media only screen and (min-width: 768px) {
                                                         /* Styles for medium screens here */
                     html {
 			           margin:0 auto;
 			          width:90%;
-	        	  }    
+	        	  }  
+                				  
                   					
       }
      @media only screen and (min-width:992px) {
@@ -424,6 +489,10 @@ h2 {
 			   border-radius:50%;
 		    }		                                    
          .head-logo > a:hover{ -webkit-transform:scale(1.20); -ms-transform:scale(1.20); transform:scale(1.20)}
+		 
+		  .page:hover {
+                 transform: translateY(-5px);
+            }
       }
 
 
@@ -442,7 +511,7 @@ h2 {
 	  } */
  </style>
 </head>
-<body  oncontextmenu="return false">
+<body  ncontextmenu="return false">
   
         <header id="header">
     <nav id="navbar">
@@ -581,6 +650,59 @@ h2 {
          <button id="next-btn">Next Question</button>
          <div id="result"></div>
     </div>
+	
+	
+	
+	<section class="container">
+    <h1>Recommended Pages</h1>
+    <div class="recommended-pages">
+      <!-- Page 1 -->
+      <a class="page" href="books-poem-sonnet-poetry.html">
+        <img src="INDEX/poetry.webp" alt="Beauty of poetry">
+        <div class="page-content">
+          <h2>  Discover the Beauty of Poetry: Explore Poems, Analysis, and Inspiration Here  </h2>
+        </div>
+      </a>
+      <!-- Page 2 -->
+      <a class="page" href="index.html">
+        <img src="INDEX/Lod7.webp" alt="lord Krishna quotes">
+        <div class="page-content">
+          <h2>  50 Best Shri Krishna's Quotes From Srimad Bhagavad Gita  </h2>
+        </div>
+      </a>
+      <!-- Page 3 -->
+      <a class="page" href="general-knowledge-gk-quiz-on-ramayana-and-mahabharat.html">
+        <img src="INDEX/cute.webp" alt="ramayana-and-mahabharat">
+        <div class="page-content">
+          <h2> Explore the Epics: Ramayana and Mahabharata Q&A </h2>
+        </div>
+      </a>
+      <!-- Page 4 -->
+      <a class="page" href="best-online-mobile-games.html">
+        <img src="INDEX/banner.webp" alt="video games">
+        <div class="page-content">
+          <h2>  Best mobile games in India: discover the best Games, tips, and reviews  </h2>
+        </div>
+      </a>
+      <!-- Page 5 -->
+      <a class="page" href="best-instant-free-paytm-cash-earning-apps.html">
+        <img src="INDEX/cash.webp" alt="Paytm cash-earning-apps">
+        <div class="page-content">
+          <h2>  10 Best Paytm Cash Earning Apps: Boost Your Wallet with Easy-to-Use Options  </h2>
+        </div>
+      </a>
+      <!-- Page 6 -->
+      <a class="page" href="best-free-movie-download-websites.html">
+        <img src="INDEX/movie.webp" alt="movie-download-websites">
+        <div class="page-content">
+          <h2> Download movies: best movie download websites in 2024  </h2>
+        </div>
+      </a>
+    </div>
+  </section>
+  
+  
+  
     <!-----------------------------------
 	    ----------FOOTER SECTION----------
 	  -------------------------------------->
